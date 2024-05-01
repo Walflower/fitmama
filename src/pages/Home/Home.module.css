@@ -1,3 +1,73 @@
-.hero {
-  background: #e6faf6;
+/* change padding and margin to rem for responsive design once confirmed wit UX*/
+
+.header {
+  background: #e0ede7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 142px;
+  border-bottom: 2px solid #728fad;
 }
+
+.headerBox {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+}
+
+.buttons {
+  margin-right: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+.clearButton {
+  background: #e0ede7;
+  border: none;
+  color: #4f7398;
+  width: 7.313rem;
+  height: 3.188rem;
+}
+
+/************************ Hero starts******************/
+.main {
+  background: #e0ede7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+.fuelPic {
+  width: 27.25rem;
+}
+
+.UnderlinedButton {
+  width: 17.313rem;
+}
+
+/* Next section--------------------- Services*/
+
+/* Next section-- Services*/
+/* Next section-- Services*/
+/* Next section-- Services*/

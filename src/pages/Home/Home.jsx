@@ -19,42 +19,55 @@ import Minus from "../../assets/Images/minus-sign.svg";
 import BlogOne from "../../assets/Challenges/blog-one.svg";
 import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/Logos/MIM-logo.svg";
+import BlueButton from "../../components/BlueButton/BlueButton";
+import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
 
 export default function Home() {
   return (
     <div>
       <header className={styles.header}>
-        <h3>Moms in Motion</h3>
+        <img src={Logo} alt="Moms in Motion Logo" />
 
-        <nav>
-          <NavLink>Services</NavLink>
-          <NavLink>Resources</NavLink>
+        <div className={styles.headerBox}>
+          <nav className={styles.navList}>
+            <NavLink className={styles.link}>Services</NavLink>
+            <NavLink className={styles.link}>Resources</NavLink>
 
-          <NavLink>About us</NavLink>
-        </nav>
+            <NavLink className={styles.link}>About us</NavLink>
+          </nav>
 
-        <div>
-          <button>Sign in</button>
-          <button>Sign up</button>
+          <div className={styles.buttons}>
+            <button className={styles.clearButton}>Sign in</button>
+            <BlueButton text="Sign Up" />
+          </div>
         </div>
       </header>
 
-      <main>
+      <main className={styles.main}>
         <div className={styles.hero}>
           <div>
-            <h1>Wellness Redefined: Find Balance, Fin You!</h1>
+            <h1 className={styles.heroTitle}>
+              Wellness Redefined: Find Balance, Fin You!
+            </h1>
             <p>
               Discover a wealth of resources and support to help you thrive in
               every aspect of your health
             </p>
           </div>
           <img
+            className={styles.fuelPic}
             src={Fuel}
             alt="Women looking out into the sunset and text stating fuel your life: Wellness Starts Here"
           />
-          <img src={GetStarted} alt="button stating get started now" />
+          <img
+            className={styles.UnderlinedButton}
+            src={GetStarted}
+            alt="button stating get started now"
+          />
         </div>
 
+        {/* <UnderLineButton text="Get Started now" /> */}
         <img
           src={Characters}
           alt="Three animated women drinking water, walking and eating an apple"
