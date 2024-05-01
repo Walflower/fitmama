@@ -26,23 +26,27 @@ export default function Home() {
       <header className={styles.header}>
         <h3>Moms in Motion</h3>
 
-        <nav>
-          <NavLink>Services</NavLink>
-          <NavLink>Resources</NavLink>
+        <div className={styles.headerBox}>
+          <nav className={styles.navList}>
+            <NavLink>Services</NavLink>
+            <NavLink>Resources</NavLink>
 
-          <NavLink>About us</NavLink>
-        </nav>
+            <NavLink>About us</NavLink>
+          </nav>
 
-        <div>
-          <button>Sign in</button>
-          <button>Sign up</button>
+          <div>
+            <button>Sign in</button>
+            <button>Sign up</button>
+          </div>
         </div>
       </header>
 
-      <main>
+      <main className={styles.main}>
         <div className={styles.hero}>
           <div>
-            <h1>Wellness Redefined: Find Balance, Fin You!</h1>
+            <h1 className={styles.heroTitle}>
+              Wellness Redefined: Find Balance, Fin You!
+            </h1>
             <p>
               Discover a wealth of resources and support to help you thrive in
               every aspect of your health
