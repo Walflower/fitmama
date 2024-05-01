@@ -67,7 +67,68 @@
 }
 
 /* Next section--------------------- Services*/
+.SectionOne {
+  padding: 50px;
+}
 
-/* Next section-- Services*/
-/* Next section-- Services*/
-/* Next section-- Services*/
+.SectionOneTitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+}
+.SectionOneText {
+  font-size: 1.5rem;
+}
+
+.ServiceOptions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8.33px;
+}
+/* Next section-- Wellness Challengee*/
+.SectionTwo {
+  padding: 50px;
+}
+
+.challenges {
+  display: flex;
+  justify-content: space-between;
+}
+.challenge {
+  width: 31%;
+}
+
+/* Next section-- Trainer hub*/
+.SectionThree {
+  padding: 50px;
+}
+
+.SectionThreeSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Next section-- Feature Trainers*/
+
+.SectionFour {
+  padding: 50px;
+}
+
+.SectionFourSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Next section-- Live Session*/
+.SectionFive {
+  padding: 50px;
+}
+
+/* Next section-- Community*/
+.SectionSeven {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
