@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/** Might remove the the wellness challenge */}
-      <section>
+      <section className={styles.SectionTwo}>
         <h3>A wellness challenge</h3>
         <p>
           Our Platform provide activities such as hydration, physical activity
@@ -103,16 +103,28 @@ export default function Home() {
         </p>
         <button>Explore More</button>
 
-        <div>
-          <img src={ChallengeOne} alt="hydration challenge" />
-          <img src={ChallengeTwo} alt="mindful eating challenge" />
-          <img src={ChallengeThree} alt="sleep well challenge" />
+        <div className={styles.challenges}>
+          <img
+            className={styles.challenge}
+            src={ChallengeOne}
+            alt="hydration challenge"
+          />
+          <img
+            className={styles.challenge}
+            src={ChallengeTwo}
+            alt="mindful eating challenge"
+          />
+          <img
+            className={styles.challenge}
+            src={ChallengeThree}
+            alt="sleep well challenge"
+          />
         </div>
       </section>
 
       {/**trainer hub */}
 
-      <section>
+      <section className={styles.SectionThree}>
         <h3>Trainer Fitness Hub</h3>
         <p>
           Experience a comprehensive fitness journey with our Trainer Fitness
@@ -120,41 +132,54 @@ export default function Home() {
           personalized programs designed by expert trainers to help you achieve
           your fitness goals.
         </p>
-        <div>
+        <div className={styles.SectionThreeSub}>
           <img src={LiveSession} alt="live session" />
           <img src={VideoLibrary} alt="video library" />
         </div>
       </section>
 
-      <section>
+      {/**Feature Trainers */}
+
+      <section className={styles.SectionFour}>
         <h3>Feature Trainers</h3>
         <p>
           Our Faculty are all professionally qualified and have rich industry
           experience, essential for giving a practical context to concepts
         </p>
-        <div>
+
+        <div className={styles.SectionFourSub}>
           <img src={TrainerOne} alt="trainer one" />
-          <imag src={TrainerTwo} alt="trainer one" />
-          <imag src={TrainerThree} alt="trainer one" />
+          <img src={TrainerOne} alt="trainer one" />
+          <img src={TrainerOne} alt="trainer one" />
         </div>
       </section>
 
-      <section>
+      {/**Live Session Section */}
+      {/* Need this to be changed*/}
+
+      <section className={styles.SectionFive}>
         <h3>Join Our Live Session</h3>
         {/**There will be cards here */}
       </section>
 
-      <section>{/**membership sections */}</section>
-
-      <section>
-        <h3>What Clients have to save about us</h3>
-        <img src={CardOne} alt="comment one" />
-        <img src={CardTwo} alt="comment two" />
+      <section className={styles.SectionFive}>
+        {/**membership sections */}
       </section>
 
-      <section>
+      <section className={styles.SectionFive}>
+        <h3>What Clients have to save about us</h3>
+
+        <div className={styles.SectionFourSub}>
+          <img src={CardOne} alt="comment one" />
+          <img src={CardTwo} alt="comment two" />
+        </div>
+      </section>
+
+      <section className={styles.SectionSeven}>
         <div>
-          <h1>Supportive Community for Your Wellness Journey</h1>
+          <h1 className={styles.heroTitle}>
+            Supportive Community for Your Wellness Journey
+          </h1>
           <p>
             Join our virtual community to connect with other on similar journeys
             towards better health. Share experiences, seek advice, and find
@@ -162,6 +187,7 @@ export default function Home() {
           </p>
           <button>Join now</button>
         </div>
+
         <img src={GroupVideo} alt="virtual group chat" />
       </section>
 

@@ -87,8 +87,48 @@
   justify-content: space-between;
   gap: 8.33px;
 }
-/* Next section-- Wellness Challengee/
+/* Next section-- Wellness Challengee*/
+.SectionTwo {
+  padding: 50px;
+}
 
+.challenges {
+  display: flex;
+  justify-content: space-between;
+}
+.challenge {
+  width: 31%;
+}
 
-/* Next section-- Services*/
-/* Next section-- Services*/
+/* Next section-- Trainer hub*/
+.SectionThree {
+  padding: 50px;
+}
+
+.SectionThreeSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Next section-- Feature Trainers*/
+
+.SectionFour {
+  padding: 50px;
+}
+
+.SectionFourSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Next section-- Live Session*/
+.SectionFive {
+  padding: 50px;
+}
+
+/* Next section-- Community*/
+.SectionSeven {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
