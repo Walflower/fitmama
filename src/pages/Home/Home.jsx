@@ -21,6 +21,7 @@ import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logos/MIM-logo.svg";
 import BlueButton from "../../components/BlueButton/BlueButton";
+import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
 
 export default function Home() {
   return (
@@ -55,12 +56,18 @@ export default function Home() {
             </p>
           </div>
           <img
+            className={styles.fuelPic}
             src={Fuel}
             alt="Women looking out into the sunset and text stating fuel your life: Wellness Starts Here"
           />
-          <img src={GetStarted} alt="button stating get started now" />
+          <img
+            className={styles.UnderlinedButton}
+            src={GetStarted}
+            alt="button stating get started now"
+          />
         </div>
 
+        {/* <UnderLineButton text="Get Started now" /> */}
         <img
           src={Characters}
           alt="Three animated women drinking water, walking and eating an apple"

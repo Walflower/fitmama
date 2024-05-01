@@ -1,3 +1,5 @@
+/* change padding and margin to rem for responsive design once confirmed wit UX*/
+
 .header {
   background: #e0ede7;
   display: flex;
@@ -37,12 +39,35 @@
   height: 3.188rem;
 }
 
+/************************ Hero starts******************/
 .main {
   background: #e0ede7;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
 }
 
 .heroTitle {
   margin: 0;
+  font-size: 3.5rem;
 }
+
+.fuelPic {
+  width: 27.25rem;
+}
+
+.UnderlinedButton {
+  width: 17.313rem;
+}
+
+/* Next section--------------------- Services*/
+
+/* Next section-- Services*/
+/* Next section-- Services*/
+/* Next section-- Services*/
