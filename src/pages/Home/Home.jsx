@@ -19,24 +19,26 @@ import Minus from "../../assets/Images/minus-sign.svg";
 import BlogOne from "../../assets/Challenges/blog-one.svg";
 import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/Logos/MIM-logo.svg";
+import BlueButton from "../../components/BlueButton/BlueButton";
 
 export default function Home() {
   return (
     <div>
       <header className={styles.header}>
-        <h3>Moms in Motion</h3>
+        <img src={Logo} alt="Moms in Motion Logo" />
 
         <div className={styles.headerBox}>
           <nav className={styles.navList}>
-            <NavLink>Services</NavLink>
-            <NavLink>Resources</NavLink>
+            <NavLink className={styles.link}>Services</NavLink>
+            <NavLink className={styles.link}>Resources</NavLink>
 
-            <NavLink>About us</NavLink>
+            <NavLink className={styles.link}>About us</NavLink>
           </nav>
 
-          <div>
-            <button>Sign in</button>
-            <button>Sign up</button>
+          <div className={styles.buttons}>
+            <button className={styles.clearButton}>Sign in</button>
+            <BlueButton text="Sign Up" />
           </div>
         </div>
       </header>

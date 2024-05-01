@@ -10,14 +10,31 @@
 
 .headerBox {
   display: flex;
-  width: 50%;
+  width: 65%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navList {
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
+  width: 65%;
+}
+
+.buttons {
+  margin-right: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+.clearButton {
+  background: #e0ede7;
+  border: none;
+  color: #4f7398;
+  width: 7.313rem;
+  height: 3.188rem;
 }
 
 .main {
@@ -25,9 +42,7 @@
   display: flex;
   align-items: center;
 }
-/* .hero {
-  background: #e0ede7;
-} */
+
 .heroTitle {
   margin: 0;
 }
