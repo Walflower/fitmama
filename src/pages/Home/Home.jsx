@@ -22,6 +22,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logos/MIM-logo.svg";
 import BlueButton from "../../components/BlueButton/BlueButton";
 import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
+import GreenButton from "../../components/GreenButton/GreenButton";
 
 export default function Home() {
   return (
@@ -74,24 +75,22 @@ export default function Home() {
         />
       </main>
 
-      <section>
-        <h2>Services & Benefits</h2>
-        <p>
+      <section className={styles.SectionOne}>
+        <h2 className={styles.SectionOneTitle}>Services & Benefits</h2>
+        <p className={styles.SectionOneText}>
           Discover a new definition of wellness and find balance in your life
           with our supportive community
         </p>
 
         {/** links to other sections  */}
-        <div>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
-          <button>Access to join a community</button>
+        <div className={styles.ServiceOptions}>
+          <GreenButton text="Access to join a community" />
+          <GreenButton text="Cost Effective" />
+          <GreenButton text="Workouts" />
+
+          <GreenButton text="Educational Resources" />
+          <GreenButton text="Time Efficiency" />
+          <GreenButton text="Live sessions with trainers" />
         </div>
       </section>
 

@@ -67,7 +67,28 @@
 }
 
 /* Next section--------------------- Services*/
+.SectionOne {
+  padding: 50px;
+}
 
-/* Next section-- Services*/
+.SectionOneTitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+}
+.SectionOneText {
+  font-size: 1.5rem;
+}
+
+.ServiceOptions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8.33px;
+}
+/* Next section-- Wellness Challengee/
+
+
 /* Next section-- Services*/
 /* Next section-- Services*/
