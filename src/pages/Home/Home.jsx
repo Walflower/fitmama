@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
+import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
+
 import Fuel from "../../assets/Images/fuel-image.svg";
 import GetStarted from "../../assets/Images/get-started.svg";
 import Characters from "../../assets/Images/Healthy lifestyle-amico 1.svg";
@@ -32,7 +35,14 @@ export default function Home() {
 
         <div className={styles.headerBox}>
           <nav className={styles.navList}>
-            <NavLink className={styles.link}>Services</NavLink>
+            {/* <NavHashLink to="/home#intro" activeClassName="active">
+        Introduction
+      </NavHashLink> */}
+
+            <NavHashLink smooth to="/#Services" className={styles.link}>
+              Services
+            </NavHashLink>
+
             <NavLink className={styles.link}>Resources</NavLink>
 
             <NavLink className={styles.link}>About us</NavLink>
@@ -75,7 +85,7 @@ export default function Home() {
         />
       </main>
 
-      <section className={styles.SectionOne}>
+      <section id="Services" className={styles.SectionOne}>
         <h2 className={styles.SectionOneTitle}>Services & Benefits</h2>
         <p className={styles.SectionOneText}>
           Discover a new definition of wellness and find balance in your life
