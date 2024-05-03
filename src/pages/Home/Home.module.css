@@ -1,7 +1,7 @@
-/* change padding and margin to rem for responsive design once confirmed wit UX*/
+/* change padding and margin to rem for responsive design once confirmed with UX*/
 
 .header {
-  background: #e0ede7;
+  background: #fbdef54d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +32,7 @@
   color: #000000;
 }
 .clearButton {
-  background: #e0ede7;
+  background: #fbdef54d;
   border: none;
   color: #4f7398;
   width: 7.313rem;
@@ -41,7 +41,7 @@
 
 /************************ Hero starts******************/
 .main {
-  background: #e0ede7;
+  background: #fbdef54d;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -78,20 +78,35 @@
 }
 .SectionOneText {
   font-size: 1.5rem;
+  text-align: center;
 }
 
+.SectionTwoTitle {
+  text-align: center;
+  font-size: 4rem;
+}
 .ServiceOptions {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8.33px;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.ServiceCards {
+  display: flex;
+  flex-direction: column;
+}
+.ServiceImage {
+  height: 22rem;
 }
 /* Next section-- Wellness Challengee*/
 .SectionTwo {
   padding: 50px;
 }
 
+.trainers {
+  width: 25rem;
+}
 .challenges {
   display: flex;
   justify-content: space-between;
@@ -110,6 +125,13 @@
   justify-content: space-evenly;
 }
 
+/* .liveSession__pic {
+  width: 30rem;
+} */
+.liveSession__text {
+  display: flex;
+  flex-direction: column;
+}
 /* Next section-- Feature Trainers*/
 
 .SectionFour {

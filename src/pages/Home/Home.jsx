@@ -11,9 +11,9 @@ import ChallengeTwo from "../../assets/Challenges/mindful-eating.svg";
 import ChallengeThree from "../../assets/Challenges/sleep-well.svg";
 import LiveSession from "../../assets/Challenges/live-sessions.svg";
 import VideoLibrary from "../../assets/Challenges/video-library.svg";
-import TrainerOne from "../../assets/Challenges/trainer-sarah.svg";
-import TrainerTwo from "../../assets/Challenges/trainer-nayan.svg";
-import TrainerThree from "../../assets/Challenges/trainer-amar.svg";
+import TrainerOne from "../../assets/Images/trainerpic1.png";
+import TrainerTwo from "../../assets/Images/trainerpic2.png";
+import TrainerThree from "../../assets/Images/trainerpic3.png";
 import CardOne from "../../assets/Challenges/Testimonials-card-1.svg";
 import CardTwo from "../../assets/Challenges/Testimonials-card-two.svg";
 import GroupVideo from "../../assets/Challenges/group-video.svg";
@@ -22,10 +22,15 @@ import Minus from "../../assets/Images/minus-sign.svg";
 import BlogOne from "../../assets/Challenges/blog-one.svg";
 import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/Logos/MIM-logo.svg";
+import Logo from "../../assets/Logos/MFH-logo.svg";
 import BlueButton from "../../components/BlueButton/BlueButton";
 import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
 import GreenButton from "../../components/GreenButton/GreenButton";
+
+import ServicesOne from "../../assets/Images/services-one.svg";
+import ServicesTwo from "../../assets/Images/services-two.svg";
+import ServicesThree from "../../assets/Images/services-three.png";
+import FitnessHub from "../../assets/Images/fitness-hub-pic.png";
 
 export default function Home() {
   return (
@@ -43,9 +48,16 @@ export default function Home() {
               Services
             </NavHashLink>
 
-            <NavLink className={styles.link}>Resources</NavLink>
+            <NavHashLink smooth to="/#Trainers" className={styles.link}>
+              Trainers
+            </NavHashLink>
+            <NavHashLink smooth to="/#LiveSessions" className={styles.link}>
+              Live Sessions
+            </NavHashLink>
 
-            <NavLink className={styles.link}>About us</NavLink>
+            <NavHashLink smooth to="/#Community" className={styles.link}>
+              Community
+            </NavHashLink>
           </nav>
 
           <div className={styles.buttons}>
@@ -59,7 +71,7 @@ export default function Home() {
         <div className={styles.hero}>
           <div>
             <h1 className={styles.heroTitle}>
-              Wellness Redefined: Find Balance, Fin You!
+              Wellness Redefined: Find Balance, Find You!
             </h1>
             <p>
               Discover a wealth of resources and support to help you thrive in
@@ -87,20 +99,136 @@ export default function Home() {
 
       <section id="Services" className={styles.SectionOne}>
         <h2 className={styles.SectionOneTitle}>Services & Benefits</h2>
+        <p className={styles.SectionOneText}>Best Services for Your Health</p>
+
+        <div className={styles.ServiceOptions}>
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.ServiceImage}
+              src={ServicesOne}
+              alt="........"
+            />
+
+            <h3>
+              <b>Live Training Session</b>
+            </h3>
+            <p>
+              We provide free and online training sessions, to aid your health
+            </p>
+          </div>
+
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.ServiceImage}
+              src={ServicesTwo}
+              alt="........"
+            />
+
+            <h3>
+              <b>Live Training Session</b>
+            </h3>
+            <p>
+              We provide free and online training sessions, to aid your health
+            </p>
+          </div>
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.ServiceImage}
+              src={ServicesThree}
+              alt="........"
+            />
+
+            <h3>
+              <b>Live Training Session</b>
+            </h3>
+            <p>
+              We provide free and online training sessions, to aid your health
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/*............................................*/}
+      <section id="Trainers" className={styles.SectionFour}>
+        <h2 className={styles.SectionTwoTitle}>MEET OUR TRAINERS</h2>
         <p className={styles.SectionOneText}>
-          Discover a new definition of wellness and find balance in your life
-          with our supportive community
+          Get in touch with our top rated trainers to help mothers tackle any
+          postpartum health related issues
         </p>
 
-        {/** links to other sections  */}
         <div className={styles.ServiceOptions}>
-          <GreenButton text="Access to join a community" />
-          <GreenButton text="Cost Effective" />
-          <GreenButton text="Workouts" />
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.trainers}
+              src={TrainerOne}
+              alt="trainer one"
+            />
+            <p>Stretching Instructor</p>
+            <h1>Ken Esenwah</h1>
+            <p>
+              Help with anxiety, eating disorders, panic attacks, medications
+            </p>
+            <BlueButton text="See profile" />
+          </div>
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.trainers}
+              src={TrainerTwo}
+              alt="trainer one"
+            />
+            <p>Stretching Instructor</p>
+            <h1>Sandy James</h1>
+            <p>
+              Help with anxiety, eating disorders, panic attacks, medications
+            </p>
+            <BlueButton text="See profile" />
+          </div>
+          <div className={styles.ServiceCards}>
+            <img
+              className={styles.trainers}
+              src={TrainerThree}
+              alt="trainer one"
+            />
+            <p>Stretching Instructor</p>
+            <h1>Karen J.</h1>
+            <p>
+              Help with anxiety, eating disorders, panic attacks, medications
+            </p>
+            <BlueButton text="See profile" />
+          </div>
+        </div>
+      </section>
 
-          <GreenButton text="Educational Resources" />
-          <GreenButton text="Time Efficiency" />
-          <GreenButton text="Live sessions with trainers" />
+      {/**..................................................... */}
+      {/**trainer hub */}
+
+      <section className={styles.SectionThree}>
+        <h3 className={styles.SectionTwoTitle}>Trainer Fitness Hub</h3>
+        <p className={styles.SectionOneText}>
+          Experience a comprehensive fitness journey with our Trainer Fitness
+          Hub. Explore live sessions, access our video library, and unlock
+          personalized programs designed by expert trainers to help you achieve
+          your fitness goals.
+        </p>
+        <UnderLineButton text="Explore More" />
+
+        <div className={styles.SectionThreeSub}>
+          <img
+            className={styles.liveSession__pic}
+            src={FitnessHub}
+            alt="live session"
+          />
+          <div className={styles.liveSession__text}>
+            <h1>Live Sessions</h1>
+            <p>
+              Join our Live Session features for real time fitness excitement!
+              Immerse yourself in dynamic experience where ou can engage
+              directly with our expert trainers. They'll lead you through
+              interactive workouts, sharing exclusive tips tailored to your need
+              and answering your burning fitness questions on the spot. Tune in
+              and elevate your fitness journey with every session!
+            </p>
+          </div>
         </div>
       </section>
 
@@ -132,45 +260,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/**trainer hub */}
-
-      <section className={styles.SectionThree}>
-        <h3>Trainer Fitness Hub</h3>
-        <p>
-          Experience a comprehensive fitness journey with our Trainer Fitness
-          Hub. Explore live sessions, access our video library, and unlock
-          personalized programs designed by expert trainers to help you achieve
-          your fitness goals.
-        </p>
-        <div className={styles.SectionThreeSub}>
-          <img src={LiveSession} alt="live session" />
-          <img src={VideoLibrary} alt="video library" />
-        </div>
-      </section>
-
       {/**Feature Trainers */}
-
-      <section className={styles.SectionFour}>
-        <h3>Feature Trainers</h3>
-        <p>
-          Our Faculty are all professionally qualified and have rich industry
-          experience, essential for giving a practical context to concepts
-        </p>
-
-        <div className={styles.SectionFourSub}>
-          <img src={TrainerOne} alt="trainer one" />
-          <img src={TrainerOne} alt="trainer one" />
-          <img src={TrainerOne} alt="trainer one" />
-        </div>
-      </section>
 
       {/**Live Session Section */}
       {/* Need this to be changed*/}
 
-      <section className={styles.SectionFive}>
+      {/* <section className={styles.SectionFive}>
         <h3>Join Our Live Session</h3>
-        {/**There will be cards here */}
-      </section>
+      
+      </section> */}
 
       <section className={styles.SectionFive}>
         {/**membership sections */}
@@ -226,19 +324,19 @@ export default function Home() {
       </section>
 
       {/** is there health blog api?? we didn't discuss this feature yet */}
-      <section>
+      {/* <section>
         <h3>#Blogs</h3>
         <div>
           <img src={BlogOne} alt="blog post" />
           <img src={BlogTwo} alt="blog post" />
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <h2>Subscribe to Our Newsletter</h2>
         <input type="email" placeholder="Your Email"></input>
         <button type="submit">Be a Member</button>
-      </section>
+      </section> */}
     </div>
   );
 }
