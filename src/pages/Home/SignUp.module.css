@@ -1,0 +1,43 @@
+.CreateAccountContainer {
+  display: flex;
+  /* margin-top: 168px;
+  margin-left: 135px; */
+}
+/************************ CreateAccountImage ******************/
+.CreateAccountImageContainer {
+  width: 690px;
+  height: 690px;
+  margin-right: 46px;
+}
+/************************ SigupContainer ******************/
+.SignUpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/************************ Title ******************/
+.SignUpTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SignUpTitle {
+  display: flex;
+  align-content: center;
+  font-size: 40px;
+  font-weight: 400px;
+  line-height: 52px;
+  margin-bottom: 0;
+}
+.SignUpSubTitle {
+  font-size: 10px;
+  font-weight: 400px;
+  line-height: 16px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+
+/************************ TextFieldContainer ******************/
+.TextFieldContainer {
+  width: 100%;
+}

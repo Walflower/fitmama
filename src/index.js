@@ -13,11 +13,13 @@ import {
 
 import Home from "./pages/Home/Home";
 import reportWebVitals from "./reportWebVitals";
+import SignUp from "./pages/Home/SignUp";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />} />
+      <Route path="/Signup" element={<SignUp />} />
     </>
   )
 );
