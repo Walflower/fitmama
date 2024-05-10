@@ -5,7 +5,7 @@ import SignUpWithGoogle from "../../components/SignUpWithGoogle/SignUpWithGoogle
 import SignUpBlueButton from "../../components/SignUpBlueButton/SigupBlueButton";
 import EyePassewordImage from "../../assets/Images/eye password logo.png";
 import SignUpWithGoogleImage from "../../assets/Images/Google Logo.jpg";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   return (
@@ -50,9 +50,9 @@ export default function SignUp() {
         </div>
         <div className={styles.LoginContainer}>
           <p>Already have an account?</p>
-          <NavLink className={styles.LogInLink} linkTo="/Home">
+          <Link className={styles.LogInLink} linkTo="/Home">
             Login
-          </NavLink>
+          </Link>
         </div>
       </div>
     </div>
