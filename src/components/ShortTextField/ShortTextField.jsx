@@ -4,6 +4,7 @@ export default function ShortTextField({ text }) {
   return (
     <label className={styles.label}>
       <div className={styles.container}>
+        <div className={styles.text}>{text}</div>
         <input
           placeholder={"Enter Your Username"}
           type="text"
@@ -12,7 +13,8 @@ export default function ShortTextField({ text }) {
         ></input>
       </div>
 
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
+        <div className={styles.text}>{text}</div>
         <input
           placeholder={"Enter Your Email"}
           type="text"
@@ -21,6 +23,7 @@ export default function ShortTextField({ text }) {
         ></input>
       </div>
       <div className={styles.container}>
+        <div className={styles.text}>{text}</div>
         <input
           placeholder={"Enter Your Phone Number"}
           type="text"
@@ -29,13 +32,14 @@ export default function ShortTextField({ text }) {
         ></input>
       </div>
       <div className={styles.container}>
+        <div className={styles.text}>{text}</div>
         <input
           placeholder={"Enter Your Password"}
           type="text"
           name="title__name"
           className={styles.input}
         ></input>
-      </div>
+      </div> */}
     </label>
   );
 }
