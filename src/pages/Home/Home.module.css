@@ -1,0 +1,156 @@
+/* change padding and margin to rem for responsive design once confirmed with UX*/
+
+.header {
+  background: #fbdef54d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 142px;
+  border-bottom: 2px solid #728fad;
+}
+
+.headerBox {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+}
+
+.buttons {
+  margin-right: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+.clearButton {
+  background: #fbdef54d;
+  border: none;
+  color: #4f7398;
+  width: 7.313rem;
+  height: 3.188rem;
+}
+
+/************************ Hero starts******************/
+.main {
+  background: #fbdef54d;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+.fuelPic {
+  width: 27.25rem;
+}
+
+.UnderlinedButton {
+  width: 17.313rem;
+}
+
+/* Next section--------------------- Services*/
+.SectionOne {
+  padding: 50px;
+}
+
+.SectionOneTitle {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+}
+.SectionOneText {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.SectionTwoTitle {
+  text-align: center;
+  font-size: 4rem;
+}
+.ServiceOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.ServiceCards {
+  display: flex;
+  flex-direction: column;
+}
+.ServiceImage {
+  height: 22rem;
+}
+/* Next section-- Wellness Challengee*/
+.SectionTwo {
+  padding: 50px;
+}
+
+.trainers {
+  width: 25rem;
+}
+.challenges {
+  display: flex;
+  justify-content: space-between;
+}
+.challenge {
+  width: 31%;
+}
+
+/* Next section-- Trainer hub*/
+.SectionThree {
+  padding: 50px;
+}
+
+.SectionThreeSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .liveSession__pic {
+  width: 30rem;
+} */
+.liveSession__text {
+  display: flex;
+  flex-direction: column;
+}
+/* Next section-- Feature Trainers*/
+
+.SectionFour {
+  padding: 50px;
+}
+
+.SectionFourSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Next section-- Live Session*/
+.SectionFive {
+  padding: 50px;
+}
+
+/* Next section-- Community*/
+.SectionSeven {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}

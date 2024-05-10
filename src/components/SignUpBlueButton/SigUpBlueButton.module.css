@@ -1,0 +1,15 @@
+.SignUpBlueButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #4f7398;
+  color: white;
+  width: 19.5rem;
+  height: 3.188rem;
+  border-radius: 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
