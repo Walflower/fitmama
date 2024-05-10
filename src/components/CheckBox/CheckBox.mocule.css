@@ -1,0 +1,14 @@
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary-color);
+}
+
+.input {
+  accent-color: var(--cta-primary-color);
+}
