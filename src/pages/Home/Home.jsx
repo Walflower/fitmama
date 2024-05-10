@@ -307,6 +307,21 @@ export default function Home() {
           Is there a community engagement forum for Moms in Motion{" "}
           <img src={Plus} alt="plus sign" />
         </span>
+      </section>
+
+      {/** is there health blog api?? we didn't discuss this feature yet */}
+      {/* <section>
+        <h3>#Blogs</h3>
+        <div>
+          <img src={BlogOne} alt="blog post" />
+          <img src={BlogTwo} alt="blog post" />
+        </div>
+      </section> */}
+
+      {/* <section>
+        <h2>Subscribe to Our Newsletter</h2>
+        <input type="email" placeholder="Your Email"></input>
+        <button type="submit">Be a Member</button>
       </section> */}
     </div>
   );
