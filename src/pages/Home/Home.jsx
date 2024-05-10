@@ -5,9 +5,9 @@ import { NavHashLink } from "react-router-hash-link";
 
 import Fuel from "../../assets/Images/fuel-image.svg";
 import GetStarted from "../../assets/Images/get-started.svg";
-import Characters from "../../assets/Images/Healthy lifestyle-amico 1.svg";
-import ChallengeOne from "../../assets/Challenges/hydration-challenge.svg";
-import ChallengeTwo from "../../assets/Challenges/mindful-eating.svg";
+import Hero from "../../assets/Images/hero-landing-image.svg";
+import ChallengeOne from "../../assets/Images/water.png";
+import ChallengeTwo from "../../assets/Images/smoothie.png";
 import ChallengeThree from "../../assets/Challenges/sleep-well.svg";
 import LiveSession from "../../assets/Challenges/live-sessions.svg";
 import VideoLibrary from "../../assets/Challenges/video-library.svg";
@@ -16,13 +16,13 @@ import TrainerTwo from "../../assets/Images/trainerpic2.png";
 import TrainerThree from "../../assets/Images/trainerpic3.png";
 import CardOne from "../../assets/Challenges/Testimonials-card-1.svg";
 import CardTwo from "../../assets/Challenges/Testimonials-card-two.svg";
-import GroupVideo from "../../assets/Challenges/group-video.svg";
+import CommunityImage from "../../assets/Images/connection-image.svg";
 import Plus from "../../assets/Images/plus-sign.svg";
 import Minus from "../../assets/Images/minus-sign.svg";
 import BlogOne from "../../assets/Challenges/blog-one.svg";
 import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/Logos/MFH-logo.svg";
+import Logo from "../../assets/Logos/fit-mama-hub-logo.svg";
 import BlueButton from "../../components/BlueButton/BlueButton";
 import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
 import GreenButton from "../../components/GreenButton/GreenButton";
@@ -31,28 +31,19 @@ import ServicesOne from "../../assets/Images/services-one.svg";
 import ServicesTwo from "../../assets/Images/services-two.svg";
 import ServicesThree from "../../assets/Images/services-three.png";
 import FitnessHub from "../../assets/Images/fitness-hub-pic.png";
+import WhiteButton from "../../components/WhiteButton/WhiteButton";
 
 export default function Home() {
   return (
     <div>
+      {/**---------------Header & Nav bar ----------------------- */}
       <header className={styles.header}>
-        <img src={Logo} alt="Moms in Motion Logo" />
+        <img className={styles.logo} src={Logo} alt="Moms in Motion Logo" />
 
         <div className={styles.headerBox}>
           <nav className={styles.navList}>
-            {/* <NavHashLink to="/home#intro" activeClassName="active">
-        Introduction
-      </NavHashLink> */}
-
             <NavHashLink smooth to="/#Services" className={styles.link}>
               Services
-            </NavHashLink>
-
-            <NavHashLink smooth to="/#Trainers" className={styles.link}>
-              Trainers
-            </NavHashLink>
-            <NavHashLink smooth to="/#LiveSessions" className={styles.link}>
-              Live Sessions
             </NavHashLink>
 
             <NavHashLink smooth to="/#Community" className={styles.link}>
@@ -67,38 +58,42 @@ export default function Home() {
         </div>
       </header>
 
+      {/**----------------------------Hero------------------------------- */}
+
       <main className={styles.main}>
-        <div className={styles.hero}>
-          <div>
+        <div className={styles.divider}></div>
+
+        <section className={styles.hero}>
+          <div className={styles.subContainer}>
             <h1 className={styles.heroTitle}>
-              Wellness Redefined: Find Balance, Find You!
+              Wellness Redefined: Find Balance, Find You! Together We Thrive
             </h1>
-            <p>
+            <p className={styles.heroParagraph}>
               Discover a wealth of resources and support to help you thrive in
-              every aspect of your health
+              every aspect of your health.
             </p>
           </div>
+
+          <img
+            src={Hero}
+            alt="Women doing a squat while holding her young child"
+          />
+        </section>
+
+        <section className={styles.heroBottom}>
+          <UnderLineButton text="Get started now" />
+
           <img
             className={styles.fuelPic}
             src={Fuel}
             alt="Women looking out into the sunset and text stating fuel your life: Wellness Starts Here"
           />
-          <img
-            className={styles.UnderlinedButton}
-            src={GetStarted}
-            alt="button stating get started now"
-          />
-        </div>
-
-        {/* <UnderLineButton text="Get Started now" /> */}
-        <img
-          src={Characters}
-          alt="Three animated women drinking water, walking and eating an apple"
-        />
+        </section>
       </main>
 
+      {/**---------------------------- Services Section------------------------------- */}
       <section id="Services" className={styles.SectionOne}>
-        <h2 className={styles.SectionOneTitle}>Services & Benefits</h2>
+        <h2 className={styles.SectionOneTitle}>Our Services</h2>
         <p className={styles.SectionOneText}>Best Services for Your Health</p>
 
         <div className={styles.ServiceOptions}>
@@ -109,10 +104,8 @@ export default function Home() {
               alt="........"
             />
 
-            <h3>
-              <b>Live Training Session</b>
-            </h3>
-            <p>
+            <h3 className={styles.ServiceTitle}>Matching</h3>
+            <p className={styles.ServiceText}>
               We provide free and online training sessions, to aid your health
             </p>
           </div>
@@ -124,10 +117,8 @@ export default function Home() {
               alt="........"
             />
 
-            <h3>
-              <b>Live Training Session</b>
-            </h3>
-            <p>
+            <h3 className={styles.ServiceTitle}>Weekly Challenges</h3>
+            <p className={styles.ServiceText}>
               We provide free and online training sessions, to aid your health
             </p>
           </div>
@@ -138,17 +129,66 @@ export default function Home() {
               alt="........"
             />
 
-            <h3>
-              <b>Live Training Session</b>
-            </h3>
-            <p>
+            <h3 className={styles.ServiceTitle}>Supportive Community</h3>
+            <p className={styles.ServiceText}>
               We provide free and online training sessions, to aid your health
             </p>
           </div>
         </div>
       </section>
 
-      {/*............................................*/}
+      {/*....................Supportive Community Section........................*/}
+
+      <section id="Community" className={styles.SectionSeven}>
+        <div className={styles.subContainer}>
+          <h2 className={styles.heroTitle}>
+            Supportive Community for Your Wellness Journey
+          </h2>
+          <p className={styles.heroParagraph}>
+            Join our virtual community to connect with others on similar
+            journeys towards better health. Share experiences, seek advice, and
+            find support in a safe and understanding space
+          </p>
+          <UnderLineButton text="Join Now" />
+        </div>
+
+        <img
+          className={styles.CommunityImage}
+          src={CommunityImage}
+          alt="virtual group chat"
+        />
+      </section>
+
+      {/**--------------------- Wellness Challenges Section -------------------------- */}
+
+      <section className={styles.SectionTwo}>
+        <h2 className={styles.heroTitle}>A wellness challenge</h2>
+        <p className={styles.heroParagraph}>
+          Our Platform provide activities such as hydration, physical activity
+          mindfulness, adequate sleep patterns...
+        </p>
+        <WhiteButton text="Explore More" />
+
+        <section className={styles.challenges}>
+          <div className={styles.card}>
+            <img src={ChallengeOne} alt="hydration challenge" />
+            <p>Hydration Boost Challenge</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={ChallengeTwo} alt="hydration challenge" />
+            <p>Mindful Eating</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={ChallengeOne} alt="hydration challenge" />
+            <p>Sleep Well Challenge</p>
+          </div>
+        </section>
+      </section>
+
+      {/**----------------------------------------------------------------- */}
+
       <section id="Trainers" className={styles.SectionFour}>
         <h2 className={styles.SectionTwoTitle}>MEET OUR TRAINERS</h2>
         <p className={styles.SectionOneText}>
@@ -232,44 +272,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/** Might remove the the wellness challenge */}
-      <section className={styles.SectionTwo}>
-        <h3>A wellness challenge</h3>
-        <p>
-          Our Platform provide activities such as hydration, physical activity
-          mindfulness, adequate sleep patterns...
-        </p>
-        <button>Explore More</button>
-
-        <div className={styles.challenges}>
-          <img
-            className={styles.challenge}
-            src={ChallengeOne}
-            alt="hydration challenge"
-          />
-          <img
-            className={styles.challenge}
-            src={ChallengeTwo}
-            alt="mindful eating challenge"
-          />
-          <img
-            className={styles.challenge}
-            src={ChallengeThree}
-            alt="sleep well challenge"
-          />
-        </div>
-      </section>
-
-      {/**Feature Trainers */}
-
-      {/**Live Session Section */}
-      {/* Need this to be changed*/}
-
-      {/* <section className={styles.SectionFive}>
-        <h3>Join Our Live Session</h3>
-      
-      </section> */}
-
       <section className={styles.SectionFive}>
         {/**membership sections */}
       </section>
@@ -281,22 +283,6 @@ export default function Home() {
           <img src={CardOne} alt="comment one" />
           <img src={CardTwo} alt="comment two" />
         </div>
-      </section>
-
-      <section className={styles.SectionSeven}>
-        <div>
-          <h1 className={styles.heroTitle}>
-            Supportive Community for Your Wellness Journey
-          </h1>
-          <p>
-            Join our virtual community to connect with other on similar journeys
-            towards better health. Share experiences, seek advice, and find
-            support in a safe and understanding space
-          </p>
-          <button>Join now</button>
-        </div>
-
-        <img src={GroupVideo} alt="virtual group chat" />
       </section>
 
       {/**each question needs to be to span down and up */}
@@ -322,21 +308,6 @@ export default function Home() {
           <img src={Plus} alt="plus sign" />
         </span>
       </section>
-
-      {/** is there health blog api?? we didn't discuss this feature yet */}
-      {/* <section>
-        <h3>#Blogs</h3>
-        <div>
-          <img src={BlogOne} alt="blog post" />
-          <img src={BlogTwo} alt="blog post" />
-        </div>
-      </section> */}
-
-      {/* <section>
-        <h2>Subscribe to Our Newsletter</h2>
-        <input type="email" placeholder="Your Email"></input>
-        <button type="submit">Be a Member</button>
-      </section> */}
     </div>
   );
 }
