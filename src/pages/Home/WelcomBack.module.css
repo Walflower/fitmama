@@ -1,13 +1,7 @@
 .WelcomeBackContainer {
   display: flex;
   /* width: 20.5rem; */
-  justify-content: center;
-  /* align-items: center; */
-  /* padding-top: 150px; */
-
-  /* display: flex;
-  width: 40rem;
-  padding-top: 150px;*/
+  align-items: center;
 }
 /************************ WelcomeAccountImage ******************/
 .WelcomeAccountImageContainer {
