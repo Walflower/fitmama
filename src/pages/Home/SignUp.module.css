@@ -1,17 +1,22 @@
 .CreateAccountContainer {
   display: flex;
-  width: 20.5rem;
-  padding-top: 150px;
+  /* width: 20.5rem; */
+  justify-content: center;
+  /* align-items: center; */
+  /* padding-top: 150px; */
 }
 /************************ CreateAccountImage ******************/
 .CreateAccountImageContainer {
-  width: 451px;
+  /* width: 451px;
+  height: 542px;
+  margin-right: 46px; */
+
   height: 542px;
   margin-right: 46px;
 }
 .CreateAccountImage {
   width: 451px;
-  padding-top: 134px;
+  padding-top: 156px;
 }
 /************************ SigupContainer ******************/
 .SignUpContainer {
@@ -19,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 20.5rem;
+  /* width: 20.5rem; */
 }
 /************************ Title ******************/
 

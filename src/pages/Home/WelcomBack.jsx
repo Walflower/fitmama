@@ -4,7 +4,7 @@ import ShortTextField from "../../components/ShortTextField/ShortTextField";
 import WelcomeBackImage from "../../assets/Images/Sign in-amico-2 1.svg";
 import SignUpWithGoogle from "../../components/SignUpWithGoogle/SignUpWithGoogle";
 import SignUpBlueButton from "../../components/SignUpBlueButton/SigupBlueButton";
-import EyePassewordImage from "../../assets/Images/eye password logo.png";
+import EyePassewordImageOpen from "../../assets/Images/eye password open2.png";
 import WavingHandImage from "../../assets/Images/waving hand.png";
 import SignUpWithGoogleImage from "../../assets/Images/Google Logo.jpg";
 // import CheckBox from "../../components/CheckBox/CheckBox";
@@ -29,7 +29,7 @@ export default function SignUp() {
           <ShortTextField
             text={"Passeword"}
             placeholder="Enter Your Password"
-            image={EyePassewordImage}
+            image={EyePassewordImageOpen}
           />
         </div>
         {/* <div>
