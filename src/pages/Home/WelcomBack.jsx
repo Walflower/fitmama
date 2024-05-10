@@ -7,6 +7,7 @@ import SignUpBlueButton from "../../components/SignUpBlueButton/SigupBlueButton"
 import EyePassewordImageOpen from "../../assets/Images/eye password open2.png";
 import WavingHandImage from "../../assets/Images/waving hand.png";
 import SignUpWithGoogleImage from "../../assets/Images/Google Logo.jpg";
+import { NavHashLink } from "react-router-hash-link";
 // import CheckBox from "../../components/CheckBox/CheckBox";
 
 export default function SignUp() {
@@ -47,9 +48,9 @@ export default function SignUp() {
         </div>
         <div className={styles.LoginContainer}>
           <p>Don’t have an account ? </p>
-          <NavLink className={styles.LogInLink} linkTo="/Home">
+          <NavHashLink className={styles.LogInLink} linkTo="/#Home">
             Sign Up
-          </NavLink>
+          </NavHashLink>
         </div>
       </div>
     </div>

@@ -110,7 +110,7 @@ export default function Home() {
             />
 
             <h3>
-              <b>Live Training Session</b>
+              <b>Matching</b>
             </h3>
             <p>
               We provide free and online training sessions, to aid your health
@@ -300,8 +300,8 @@ export default function Home() {
       </section>
 
       {/**each question needs to be to span down and up */}
-      <section>
-        <h3>#FAQ</h3>
+      {/*<section>
+         <h3>#FAQ</h3>
 
         <span>
           What is the moms in motion web app <img src={Plus} alt="plus sign" />
@@ -321,7 +321,7 @@ export default function Home() {
           Is there a community engagement forum for Moms in Motion{" "}
           <img src={Plus} alt="plus sign" />
         </span>
-      </section>
+      </section> */}
 
       {/** is there health blog api?? we didn't discuss this feature yet */}
       {/* <section>
