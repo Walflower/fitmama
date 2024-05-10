@@ -286,7 +286,7 @@ export default function Home() {
       </section>
 
       {/**each question needs to be to span down and up */}
-      <section>
+      {/* <section>
         <h3>#FAQ</h3>
 
         <span>
@@ -307,7 +307,7 @@ export default function Home() {
           Is there a community engagement forum for Moms in Motion{" "}
           <img src={Plus} alt="plus sign" />
         </span>
-      </section>
+      </section> */}
     </div>
   );
 }

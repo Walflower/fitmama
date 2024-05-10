@@ -148,6 +148,8 @@
 .challenges {
   display: flex;
   justify-content: space-between;
+  gap: 5rem;
+  padding-top: 2.5rem;
 }
 /* .challenge {
   width: 31%;
@@ -161,8 +163,11 @@
 .SectionThreeSub {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 2.5rem;
 }
-
+.liveSession__pic {
+  padding-right: 2.5rem;
+}
 .liveSession__text {
   display: flex;
   flex-direction: column;
