@@ -5,9 +5,9 @@ import { NavHashLink } from "react-router-hash-link";
 
 import Fuel from "../../assets/Images/fuel-image.svg";
 import GetStarted from "../../assets/Images/get-started.svg";
-import Hero from "../../assets/Images/hero-image-landing.svg";
-import ChallengeOne from "../../assets/Challenges/hydration-challenge.svg";
-import ChallengeTwo from "../../assets/Challenges/mindful-eating.svg";
+import Hero from "../../assets/Images/hero-landing-image.svg";
+import ChallengeOne from "../../assets/Images/water.png";
+import ChallengeTwo from "../../assets/Images/smoothie.png";
 import ChallengeThree from "../../assets/Challenges/sleep-well.svg";
 import LiveSession from "../../assets/Challenges/live-sessions.svg";
 import VideoLibrary from "../../assets/Challenges/video-library.svg";
@@ -31,6 +31,7 @@ import ServicesOne from "../../assets/Images/services-one.svg";
 import ServicesTwo from "../../assets/Images/services-two.svg";
 import ServicesThree from "../../assets/Images/services-three.png";
 import FitnessHub from "../../assets/Images/fitness-hub-pic.png";
+import WhiteButton from "../../components/WhiteButton/WhiteButton";
 
 export default function Home() {
   return (
@@ -140,9 +141,9 @@ export default function Home() {
 
       <section id="Community" className={styles.SectionSeven}>
         <div className={styles.subContainer}>
-          <h1 className={styles.heroTitle}>
+          <h2 className={styles.heroTitle}>
             Supportive Community for Your Wellness Journey
-          </h1>
+          </h2>
           <p className={styles.heroParagraph}>
             Join our virtual community to connect with others on similar
             journeys towards better health. Share experiences, seek advice, and
@@ -158,7 +159,36 @@ export default function Home() {
         />
       </section>
 
-      {/**----------------------------------------------- */}
+      {/**--------------------- Wellness Challenges Section -------------------------- */}
+
+      <section className={styles.SectionTwo}>
+        <h2 className={styles.heroTitle}>A wellness challenge</h2>
+        <p className={styles.heroParagraph}>
+          Our Platform provide activities such as hydration, physical activity
+          mindfulness, adequate sleep patterns...
+        </p>
+        <WhiteButton text="Explore More" />
+
+        <section className={styles.challenges}>
+          <div className={styles.card}>
+            <img src={ChallengeOne} alt="hydration challenge" />
+            <p>Hydration Boost Challenge</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={ChallengeTwo} alt="hydration challenge" />
+            <p>Mindful Eating</p>
+          </div>
+
+          <div className={styles.card}>
+            <img src={ChallengeOne} alt="hydration challenge" />
+            <p>Sleep Well Challenge</p>
+          </div>
+        </section>
+      </section>
+
+      {/**----------------------------------------------------------------- */}
+
       <section id="Trainers" className={styles.SectionFour}>
         <h2 className={styles.SectionTwoTitle}>MEET OUR TRAINERS</h2>
         <p className={styles.SectionOneText}>
@@ -239,34 +269,6 @@ export default function Home() {
               and elevate your fitness journey with every session!
             </p>
           </div>
-        </div>
-      </section>
-
-      {/** Might remove the the wellness challenge */}
-      <section className={styles.SectionTwo}>
-        <h3>A wellness challenge</h3>
-        <p>
-          Our Platform provide activities such as hydration, physical activity
-          mindfulness, adequate sleep patterns...
-        </p>
-        <button>Explore More</button>
-
-        <div className={styles.challenges}>
-          <img
-            className={styles.challenge}
-            src={ChallengeOne}
-            alt="hydration challenge"
-          />
-          <img
-            className={styles.challenge}
-            src={ChallengeTwo}
-            alt="mindful eating challenge"
-          />
-          <img
-            className={styles.challenge}
-            src={ChallengeThree}
-            alt="sleep well challenge"
-          />
         </div>
       </section>
 

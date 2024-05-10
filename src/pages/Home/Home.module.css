@@ -90,6 +90,12 @@
 .SectionOne {
   padding: 3rem 6rem;
 }
+.SectionTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 6rem;
+}
 
 .SectionOneTitle {
   font-size: 2rem;
@@ -135,9 +141,6 @@
 }
 
 /* --------Next section-- Wellness Challengee*/
-.SectionTwo {
-  padding: 50px;
-}
 
 .trainers {
   width: 25rem;
@@ -146,9 +149,9 @@
   display: flex;
   justify-content: space-between;
 }
-.challenge {
+/* .challenge {
   width: 31%;
-}
+} */
 
 /* Next section-- Trainer hub*/
 .SectionThree {
