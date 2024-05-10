@@ -36,8 +36,22 @@
   margin-top: 1px;
   margin-bottom: 30px;
 }
-
+/************************ OrWithContainer ******************/
+.OrWithContainer {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-bottom: 5rem;
+}
+.OrWith {
+  font-size: 26px;
+}
+.Line {
+  border: 3rem;
+  width: 10rem;
+  height: 5rem;
+}
 /************************ TextFieldContainer ******************/
 .TextFieldContainer {
+  margin-top: 47px;
   width: 100%;
 }

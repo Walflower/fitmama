@@ -1,5 +1,4 @@
 import styles from "./SignUp.module.css";
-import BlueButton from "../../components/BlueButton/BlueButton";
 import ShortTextField from "../../components/ShortTextField/ShortTextField";
 import CreateAccountImage from "../../assets/Images/signup-image.svg";
 import SignUpWithGoogle from "../../components/SignUpWithGoogle/SignUpWithGoogle";
@@ -14,18 +13,18 @@ export default function SignUp() {
       <div className={styles.SignUpContainer}>
         <div className={styles.SignUpTitleContainer}>
           <p className={styles.SignUpTitle}>Create An Account</p>
-          <p className={styles.SignUpSubTitle}>
-            Connect with your friends today!
-          </p>
         </div>
 
         <div className={styles.TextFieldContainer}>
           <ShortTextField />
         </div>
         <SignUpBlueButton text="Sign Up" />
-        <div>
-          <p>Or With</p>
+
+        <div className={styles.OrWitheContainer}>
+          <div></div>
+          <p className={styles.OrWith}>Or With</p>
         </div>
+
         <div>
           <SignUpWithGoogle text="Signup With Google" />
         </div>
