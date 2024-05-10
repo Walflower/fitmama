@@ -1,12 +1,19 @@
 .CreateAccountContainer {
   display: flex;
+  width: 20.5rem;
+
   /* margin-top: 168px;
   margin-left: 135px; */
 }
 /************************ CreateAccountImage ******************/
-.CreateAccountImageContainer {
-  width: 690px;
-  height: 690px;
+/* .CreateAccountImageContainer {
+  width: 451px;
+  height: 542px;
+  margin-right: 46px;
+} */
+.CreateAccountImage {
+  width: 451px;
+  height: 542px;
   margin-right: 46px;
 }
 /************************ SigupContainer ******************/
@@ -14,44 +21,58 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 20.5rem;
 }
 /************************ Title ******************/
-.SignUpTitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .SignUpTitle {
   display: flex;
-  align-content: center;
-  font-size: 40px;
-  font-weight: 400px;
+  justify-content: start;
+  font-size: 37px;
+  font-weight: 400;
   line-height: 52px;
-  margin-bottom: 0;
-}
-.SignUpSubTitle {
-  font-size: 10px;
-  font-weight: 400px;
-  line-height: 16px;
-  margin-top: 1px;
-  margin-bottom: 30px;
-}
-/************************ OrWithContainer ******************/
-.OrWithContainer {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  border-bottom: 5rem;
-}
-.OrWith {
-  font-size: 26px;
-}
-.Line {
-  border: 3rem;
-  width: 10rem;
-  height: 5rem;
+  margin-bottom: 47px;
 }
 /************************ TextFieldContainer ******************/
 .TextFieldContainer {
-  margin-top: 47px;
   width: 100%;
+}
+
+/************************ OrWithContainer ******************/
+.EyePassewordContainer {
+  display: flex;
+  flex-direction: row;
+}
+/************************ EyePassewordContainer ******************/
+.OrWitheContainer {
+  display: flex;
+  border-bottom: 5rem;
+  width: 20.5rem;
+}
+.OrWith {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.Line {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  width: 116px;
+  height: 1px;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+/************************ LoginContainer ******************/
+.LoginContainer {
+  display: flex;
+  align-items: center;
+}
+/************************ LogInLink ******************/
+.LogInLink {
+  padding-left: 21px;
+  text-decoration-style: none;
 }

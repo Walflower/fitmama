@@ -1,7 +1,11 @@
-.button {
+.SignUpBlueButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #4f7398;
   color: white;
-  width: 100%;
+  width: 19.5rem;
   height: 3.188rem;
   border-radius: 24px;
   border: none;

@@ -1,16 +1,39 @@
+.container {
+  width: 19.5rem;
+  display: flex;
+}
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+}
 .input {
   display: flex;
+
   border-radius: 10px;
   height: 48px;
   padding-left: 11px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 28px;
-  width: 100%;
+  width: 19.5rem;
 
-  &:focus {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: right;
+  background-origin: content-box;
+  padding-right: 13px;
+
+  /* &:focus {
     color: var(--text-primary-color);
     outline: 1px solid var(--text-primary-color);
-  }
+  } */
+}
+
+.image {
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
 }

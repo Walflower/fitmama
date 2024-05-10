@@ -3,6 +3,9 @@ import ShortTextField from "../../components/ShortTextField/ShortTextField";
 import CreateAccountImage from "../../assets/Images/signup-image.svg";
 import SignUpWithGoogle from "../../components/SignUpWithGoogle/SignUpWithGoogle";
 import SignUpBlueButton from "../../components/SignUpBlueButton/SigupBlueButton";
+import EyePassewordImage from "../../assets/Images/eye password logo.png";
+import SignUpWithGoogleImage from "../../assets/Images/Google Logo.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function SignUp() {
   return (
@@ -16,20 +19,41 @@ export default function SignUp() {
         </div>
 
         <div className={styles.TextFieldContainer}>
-          <ShortTextField />
+          <ShortTextField placeholder="Enter Your Username" />
+        </div>
+        <div className={styles.TextFieldContainer}>
+          <ShortTextField placeholder="Enter Your Email" />
+        </div>
+        <div className={styles.TextFieldContainer}>
+          <ShortTextField placeholder="Enter Your Phone Number" />
+        </div>
+        <div className={styles.TextFieldContainer}>
+          <ShortTextField
+            placeholder="Enter Your Password"
+            image={EyePassewordImage}
+          />
         </div>
         <SignUpBlueButton text="Sign Up" />
 
         <div className={styles.OrWitheContainer}>
-          <div></div>
+          <div className={styles.Line}></div>
           <p className={styles.OrWith}>Or With</p>
+          <div className={styles.Line}></div>
         </div>
 
         <div>
-          <SignUpWithGoogle text="Signup With Google" />
+          <SignUpWithGoogle
+            text="Signup With Google"
+            image={SignUpWithGoogleImage}
+            linkTo="/Google"
+          />
         </div>
-        <p>Already have an account? </p>
-        <link rel="stylesheet" href="" />
+        <div className={styles.LoginContainer}>
+          <p>Already have an account?</p>
+          <NavLink className={styles.LogInLink} linkTo="/login">
+            Login
+          </NavLink>
+        </div>
       </div>
     </div>
   );
