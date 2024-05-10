@@ -50,7 +50,7 @@ export default function SignUp() {
         </div>
         <div className={styles.LoginContainer}>
           <p>Already have an account?</p>
-          <NavLink className={styles.LogInLink} linkTo="/login">
+          <NavLink className={styles.LogInLink} linkTo="/Home">
             Login
           </NavLink>
         </div>

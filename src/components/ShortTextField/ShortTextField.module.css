@@ -1,11 +1,17 @@
 .container {
+  display: flex;
+  flex-direction: column;
   width: 19.5rem;
   display: flex;
 }
 .text {
   font-size: 14px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 21px;
+  padding-left: 2px;
+  padding-bottom: 6px;
+  align-items: center;
+  color: #695c5c;
 }
 .input {
   display: flex;
@@ -13,6 +19,7 @@
   border-radius: 10px;
   height: 48px;
   padding-left: 11px;
+  padding-right: 13px;
 
   font-weight: 400;
   font-size: 18px;
@@ -24,7 +31,6 @@
   background-position: center;
   background-position: right;
   background-origin: content-box;
-  padding-right: 13px;
 
   /* &:focus {
     color: var(--text-primary-color);
