@@ -33,7 +33,9 @@ export default function SignUp() {
             image={EyePassewordImage}
           />
         </div>
-        <SignUpBlueButton text="Sign Up" />
+        <Link to="/">
+          <SignUpBlueButton text="Sign Up" />
+        </Link>
 
         <div className={styles.OrWitheContainer}>
           <div className={styles.Line}></div>
@@ -45,12 +47,11 @@ export default function SignUp() {
           <SignUpWithGoogle
             text="Signup With Google"
             image={SignUpWithGoogleImage}
-            linkTo="/Google"
           />
         </div>
         <div className={styles.LoginContainer}>
           <p>Already have an account?</p>
-          <Link className={styles.LogInLink} linkTo="/Home">
+          <Link className={styles.LogInLink} to="/">
             Login
           </Link>
         </div>

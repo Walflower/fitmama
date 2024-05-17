@@ -1,0 +1,43 @@
+/* body {
+  font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: #2a2a2a;
+} */
+
+#twenty:checked ~ .progress > .progress-bar {
+  width: 20%;
+  height: 0.5rem;
+  background-color: #f63a0f;
+}
+
+.radio {
+  display: none;
+}
+.label {
+  display: inline-block;
+  margin: 0 5px;
+  color: #aaa;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &__left {
+    display: flex;
+    margin: 0 5px;
+    width: 1rem;
+    cursor: pointer;
+  }
+  &__right {
+    display: flex;
+    margin: 0 5px;
+    width: 1rem;
+    cursor: pointer;
+  }
+}
+.radio:checked + .label {
+  height: 1rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
