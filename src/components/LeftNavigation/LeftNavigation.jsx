@@ -2,6 +2,15 @@ import styles from "./LeftNavigation.module.css";
 import Lara from "../../assets/Images/ProfileImages/Lara.png";
 import Services from "../../assets/Images/Sidebar/Services.svg";
 
+import Community from "../../assets/Icons/community.svg";
+import Dashboard from "../../assets/Icons/dashboard.svg";
+import FAQ from "../../assets/Icons/faq.svg";
+import Membership from "../../assets/Icons/membership.svg";
+import Rewards from "../../assets/Icons/rewards.svg";
+import Settings from "../../assets/Icons/settings.svg";
+import Testimonial from "../../assets/Icons/testimonial.svg";
+import Trainers from "../../assets/Icons/trainers.svg";
+
 export function LeftNavigation() {
   return (
     <div className={styles.LeftNavigation}>
@@ -22,7 +31,7 @@ export function LeftNavigation() {
 
           <div className={styles.Community}>
             <img
-              src={Services}
+              src={Community}
               alt="Services"
               className={styles.ServicesImage}
             />
@@ -58,28 +67,24 @@ export function LeftNavigation() {
           </div>
           <div className={styles.Settings}>
             <img
-              src={Services}
+              src={Settings}
               alt="Services"
               className={styles.ServicesImage}
             />
             <div className={styles.ServicesTitles}>Settings</div>
           </div>
           <div className={styles.FAQ}>
+            <img src={FAQ} alt="Services" className={styles.ServicesImage} />
+            <div className={styles.ServicesTitles}>FAQ</div>
+          </div>
+          {/* <div className={styles.SignOut}>
             <img
               src={Services}
               alt="Services"
               className={styles.ServicesImage}
             />
             <div className={styles.ServicesTitles}>FAQ</div>
-          </div>
-          <div className={styles.SignOut}>
-            <img
-              src={Services}
-              alt="Services"
-              className={styles.ServicesImage}
-            />
-            <div className={styles.ServicesTitles}>FAQ</div>
-          </div>
+          </div> */}
         </section>
       </div>
     </div>
