@@ -1,0 +1,101 @@
+.LeftNavigation {
+  display: flex;
+}
+.Questionnaire {
+  width: 312px;
+  background-color: #202e3d;
+  color: #ffffff;
+  height: 829px;
+}
+/* ..............userprofile .................. */
+.Navigation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.UserProfile {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.UserImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #ffffff;
+}
+.UserName {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 700;
+  padding-left: 6px;
+}
+/* ..............Services .................. */
+.Services {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.ServicesImage {
+  width: 21.49px;
+  height: 19.11px;
+  background-color: #ffffff;
+}
+.ServicesTitles {
+  padding-left: 28.26px;
+  padding-bottom: 16px;
+}
+.Community {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.Testimonial {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.Trainers {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+/* ....................Subscription......... */
+.Subscription {
+  /* padding-left: 8px; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.Rewards {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.Settings {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.FAQ {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.FAQ {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.SignOut {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
