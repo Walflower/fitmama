@@ -5,8 +5,13 @@
 .Body {
   padding-left: 135px;
   display: flex;
-  justify-content: center;
+
   flex-direction: column;
+}
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
 }
 .QuestionnaireTitle {
   font-weight: 700;
@@ -18,7 +23,7 @@
   /* padding-left: 27px; */
 }
 .StatusBar {
-  padding-top: 28px;
+  /* padding-top: 28px; */
   width: 10px;
 }
 .TextFields {
@@ -28,9 +33,11 @@
 .CheckBoxContainer {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 }
 .CheckBox {
   display: flex;
+  padding-top: 10px;
 }
 
 .CheckBoxTitle {
@@ -43,6 +50,9 @@
   color: #695c5c;
 }
 
+.TextFieldContainer {
+  padding-top: 10px;
+}
 .BlueButton {
   display: flex;
   /* align-content: center; */

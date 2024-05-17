@@ -1,6 +1,8 @@
 import styles from "./LeftNavigation.module.css";
 import Lara from "../../assets/Images/ProfileImages/Lara.png";
 import Services from "../../assets/Images/Sidebar/Services.svg";
+import { Link } from "react-router-dom";
+import LOGO from "../../assets/Images/LOGO.png";
 
 export function LeftNavigation() {
   return (
@@ -80,6 +82,10 @@ export function LeftNavigation() {
             />
             <div className={styles.ServicesTitles}>FAQ</div>
           </div>
+
+          <Link>
+            <img src={LOGO} alt="BackButton" className={styles.Logo} />
+          </Link>
         </section>
       </div>
     </div>
