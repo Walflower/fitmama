@@ -3,54 +3,65 @@
   display: flex;
 }
 .Body {
-  padding-left: 135px;
+  padding-left: 23px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  width: 621px;
 }
-.QuestionnaireTitle {
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
+}
+.DashBoardTitle {
   font-weight: 700;
   font-size: 56px;
   line-height: 67.2px;
   display: flex;
   align-items: center;
-  /* padding-top: 61px; */
-  /* padding-left: 27px; */
-}
-.StatusBar {
-  padding-top: 28px;
-  width: 10px;
-}
-.TextFields {
-  padding-top: 28px;
-  width: 621px;
-}
-.CheckBoxContainer {
+  padding-top: 43px;
   display: flex;
-  flex-direction: column;
+  text-align: center;
 }
-.CheckBox {
-  display: flex;
-}
-
-.CheckBoxTitle {
+.DashParagraph {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 400px;
   line-height: 26px;
-  padding-left: 2px;
-  padding-bottom: 6px;
-  align-items: center;
-  color: #695c5c;
+  padding-top: 62px;
+  padding-bottom: 14px;
+}
+.DashBoardImage {
+  width: 480px;
+  height: 320px;
 }
 
-.BlueButton {
+.JoinMembership {
+  background-color: #dbebe4;
+  width: 201px;
+  height: 198px;
+  border-radius: 16px;
   display: flex;
-  /* align-content: center; */
+  align-items: center;
   justify-content: center;
-  width: 621px;
+  text-align: center;
 }
+.JoinMembershipText {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  color: black;
+  width: 170px;
+  height: 127px;
+  top: 84px;
+  left: 994px;
+  gap: 0px;
+  opacity: 0px;
 
+  display: flex;
+  align-items: center;
+}
 .Link {
   display: flex;
   width: 256px;
+  text-decoration: none;
 }
