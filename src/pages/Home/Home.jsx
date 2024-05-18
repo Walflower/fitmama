@@ -52,8 +52,12 @@ export default function Home() {
           </nav>
 
           <div className={styles.buttons}>
-            <button className={styles.clearButton}>Sign in</button>
-            <BlueButton text="Sign Up" />
+            <NavLink to="/Signup">
+              <button className={styles.clearButton}>Sign in</button>
+            </NavLink>
+            <NavLink to="/Signup">
+              <BlueButton text="Sign Up" />
+            </NavLink>
           </div>
         </div>
       </header>

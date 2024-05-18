@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import LOGO from "../../assets/Images/LOGO.png";
 
 import Community from "../../assets/Icons/community.svg";
-import Dashboard from "../../assets/Icons/dashboard.svg";
+import DashboardImage from "../../assets/Icons/dashboard.svg";
 import FAQ from "../../assets/Icons/faq.svg";
 import Membership from "../../assets/Icons/membership.svg";
 import Rewards from "../../assets/Icons/rewards.svg";
@@ -20,83 +20,86 @@ export function LeftNavigation() {
         <section className={styles.Navigation}>
           <div className={styles.UserProfile}>
             <img src={Lara} alt="Lara" className={styles.UserImage} />
-            <div className={styles.UserName}>Hi Lara</div>
+            <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
-          <div className={styles.Services}>
+
+          <section className={styles.Services}>
             <img
-              src={Services}
+              src={DashboardImage}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Services</div>
-          </div>
+            <p className={styles.ServicesTitles}>Services</p>
+          </section>
 
-          <div className={styles.Community}>
+          <section className={styles.Community}>
             <img
               src={Community}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Community</div>
-          </div>
-          <div className={styles.Testimonial}>
+            <p className={styles.ServicesTitles}>Community</p>
+          </section>
+
+          <section className={styles.Testimonial}>
             <img
-              src={Services}
+              src={Testimonial}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Testimonial</div>
-          </div>
-          <div className={styles.Trainers}>
+            <p className={styles.ServicesTitles}>Testimonial</p>
+          </section>
+
+          <section className={styles.Trainers}>
             <img
-              src={Services}
+              src={Trainers}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Trainers</div>
-          </div>
+            <p className={styles.ServicesTitles}>Trainers</p>
+          </section>
         </section>
 
         <section className={styles.Subscription}>
-          <div classImage={styles.Subscribe}>Subscribe to Fit Mama Hub</div>
-          <div className={styles.Rewards}>
+          <h3 classImage={styles.Subscribe}>Subscribe to Fit Mama Hub</h3>
+
+          <section className={styles.Rewards}>
             <img
-              src={Services}
+              src={Rewards}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Rewards</div>
-          </div>
-          <div className={styles.Settings}>
+            <p className={styles.ServicesTitles}>Rewards</p>
+          </section>
+
+          <section className={styles.Settings}>
             <img
               src={Settings}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>Settings</div>
-          </div>
-          <div className={styles.FAQ}>
-            <img src={FAQ} alt="Services" className={styles.ServicesImage} />
-            <div className={styles.ServicesTitles}>FAQ</div>
-          </div>
+            <p className={styles.ServicesTitles}>Settings</p>
+          </section>
 
-          <div className={styles.SignOut}>
+          <section className={styles.SignOut}>
+            <img
+              src={Membership}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <p className={styles.ServicesTitles}>Membership</p>
+          </section>
+
+          <section className={styles.SignOut}>
             <img
               src={Services}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <div className={styles.ServicesTitles}>FAQ</div>
-          </div>
-          <div className={styles.SignOut}>
-            <img
-              src={Services}
-              alt="Services"
-              className={styles.ServicesImage}
-            />
-            <div className={styles.ServicesTitles}>FAQ</div>
-          </div>
+            <p className={styles.ServicesTitles}>FAQ</p>
+          </section>
 
+          {/**where is this back button going?/............................................ */}
           <Link>
             <img src={LOGO} alt="BackButton" className={styles.Logo} />
           </Link>
