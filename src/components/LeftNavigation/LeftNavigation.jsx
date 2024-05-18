@@ -40,7 +40,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Community">
               <p className={styles.ServicesTitles}>Community</p>
             </Link>
           </section>
