@@ -9,6 +9,7 @@ export default function Dashboard() {
     <div className={styles.Content}>
       <LeftNavigation />
       <img src={BackButton} alt="BackButton" className={styles.BackButton} />
+
       <section className={styles.Body}>
         <div className={styles.DashBoardTitle}>
           Hi Helen, Welcome to Fit Mama hub

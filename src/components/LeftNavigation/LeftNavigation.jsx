@@ -29,7 +29,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Dashboard</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Dashboard</p>
+            </Link>
           </section>
 
           <section className={styles.Community}>
@@ -38,7 +40,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Community</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Community</p>
+            </Link>
           </section>
 
           <section className={styles.Testimonial}>
@@ -47,7 +51,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Testimonial</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Testimonial</p>
+            </Link>
           </section>
 
           <section className={styles.Trainers}>
@@ -56,7 +62,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Trainers</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Trainers</p>
+            </Link>
           </section>
         </section>
 
@@ -69,7 +77,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Rewards</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Rewards</p>
+            </Link>
           </section>
 
           <section className={styles.Settings}>
@@ -78,7 +88,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Settings</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Settings</p>
+            </Link>
           </section>
 
           <section className={styles.SignOut}>
@@ -87,7 +99,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Membership</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Membership</p>
+            </Link>
           </section>
 
           <section className={styles.SignOut}>
@@ -96,7 +110,9 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>FAQ</p>
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>FAQ</p>
+            </Link>
           </section>
 
           {/**where is this back button going?/............................................ */}
