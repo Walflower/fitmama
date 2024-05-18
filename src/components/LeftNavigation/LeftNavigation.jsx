@@ -1,6 +1,8 @@
 import styles from "./LeftNavigation.module.css";
 import Lara from "../../assets/Images/ProfileImages/Lara.png";
 import Services from "../../assets/Images/Sidebar/Services.svg";
+import { Link } from "react-router-dom";
+import LOGO from "../../assets/Images/LOGO.png";
 
 import Community from "../../assets/Icons/community.svg";
 import Dashboard from "../../assets/Icons/dashboard.svg";
@@ -77,14 +79,27 @@ export function LeftNavigation() {
             <img src={FAQ} alt="Services" className={styles.ServicesImage} />
             <div className={styles.ServicesTitles}>FAQ</div>
           </div>
-          {/* <div className={styles.SignOut}>
+
+          <div className={styles.SignOut}>
             <img
               src={Services}
               alt="Services"
               className={styles.ServicesImage}
             />
             <div className={styles.ServicesTitles}>FAQ</div>
-          </div> */}
+          </div>
+          <div className={styles.SignOut}>
+            <img
+              src={Services}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <div className={styles.ServicesTitles}>FAQ</div>
+          </div>
+
+          <Link>
+            <img src={LOGO} alt="BackButton" className={styles.Logo} />
+          </Link>
         </section>
       </div>
     </div>

@@ -11,11 +11,11 @@ export function Q2() {
   return (
     <div className={styles.Content}>
       <LeftNavigation />
-      <img src={BackButton} alt="BackButton" className={styles.BackButton} />
+      <Link to="/Questionnaire">
+        <img src={BackButton} alt="BackButton" className={styles.BackButton} />
+      </Link>
 
       <section className={styles.Body}>
-        {/* <img src={BackButton} alt="BackButton" className={styles.BackButton} /> */}
-
         <div className={styles.QuestionnaireTitle}>Questionnaire</div>
         <div className={styles.StatusBar}>{/* <ProgressBar /> */}</div>
         <section className={styles.TextFields}>

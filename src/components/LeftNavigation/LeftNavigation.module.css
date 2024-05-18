@@ -99,3 +99,10 @@
   align-items: center;
   padding-bottom: 16px;
 }
+
+.Logo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+  width: 00px;
+}

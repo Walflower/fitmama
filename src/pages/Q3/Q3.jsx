@@ -5,13 +5,18 @@ import { LeftNavigation } from "../../components/LeftNavigation/LeftNavigation";
 import BlueButton from "../../components/BlueButton/BlueButton";
 // import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { Link } from "react-router-dom";
+import BackButton from "../../assets/Images/BackButton.jpg";
 
 export function Q3() {
   return (
     <div className={styles.Content}>
-      <LeftNavigation />
+      <Link to="/Questionnaire/Q2">
+        <LeftNavigation />
+        <img src={BackButton} alt="BackButton" className={styles.BackButton} />
+      </Link>
       <section className={styles.Body}>
         <div className={styles.QuestionnaireTitle}>Questionnaire</div>
+
         <div className={styles.StatusBar}>{/* <ProgressBar /> */}</div>
         <section className={styles.TextFields}>
           <div className={styles.CheckBoxContainer}>
@@ -27,7 +32,7 @@ export function Q3() {
           <div className={styles.TextFieldContainer}>
             <ShortTextField
               placeholder="I love the color"
-              text={"IF If yes, what features did you find most helpful?"}
+              text={"If yes, what features did you find most helpful?"}
             />
           </div>
           <div className={styles.TextFieldContainer}>
@@ -47,8 +52,8 @@ export function Q3() {
             </div>
           </div>
           <div className={styles.BlueButton}>
-            <Link className={styles.Link} to="./">
-              <BlueButton text={"Next"} />
+            <Link className={styles.Link} to="/Dashboard">
+              <BlueButton text={"Submit"} />
             </Link>
           </div>
         </section>
