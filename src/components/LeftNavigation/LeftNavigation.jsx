@@ -29,7 +29,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <p className={styles.ServicesTitles}>Services</p>
+            <p className={styles.ServicesTitles}>Dashboard</p>
           </section>
 
           <section className={styles.Community}>

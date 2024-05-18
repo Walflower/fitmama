@@ -33,7 +33,7 @@ export default function SignUp() {
             image={EyePassewordImage}
           />
         </div>
-        <Link to="/">
+        <Link to="/Dashboard">
           <SignUpBlueButton text="Sign Up" />
         </Link>
 
@@ -51,7 +51,7 @@ export default function SignUp() {
         </div>
         <div className={styles.LoginContainer}>
           <p>Already have an account?</p>
-          <Link className={styles.LogInLink} to="/">
+          <Link className={styles.LogInLink} to="/WelcomeBack">
             Login
           </Link>
         </div>
