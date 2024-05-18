@@ -1,0 +1,15 @@
+/* ..............Body .................. */
+.Content {
+  display: flex;
+}
+.Body {
+  padding-left: 135px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
+}
