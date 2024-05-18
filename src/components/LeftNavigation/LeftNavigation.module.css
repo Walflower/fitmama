@@ -1,11 +1,10 @@
 .LeftNavigation {
   display: flex;
+  background-color: #202e3d;
 }
 .Questionnaire {
-  width: 312px;
-  background-color: #202e3d;
+  width: 18rem;
   color: #ffffff;
-  height: 829px;
 }
 /* ..............userprofile .................. */
 .Navigation {
