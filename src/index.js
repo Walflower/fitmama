@@ -21,6 +21,7 @@ import { Q3 } from "./pages/Q3/Q3";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Membership from "./pages/Membership/Membership";
 import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
+import Network from "./pages/Network/Network";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/WelcomeBack" element={<Membership />} />
       <Route path="/Community" element={<CommunityForum />} />
+      <Route path="/Network" element={<Network />} />
     </>
   )
 );
