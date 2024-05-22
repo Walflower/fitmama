@@ -29,7 +29,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Dashboard</p>
             </Link>
           </section>
@@ -40,7 +40,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Community">
+            <Link to="/Community" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Community</p>
             </Link>
           </section>
@@ -51,7 +51,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Testimonial</p>
             </Link>
           </section>
@@ -62,7 +62,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Trainers</p>
             </Link>
           </section>
@@ -77,7 +77,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Rewards</p>
             </Link>
           </section>
@@ -88,7 +88,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Settings</p>
             </Link>
           </section>
@@ -99,7 +99,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Membership</p>
             </Link>
           </section>
@@ -110,7 +110,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>FAQ</p>
             </Link>
           </section>
