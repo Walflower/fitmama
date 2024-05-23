@@ -23,6 +23,7 @@ import Membership from "./pages/Membership/Membership";
 import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
 import Network from "./pages/Network/Network";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Chat from "./pages/Chat/Chat";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
       <Route path="/Community" element={<CommunityForum />} />
       <Route path="/Network" element={<Network />} />
       <Route path="/UserProfile" element={<UserProfile />} />
+      <Route path="/Chat" element={<Chat />} />
     </>
   )
 );
