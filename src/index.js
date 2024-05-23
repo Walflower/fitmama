@@ -22,6 +22,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Membership from "./pages/Membership/Membership";
 import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
 import Network from "./pages/Network/Network";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
       <Route path="/WelcomeBack" element={<Membership />} />
       <Route path="/Community" element={<CommunityForum />} />
       <Route path="/Network" element={<Network />} />
+      <Route path="/UserProfile" element={<UserProfile />} />
     </>
   )
 );

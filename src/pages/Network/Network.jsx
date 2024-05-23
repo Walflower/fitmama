@@ -15,7 +15,7 @@ export default function Network() {
       <LeftNavigation />
 
       <body className={styles.Body}>
-        <Link className={styles.Link} to="/Frances">
+        <Link className={styles.Link} to="/UserProfile">
           <section className={styles.cards}>
             <div className={styles.ImageContainer}>
               <img src={Frances} alt="Frances" className={styles.Image} />
@@ -24,9 +24,9 @@ export default function Network() {
               <h6 className={styles.Kilometers}>2 kilometer Away</h6>
               <h4 className={styles.Names}>Frances</h4>
               <h6 className={styles.TexParagraph}>
-                Vel lacus gravida pulvinar amet. Integer dapibus et ut in quam
-                ultricies nisl cras sem. Massa proin sed malesuada diam. Duis
-                quam tristique et ut varius hendrerit nunc eget quisque.{" "}
+                I'm 32, navigating the challenges of fitness while raising a
+                toddler in Brampton. Join me on my journey to reclaim my health
+                and strength! #FitnessStruggle #MomLifeGoals
               </h6>
             </div>
             <Link className={styles.Connect} to="/Chat">
@@ -41,12 +41,12 @@ export default function Network() {
               <img src={Martha} alt="Martha" className={styles.Image} />
             </div>
             <div className={styles.TextContainer}>
-              <h6 className={styles.Kilometers}>2 kilometer Away</h6>
+              <h6 className={styles.Kilometers}>1.5 kilometer Away</h6>
               <h4 className={styles.Names}>Martha</h4>
               <h6 className={styles.TexParagraph}>
-                Vel lacus gravida pulvinar amet. Integer dapibus et ut in quam
-                ultricies nisl cras sem. Massa proin sed malesuada diam. Duis
-                quam tristique et ut varius hendrerit nunc eget quisque.{" "}
+                I'm dreaming of fitness goals while chasing my toddler in
+                Markham! Let's inspire each other to keep pushing forward, one
+                step at a time. #FitnessDreamer #MomOnAMission
               </h6>
             </div>
             <Link className={styles.Connect} to="/Chat">
@@ -60,12 +60,13 @@ export default function Network() {
               <img src={Matilda} alt="Matilda" className={styles.Image} />
             </div>
             <div className={styles.TextContainer}>
-              <h6 className={styles.Kilometers}>2 kilometer Away</h6>
+              <h6 className={styles.Kilometers}>3 kilometer Away</h6>
               <h4 className={styles.Names}>Matilda</h4>
               <h6 className={styles.TexParagraph}>
-                Vel lacus gravida pulvinar amet. Integer dapibus et ut in quam
-                ultricies nisl cras sem. Massa proin sed malesuada diam. Duis
-                quam tristique et ut varius hendrerit nunc eget quisque.{" "}
+                Exploring the world of fitness with my little one in GTA! Join
+                me as I try new workouts and activities while navigating the
+                joys and struggles of toddlerhood.  #FitExplorer
+                #ToddlerMomAdventures
               </h6>
             </div>
             <Link className={styles.Connect} to="/Chat">
@@ -82,9 +83,13 @@ export default function Network() {
               <h6 className={styles.Kilometers}>2 kilometer Away</h6>
               <h4 className={styles.Names}>Luna</h4>
               <h6 className={styles.TexParagraph}>
-                Vel lacus gravida pulvinar amet. Integer dapibus et ut in quam
-                ultricies nisl cras sem. Massa proin sed malesuada diam. Duis
-                quam tristique et ut varius hendrerit nunc eget quisque.{" "}
+                As a dedicated mom of two lively children, I'm striving to
+                balance family, work, and personal time by joining a fitness
+                community for mothers like me. I want to improve my physical
+                health and find emotional support among other moms facing
+                similar challenges, to help maintain a healthy life balance and
+                set a positive example for my children. I'm looking to connect
+                with moms who share these goals.
               </h6>
             </div>
             <Link className={styles.Connect} to="/Chat">
