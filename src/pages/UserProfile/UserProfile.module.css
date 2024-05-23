@@ -1,0 +1,228 @@
+.Main {
+  display: flex;
+}
+
+.BackButton {
+  padding-left: 1.6875rem;
+  padding-top: 1.697rem;
+  width: 2rem;
+  height: 2rem;
+}
+.Container {
+  display: flex;
+}
+
+.Container2 {
+  display: flex;
+  flex-direction: column;
+  width: 21rem;
+  padding-right: 3.625rem;
+  padding-left: 1.73rem;
+  padding-top: 5.875rem;
+  /* gap: 2rem; */
+}
+.ContainerProfileImage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.ProfileImage {
+  display: flex;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 100%;
+  background-color: aquamarine;
+  border: 0.25rem solid #d9d9d9;
+
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 90%;
+    transition: background-color 0.3s ease;
+  }
+}
+.NoFillButton {
+  margin-bottom: 3rem;
+}
+.Image {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+/* ................Connections............... */
+.Connections {
+  border: 0.0625rem solid #b9c7d6;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-top: 5rem;
+}
+.ConnectButton {
+  :hover {
+    background-color: #5a97d3;
+  }
+}
+
+.ConnectionsTitle {
+  font-size: 1.75rem;
+  line-height: 2.0625rem;
+  font-weight: 700;
+  color: #202e3d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ConnectionImageContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.ConnectionsIcons {
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.ConnectionsIcons1 {
+  position: relative;
+  right: 1rem;
+
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+.ConnectionsIcons2 {
+  position: relative;
+  right: 2rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.ConnectionsIcons3 {
+  position: relative;
+  right: 3rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+.ConnectionsIcons4 {
+  position: relative;
+  right: 4rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* .................ProfileContainer */
+
+.ProfileContainer {
+  margin-left: 3.625rem;
+  width: 34.125rem;
+}
+.HeaderText {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  /* text-align: left; */
+}
+.locationContainer {
+  display: flex;
+  align-items: center;
+}
+.LocationIconImage {
+  width: 2rem;
+  height: 2rem;
+}
+
+.BioContent {
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.ImagesContainer {
+  width: 100%;
+  height: 9.0625rem;
+  display: flex;
+  gap: 6.25rem;
+}
+.ActivitiesImageContainer {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ActivitiesHashtag {
+  font-size: 26.36px;
+  font-weight: 700;
+  line-height: 31.63px;
+  color: #3f5c7a;
+  padding-top: 0.5rem;
+  margin: 0;
+}
+.ACtivitiesImage {
+  width: 61.5px;
+  height: 85.66px;
+}
+
+.MembershipText {
+  width: 7rem;
+  height: 4.4156rem;
+  padding: 0.8656rem 1.5337rem 0.5537rem 1.5625rem;
+  border-radius: 1.0388rem;
+  background-color: #fbdef5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.MemberContainer {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2rem;
+}
