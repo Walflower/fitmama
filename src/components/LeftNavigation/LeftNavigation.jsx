@@ -24,13 +24,47 @@ export function LeftNavigation() {
             <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
 
+<<<<<<< HEAD
           <section className={styles.ServicesContainer}>
+||||||| b708ba1
+          <section className={styles.Services}>
+            <img
+              src={DashboardImage}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <Link to="/Dashboard">
+              <p className={styles.ServicesTitles}>Dashboard</p>
+            </Link>
+          </section>
+
+          <section className={styles.Community}>
+=======
+          <section className={styles.Services}>
+            <img
+              src={DashboardImage}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <Link to="/Dashboard" className={styles.navLink}>
+              <p className={styles.ServicesTitles}>Dashboard</p>
+            </Link>
+          </section>
+
+          <section className={styles.Community}>
+>>>>>>> 00a02e0465c1c8304a385eb101a0cd1b1765fddc
             <img
               src={Community}
               alt="Services"
               className={styles.ServicesImage}
             />
+<<<<<<< HEAD
             <Link to="/Dashboard" className={styles.Links}>
+||||||| b708ba1
+            <Link to="/Dashboard">
+=======
+            <Link to="/Community" className={styles.navLink}>
+>>>>>>> 00a02e0465c1c8304a385eb101a0cd1b1765fddc
               <p className={styles.ServicesTitles}>Community</p>
             </Link>
           </section>
@@ -63,7 +97,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Testimonial</p>
             </Link>
           </section>
@@ -74,7 +108,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Trainers</p>
             </Link>
           </section>
@@ -89,7 +123,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Rewards</p>
             </Link>
           </section>
@@ -100,7 +134,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Settings</p>
             </Link>
           </section>
@@ -111,7 +145,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Membership</p>
             </Link>
           </section>
@@ -122,7 +156,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.navLink}>
               <p className={styles.ServicesTitles}>FAQ</p>
             </Link>
           </section> */}
