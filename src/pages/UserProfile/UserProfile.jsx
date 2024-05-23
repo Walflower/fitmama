@@ -42,7 +42,8 @@ export default function UserProfile() {
               <ConnectButton text={"Connect"} />
             </Link>
           </div>
-          <div className={styles.Connections}>
+
+          <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Connections</p>
 
             <span className={styles.ConnectionImageContainer}>
@@ -72,7 +73,7 @@ export default function UserProfile() {
                 </div>
               </Link>
             </span>
-          </div>
+          </section>
         </section>
         {/* ................ProfileContainer................ */}
         <section className={styles.ProfileContainer}>

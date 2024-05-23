@@ -21,6 +21,7 @@ import { Q3 } from "./pages/Q3/Q3";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Network from "./pages/Network/Network";
 import UserProfile from "./pages/UserProfile/UserProfile";
+import Chat from "./pages/Chat/Chat";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/Network" element={<Network />} />
       <Route path="/UserProfile" element={<UserProfile />} />
+      <Route path="/Chat" element={<Chat />} />
     </>
   )
 );

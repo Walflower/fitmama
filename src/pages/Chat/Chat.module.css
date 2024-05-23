@@ -1,0 +1,97 @@
+.main {
+  display: flex;
+}
+.body {
+  display: flex;
+}
+/* ..................... */
+.Image {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+/* .......Connections.............. */
+.Connections {
+  border: 0.0625rem solid #b9c7d6;
+  display: flex;
+  flex-direction: column;
+  width: 12.5rem;
+  height: fit-content;
+  /* justify-content: center; */
+  border-radius: 1rem;
+  margin-top: 1.6875rem;
+  margin-left: 1rem;
+  background-color: #f8f9fb;
+}
+.ConnectButton {
+  :hover {
+    background-color: #5a97d3;
+  }
+}
+
+.ConnectionsTitle {
+  font-size: 1.75rem;
+  line-height: 2.0625rem;
+  font-weight: 700;
+  color: #202e3d;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ConnectionImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.ConnectionsIcons {
+  display: flex;
+  gap: 1rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 0.25rem solid #d9d9d9;
+  border-radius: 100%;
+  margin-bottom: 1.375rem;
+  :hover {
+    border-radius: 100%;
+    background-color: rgba(209, 209, 209, 0.219);
+    opacity: 70%;
+    transition: background-color 0.3s ease;
+  }
+}
+.Link {
+  text-decoration-line: none;
+  color: #4f7398;
+}
+/* ................ChatBox...... */
+.ChatMessageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.ChatBox {
+  border: 0.0625rem solid #b9c7d6;
+  display: flex;
+  width: 44.625rem;
+  height: 100%;
+  border-radius: 1rem;
+  margin-top: 1.6875rem;
+  margin-left: 1rem;
+  background-color: #f8f9fb;
+}
+.LeftChat {
+  background-color: chocolate;
+  width: 50%;
+  height: 100%;
+}
+.RightChat {
+  background-color: rgb(210, 30, 207);
+  width: 50%;
+  height: 100%;
+}
+.EmojiPicker {
+  width: 2rem;
+}
