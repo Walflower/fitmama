@@ -67,7 +67,7 @@
   text-decoration-line: none;
   color: #4f7398;
 }
-/* ................ChatBox */
+/* ................ChatBox...... */
 .ChatMessageContainer {
   display: flex;
   flex-direction: column;
@@ -91,4 +91,7 @@
   background-color: rgb(210, 30, 207);
   width: 50%;
   height: 100%;
+}
+.EmojiPicker {
+  width: 2rem;
 }

@@ -11,6 +11,7 @@ import Luna from "../../assets/Images/Network/Luna.jpg";
 import Samantha from "../../assets/Images/Network/Samantha.jpg";
 import Crystal from "../../assets/Images/Network/Crystal.jpg";
 import InputBox from "../../components/InputBox/InputBox";
+import EmojiPicker from "emoji-picker-react";
 
 export default function Chat() {
   // interface Comment(){
@@ -70,12 +71,21 @@ export default function Chat() {
             </Link>
           </span>
         </section>
+        {/* ...............................Comments .......... */}
         <section className={styles.ChatMessageContainer}>
           <span className={styles.ChatBox}>
             <div className={styles.LeftChat}></div>
             <div className={styles.RightChat}></div>
           </span>
+          <div className={styles.EmojiPicker}>
+            <EmojiPicker />
+          </div>
           <InputBox />
+          <div>
+            {comments.map((comments) => {
+              return <section></section>;
+            })}
+          </div>
         </section>
       </body>
     </main>
