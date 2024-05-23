@@ -19,6 +19,8 @@ import { Questionnaire } from "./pages/Questionnaire/Questionnaire";
 import { Q2 } from "./pages/Q2/Q2";
 import { Q3 } from "./pages/Q3/Q3";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Membership from "./pages/Membership/Membership";
+import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
 import Network from "./pages/Network/Network";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import Chat from "./pages/Chat/Chat";
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path="/Questionnaire/Q2" element={<Q2 />} />
       <Route path="/Questionnaire/Q2/Q3" element={<Q3 />} />
       <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/WelcomeBack" element={<Membership />} />
+      <Route path="/Community" element={<CommunityForum />} />
       <Route path="/Network" element={<Network />} />
       <Route path="/UserProfile" element={<UserProfile />} />
       <Route path="/Chat" element={<Chat />} />
