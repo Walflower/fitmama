@@ -1,12 +1,17 @@
 .LeftNavigation {
   display: flex;
   background-color: #202e3d;
+  height: 100%;
 }
 .Questionnaire {
   width: 18rem;
   color: #ffffff;
 }
-/* ..............userprofile .................. */
+
+.Links {
+  text-decoration-line: none;
+}
+
 .Navigation {
   display: flex;
   flex-direction: column;
@@ -16,37 +21,45 @@
 .UserProfile {
   display: flex;
   align-items: center;
-  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
 }
 .UserImage {
-  width: 50px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   margin-right: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
 }
 .UserName {
-  font-size: 24px;
-  line-height: 28.8px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   font-weight: 700;
-  padding-left: 6px;
+  padding-left: 0.375rem;
+  width: 10rem;
 }
-/* ..............Services .................. */
-.Services {
+
+.ServicesContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ServicesTitles {
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.ServicesImage {
+  width: 50px;
+}
+
+/* ................................................. */
+/* .Services {
   display: flex;
   align-items: center;
   padding-bottom: 16px;
 }
-.ServicesImage {
-  width: 40px;
-  /* height: 19.11px; */
-}
-.ServicesTitles {
-  padding-left: 28.26px;
-  padding-bottom: 16px;
-  color: white;
-  /* text-decoration: none !important; */
-}
+
 .Community {
   display: flex;
   align-items: center;
@@ -64,15 +77,15 @@
   align-items: center;
   padding-bottom: 16px;
 }
+
 /* ....................Subscription......... */
-.Subscription {
-  /* padding-left: 8px; */
+/*.Subscription {
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   padding-left: 20px;
 }
-.Rewards {
+ .Rewards {
   display: flex;
   align-items: center;
   padding-bottom: 16px;
@@ -107,3 +120,7 @@
   padding-bottom: 16px;
   width: 00px;
 }
+
+.Links {
+  text-decoration-line: none;
+} */

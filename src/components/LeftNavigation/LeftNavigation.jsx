@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import LOGO from "../../assets/Images/LOGO.png";
 
 import Community from "../../assets/Icons/community.svg";
+import Network from "../../assets/Images/Sidebar/Network.png";
 import DashboardImage from "../../assets/Icons/dashboard.svg";
-import FAQ from "../../assets/Icons/faq.svg";
-import Membership from "../../assets/Icons/membership.svg";
-import Rewards from "../../assets/Icons/rewards.svg";
-import Settings from "../../assets/Icons/settings.svg";
-import Testimonial from "../../assets/Icons/testimonial.svg";
-import Trainers from "../../assets/Icons/trainers.svg";
+// import FAQ from "../../assets/Icons/faq.svg";
+// import Membership from "../../assets/Icons/membership.svg";
+// import Rewards from "../../assets/Icons/rewards.svg";
+// import Settings from "../../assets/Icons/settings.svg";
+// import Testimonial from "../../assets/Icons/testimonial.svg";
+// import Trainers from "../../assets/Icons/trainers.svg";
 
 export function LeftNavigation() {
   return (
@@ -23,25 +24,36 @@ export function LeftNavigation() {
             <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
 
-          <section className={styles.Services}>
-            <img
-              src={DashboardImage}
-              alt="Services"
-              className={styles.ServicesImage}
-            />
-            <Link to="/Dashboard">
-              <p className={styles.ServicesTitles}>Dashboard</p>
-            </Link>
-          </section>
-
-          <section className={styles.Community}>
+          <section className={styles.ServicesContainer}>
             <img
               src={Community}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard">
+            <Link to="/Dashboard" className={styles.Links}>
               <p className={styles.ServicesTitles}>Community</p>
+            </Link>
+          </section>
+
+          <section className={styles.ServicesContainer}>
+            <img
+              src={Network}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <Link to="/Dashboard" className={styles.Links}>
+              <p className={styles.ServicesTitles}>Network</p>
+            </Link>
+          </section>
+
+          {/* <section className={styles.Services}>
+            <img
+              src={DashboardImage}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <Link to="/Community">
+              <p className={styles.ServicesTitles}>Dashboard</p>
             </Link>
           </section>
 
@@ -113,12 +125,12 @@ export function LeftNavigation() {
             <Link to="/Dashboard">
               <p className={styles.ServicesTitles}>FAQ</p>
             </Link>
-          </section>
+          </section> */}
 
           {/**where is this back button going?/............................................ */}
-          <Link>
+          {/* <Link>
             <img src={LOGO} alt="BackButton" className={styles.Logo} />
-          </Link>
+          </Link> */}
         </section>
       </div>
     </div>
