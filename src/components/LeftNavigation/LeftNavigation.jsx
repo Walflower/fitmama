@@ -41,7 +41,7 @@ export function LeftNavigation() {
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard" className={styles.Links}>
+            <Link to="/Network" className={styles.Links}>
               <p className={styles.ServicesTitles}>Network</p>
             </Link>
           </section>
