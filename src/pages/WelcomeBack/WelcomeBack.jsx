@@ -38,7 +38,7 @@ export function WelcomeBack() {
           <CheckBox />
         </div> */}
         <div className={styles.LogIn}>
-          <Link to="/Dashboard">
+          <Link to="/Community">
             <SignUpBlueButton text="Login" />
           </Link>
         </div>

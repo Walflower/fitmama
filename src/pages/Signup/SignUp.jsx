@@ -33,7 +33,7 @@ export default function SignUp() {
             image={EyePassewordImage}
           />
         </div>
-        <Link to="/Dashboard">
+        <Link to="/Community">
           <SignUpBlueButton text="Sign Up" />
         </Link>
 
