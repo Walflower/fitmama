@@ -1,12 +1,20 @@
 .LeftNavigation {
   display: flex;
   background-color: #202e3d;
-  height: 100%;
+
+  position: fixed; /* Fix the navigation bar to the side */
+  top: 0;
+  left: 0;
+  width: 18rem; /* Adjust the width as needed */
+  height: 100vh; /* Full height to cover from top to bottom */
+
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  overflow-y: auto; /* Scroll within the navigation bar if content overflows */
+  z-index: 1000; /* Ensure it is on top of other content */
 }
-.Questionnaire {
+.Container {
   width: 18rem;
   color: #ffffff;
-  gap: 6.25rem;
 }
 
 .Links {
@@ -38,7 +46,7 @@
   height: 3rem;
   margin-right: 1rem;
   border-radius: 100%;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 .UserName {
   font-size: 1.5rem;

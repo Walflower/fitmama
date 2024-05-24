@@ -1,6 +1,6 @@
 import styles from "./CommunityForum.module.css";
 import Lara from "../../assets/Images/ProfileImages/Lara.png";
-// import axios from "axios";
+import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
 // import InputEmoji from "react-input-emoji";
 // import EmojiPicker from "emoji-picker-react";
@@ -31,18 +31,18 @@ export function CommunityForum() {
   //   console.log("enter", text);
   // }
   // ................................................................................
-  // useEffect(() => {
-  //   //getting book list from api
-  //   const getPosts = async () => {
-  //     try {
-  //       const response = await axios.get("http://localhost:9000/");
-  //       setPostList(response.data);
-  //     } catch (error) {
-  //       console.error("This is the error ", error);
-  //     }
-  //   };
-  //   getPosts();
-  // }, []);
+  useEffect(() => {
+    //getting book list from api
+    const getPosts = async () => {
+      try {
+        const response = await axios.get("http://localhost:9000/");
+        setPostList(response.data);
+      } catch (error) {
+        console.error("This is the error ", error);
+      }
+    };
+    getPosts();
+  }, []);
 
   const addPost = async (e) => {
     // e.preventDefault();
@@ -70,22 +70,22 @@ export function CommunityForum() {
       alert("Failed to add post, you have errors in you form");
     }
 
-    // postNewPost(name, post);
+    postNewPost(name, post);
   };
 
-  // const postNewPost = async (name, post) => {
-  //   try {
-  //     const newPost = {
-  //       name: name,
-  //       post: post,
-  //     };
+  const postNewPost = async (name, post) => {
+    try {
+      const newPost = {
+        name: name,
+        post: post,
+      };
 
-  //     const postresponse = await axios.post("http://localhost:9000", newPost);
-  //     setPostList([newPost, ...postList]);
-  //   } catch (error) {
-  //     console.error("This is the error ", error);
-  //   }
-  // };
+      const postresponse = await axios.post("http://localhost:9000", newPost);
+      setPostList([newPost, ...postList]);
+    } catch (error) {
+      console.error("This is the error ", error);
+    }
+  };
 
   return (
     <div className={styles.content}>
@@ -93,7 +93,7 @@ export function CommunityForum() {
 
       <main className={styles.main}>
         <section className={styles.container}>
-          {/* ....................NyakumaAdde...................... */}
+          {/* ....................NyakumaAdded..............currently hardcoded need to render the images from the backend....... */}
 
           <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Feed</p>
@@ -132,7 +132,7 @@ export function CommunityForum() {
           </section>
 
           {/* ....................Nyakuma Add...................... */}
-          <ul className="list">
+          <ul className={styles.list}>
             {postList?.map((post) => {
               return (
                 <li key={post.id} className={styles.post}>

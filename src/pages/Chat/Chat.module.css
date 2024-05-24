@@ -1,8 +1,7 @@
-.main {
-  display: flex;
-}
 .body {
   display: flex;
+  padding-left: 17rem;
+  justify-content: center;
 }
 /* ..................... */
 .Image {

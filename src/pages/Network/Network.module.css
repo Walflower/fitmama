@@ -1,12 +1,13 @@
 /* ..............Body .................. */
-.main {
+/* .main {
   display: flex;
-}
+} */
 .Body {
   display: flex;
+  justify-content: center;
 
   flex-wrap: wrap;
-  padding-left: 2rem;
+  padding-left: 18rem;
 }
 .Link {
   text-decoration-line: none;
