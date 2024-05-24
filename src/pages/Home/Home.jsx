@@ -22,7 +22,7 @@ import Minus from "../../assets/Images/minus-sign.svg";
 import BlogOne from "../../assets/Challenges/blog-one.svg";
 import BlogTwo from "../../assets/Challenges/blog-two.svg";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/Logos/fit-mama-hub-logo.svg";
+import Logo from "../../assets/Images/Sidebar/LOGO.png";
 import BlueButton from "../../components/BlueButton/BlueButton";
 import UnderLineButton from "../../components/UnderLineButton/UnderLineButton";
 import GreenButton from "../../components/GreenButton/GreenButton";
