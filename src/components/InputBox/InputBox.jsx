@@ -12,7 +12,7 @@ export default function InputBox() {
         />
       </form>
       <div className={styles.IconContainer}>
-        <img src={SendIcon} alt="Samantha" className={styles.Icon} />
+        <img src={SendIcon} alt="SendIcon" className={styles.Icon} />
       </div>
     </section>
   );
