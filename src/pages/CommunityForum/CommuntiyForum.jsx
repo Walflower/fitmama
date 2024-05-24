@@ -14,6 +14,13 @@ import { Link } from "react-router-dom";
 
 import ClearButton from "../../components/ClearButton/ClearButton";
 
+import Frances from "../../assets/Images/Network/Frances.png";
+import Martha from "../../assets/Images/Network/Martha.png";
+import Matilda from "../../assets/Images/Network/Matilda.png";
+import Luna from "../../assets/Images/Network/Luna.jpg";
+import Samantha from "../../assets/Images/Network/Samantha.jpg";
+import InputBox from "../../components/InputBox/InputBox";
+
 export function CommunityForum() {
   const [postList, setPostList] = useState([]);
   const formRef = useRef(null);
@@ -86,7 +93,45 @@ export function CommunityForum() {
 
       <main className={styles.main}>
         <section className={styles.container}>
-          <h1>Feed</h1>
+          {/* ....................NyakumaAdde...................... */}
+
+          <section className={styles.Connections}>
+            <p className={styles.ConnectionsTitle}>Feed</p>
+
+            <span className={styles.ConnectionImageContainer}>
+              <Link to="/" className={styles.ConnectionsLink}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Frances} alt="Frances" className={styles.Image} />
+                </div>
+              </Link>
+              <Link to="/">
+                <div className={styles.ConnectionsIcons1}>
+                  <img src={Martha} alt="Martha" className={styles.Image} />
+                </div>
+              </Link>
+              <Link to="/">
+                <div className={styles.ConnectionsIcons2}>
+                  <img src={Matilda} alt="Matilda" className={styles.Image} />
+                </div>
+              </Link>
+              <Link to="/">
+                <div className={styles.ConnectionsIcons3}>
+                  <img src={Luna} alt="Luna" className={styles.Image} />
+                </div>
+              </Link>
+              <Link to="/" ConnectionsLink>
+                <div className={styles.ConnectionsIcons4}>
+                  <img src={Samantha} alt="Samantha" className={styles.Image} />
+                </div>
+              </Link>
+
+              <div className={styles.ConnectionsIconsMore}>
+                <div className={styles.ImageMore}>20+</div>
+              </div>
+            </span>
+          </section>
+
+          {/* ....................Nyakuma Add...................... */}
           <ul className="list">
             {postList?.map((post) => {
               return (
@@ -168,21 +213,22 @@ export function CommunityForum() {
         </section>
 
         <div>
-          <h2 className={styles.formTitle}>Add a New Post</h2>
+          <p className={styles.ConnectionsTitle2}>Add a New Post</p>
+
           <form onSubmit={addPost} ref={formRef} className={styles.form}>
-            <div className="form__container">
-              <label className="form__label">Name:</label>
+            <div className={styles.formContainer}>
+              <label className={styles.LabelTitle}>Name</label>
               <input
                 name="name"
                 type="text"
                 placeholder="Name"
-                className="form__input"
+                className={styles.Input}
                 // ref={formRef}
               />
             </div>
 
             <div className={styles.formContainer}>
-              <label className={styles.label}>New Post:</label>
+              <label className={styles.LabelTitle}>New Post:</label>
               <textarea
                 name="post"
                 type="text"
@@ -202,7 +248,7 @@ export function CommunityForum() {
                 onEnter={addPost}
               /> */}
               <button text="Submit" className={styles.formButton}>
-                post
+                POST
               </button>
             </div>
           </form>
