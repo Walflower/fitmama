@@ -18,7 +18,7 @@ import SignOut from "../../assets/Images/Sidebar/SignOut.png";
 export function LeftNavigation() {
   return (
     <div className={styles.LeftNavigation}>
-      <div className={styles.Questionnaire}>
+      <div className={styles.Container}>
         <section className={styles.Navigation}>
           <div className={styles.UserProfile}>
             <img src={Lara} alt="Lara" className={styles.UserImage} />
