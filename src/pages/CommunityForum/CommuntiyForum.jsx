@@ -3,7 +3,7 @@ import Lara from "../../assets/Images/ProfileImages/Lara.png";
 import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
 import InputEmoji from "react-input-emoji";
-import EmojiPicker from "emoji-picker-react";
+// import EmojiPicker from "emoji-picker-react";
 
 import { LeftNavigation } from "../../components/LeftNavigation/LeftNavigation";
 import greenHeart from "../../assets/Icons/green-heart.svg";

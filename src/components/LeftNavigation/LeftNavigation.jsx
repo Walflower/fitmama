@@ -24,13 +24,24 @@ export function LeftNavigation() {
             <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
 
-          <section className={styles.ServicesContainer}>
+          <section className={styles.Services}>
+            <img
+              src={DashboardImage}
+              alt="Services"
+              className={styles.ServicesImage}
+            />
+            <Link to="/Dashboard" className={styles.navLink}>
+              <p className={styles.ServicesTitles}>Dashboard</p>
+            </Link>
+          </section>
+
+          <section className={styles.Community}>
             <img
               src={Community}
               alt="Services"
               className={styles.ServicesImage}
             />
-            <Link to="/Dashboard" className={styles.Links}>
+            <Link to="/Community" className={styles.navLink}>
               <p className={styles.ServicesTitles}>Community</p>
             </Link>
           </section>
