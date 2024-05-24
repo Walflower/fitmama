@@ -34,7 +34,22 @@ export default function Chat() {
   return (
     <main className={styles.main}>
       <LeftNavigation />
+
       <body className={styles.body}>
+        <section className={styles.ChatMessageContainer}>
+          <span className={styles.ChatBox}>
+            <div className={styles.LeftChat}></div>
+            <div className={styles.RightChat}></div>
+          </span>
+          <div className={styles.EmojiPicker}></div>
+          <InputBox />
+          <div>
+            {comments.map((comments) => {
+              return <section></section>;
+            })}
+          </div>
+        </section>
+
         <section className={styles.Connections}>
           <p className={styles.ConnectionsTitle}>Connections</p>
 
@@ -72,21 +87,6 @@ export default function Chat() {
           </span>
         </section>
         {/* ...............................Comments .......... */}
-        <section className={styles.ChatMessageContainer}>
-          <span className={styles.ChatBox}>
-            <div className={styles.LeftChat}></div>
-            <div className={styles.RightChat}></div>
-          </span>
-          <div className={styles.EmojiPicker}>
-            <EmojiPicker />
-          </div>
-          <InputBox />
-          <div>
-            {comments.map((comments) => {
-              return <section></section>;
-            })}
-          </div>
-        </section>
       </body>
     </main>
   );
