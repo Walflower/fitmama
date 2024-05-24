@@ -6,6 +6,7 @@
 .Questionnaire {
   width: 18rem;
   color: #ffffff;
+  gap: 6.25rem;
 }
 
 .Links {
@@ -16,6 +17,14 @@
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  padding-left: 20px;
+}
+
+.Navigation2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
   padding-left: 20px;
 }
 .UserProfile {
@@ -42,15 +51,46 @@
 .ServicesContainer {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
+.ServicesContainerNetwork {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .ServicesTitles {
   color: white;
   font-weight: 600;
   font-size: 1.25rem;
 }
 .ServicesImage {
-  width: 50px;
+  width: 3.125rem;
+}
+.ServicesImageNetwork {
+  width: 2.2rem;
+  padding-left: 0.5rem;
+}
+
+.ServicesTitles {
+  color: white;
+}
+.navLink {
+  text-decoration-line: none;
+  :hover {
+    background-color: #3f5c7a;
+    border-radius: 1rem;
+  }
+}
+.LogoContainer {
+  margin-bottom: 2rem;
+}
+.Logo {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  margin: 0.8rem;
+  padding-left: 0.5rem;
 }
 
 /* ................................................. */
@@ -64,15 +104,10 @@
   width: 40px;
   /* height: 19.11px; */
 
-
-.navLink {
+/* .navLink {
   text-decoration: none;
 }
-.ServicesTitles {
-  padding-left: 28.26px;
-  padding-bottom: 16px;
-  color: white;
-}
+
 .Community {
   display: flex;
   align-items: center;
@@ -89,7 +124,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 16px;
-}
+} */
 
 /* ....................Subscription......... */
 /*.Subscription {
@@ -97,7 +132,7 @@
   flex-direction: column;
   padding-top: 10px;
   padding-left: 20px;
-}
+ }
  .Rewards {
   display: flex;
   align-items: center;
@@ -108,9 +143,9 @@
   display: flex;
   align-items: center;
   padding-bottom: 16px;
-}
+} */
 
-.FAQ {
+/* .FAQ {
   display: flex;
   align-items: center;
   padding-bottom: 16px;
@@ -127,13 +162,4 @@
   padding-bottom: 16px;
 }
 
-.Logo {
-  display: flex;
-  align-items: center;
-  padding-bottom: 16px;
-  width: 00px;
-}
-
-.Links {
-  text-decoration-line: none;
-} */
+ */

@@ -24,6 +24,11 @@ import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
 import Network from "./pages/Network/Network";
 import UserProfile from "./pages/UserProfile/UserProfile";
 import Chat from "./pages/Chat/Chat";
+import Challenges from "./pages/Challenges/Challenges";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import Settings from "./pages/Settings/Settings";
+import FAQ from "./pages/FAQ/FAQ";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +45,11 @@ const router = createBrowserRouter(
       <Route path="/Network" element={<Network />} />
       <Route path="/UserProfile" element={<UserProfile />} />
       <Route path="/Chat" element={<Chat />} />
+      <Route path="/Challenges" element={<Challenges />} />
+      <Route path="/AboutUs" element={<AboutUs />} />
+      <Route path="/Settings" element={<Settings />} />
+      <Route path="/FAQ" element={<FAQ />} />
+      <Route path="/ContactUs" element={<ContactUs />} />
     </>
   )
 );
