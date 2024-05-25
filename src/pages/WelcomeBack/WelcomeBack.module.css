@@ -9,6 +9,9 @@
   /* width: 451px; */
   height: 542px;
   margin-right: 46px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .CreateAccountImage {
   width: 451px;
@@ -21,6 +24,9 @@
   align-items: center;
   justify-content: center;
   width: 20.5rem;
+}
+.LOGO {
+  background-color: #3f5c7a;
 }
 /************************ Title ******************/
 

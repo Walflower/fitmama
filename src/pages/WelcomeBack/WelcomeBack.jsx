@@ -7,6 +7,7 @@ import SignUpBlueButton from "../../components/SignUpBlueButton/SigupBlueButton"
 import EyePassewordImageOpen from "../../assets/Images/eye password open2.png";
 import WavingHandImage from "../../assets/Images/waving hand.png";
 import SignUpWithGoogleImage from "../../assets/Images/Google Logo.jpg";
+import LOGO from "../../assets/Images/Sidebar/LOGO.png";
 
 import { Link } from "react-router-dom";
 // import CheckBox from "../../components/CheckBox/CheckBox";
@@ -14,9 +15,15 @@ import { Link } from "react-router-dom";
 export function WelcomeBack() {
   return (
     <div className={styles.WelcomeBackContainer}>
-      <div className={styles.WelcomeBackImageContainer}>
-        <img className={styles.WelcomeBackImage} src={WelcomeBackImage} />
+      <div>
+        <div className={styles.WelcomeBackImageContainer}>
+          <img className={styles.WelcomeBackImage} src={WelcomeBackImage} />
+        </div>
+        <div className={styles.WelcomeBackImageContainer}>
+          <img className={styles.LOGO} src={LOGO} />
+        </div>
       </div>
+
       <div className={styles.SignUpContainer}>
         <div className={styles.SignUpTitleContainer}>
           <p className={styles.SignUpTitle}>
