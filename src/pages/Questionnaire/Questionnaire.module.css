@@ -1,12 +1,18 @@
-/* ..............Body .................. */
 .Content {
   display: flex;
+  justify-content: center;
 }
 .Body {
-  padding-left: 135px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  margin-left: 20rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
 }
 .QuestionnaireTitle {
   font-weight: 700;
@@ -14,8 +20,7 @@
   line-height: 67.2px;
   display: flex;
   align-items: center;
-  /* padding-top: 61px; */
-  /* padding-left: 27px; */
+  justify-content: center;
 }
 .StatusBar {
   padding-top: 28px;
