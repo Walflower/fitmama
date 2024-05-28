@@ -1,14 +1,24 @@
 /* ..............Body .................. */
 .main {
   display: flex;
+  justify-content: space-between;
 }
 .Body {
   display: flex;
-
   flex-wrap: wrap;
-  padding-left: 2rem;
+  margin-left: 20rem;
+  margin-top: 3rem;
 }
-.Link {
+/* .UserProfile {
+  height: 10rem;
+} */
+.UserImage {
+  height: 10rem;
+  border-radius: 100%;
+}
+
+/* .............................. */
+/* .Link {
   text-decoration-line: none;
   color: black;
   :hover {
@@ -66,4 +76,4 @@
   :hover {
     background-color: #4f85bb;
   }
-}
+} */
