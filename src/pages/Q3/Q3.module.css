@@ -3,10 +3,11 @@
   display: flex;
 }
 .Body {
-  padding-left: 135px;
   display: flex;
-
   flex-direction: column;
+  margin-left: 20rem;
+  margin-top: 3rem;
+  justify-content: center;
 }
 .BackButton {
   padding-left: 27px;

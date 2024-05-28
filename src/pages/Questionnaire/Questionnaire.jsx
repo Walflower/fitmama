@@ -34,19 +34,24 @@ export function Questionnaire() {
           </div>
           <div className={styles.CheckBoxContainer}>
             <div className={styles.CheckBoxTitle}>
-              Are you currently pregnant?
+              Would you like to join challenges with other members?
             </div>
             <div className={styles.CheckBox}>
               <CheckBox text={"Yes"} />
               <CheckBox text={"No"} />
             </div>
           </div>
-          <div className={styles.BlueButton}>
-            <Link className={styles.Link} to="/Questionnaire/Q2">
-              <BlueButton text={"Next"} />
-            </Link>
-          </div>
         </section>
+        <div className={styles.BlueButton}>
+          <Link className={styles.Link} to="/Questionnaire/Q2">
+            <BlueButton text={"Next"} />
+          </Link>
+        </div>
+        {/* <div className={styles.BlueButtonContainer}>
+          <Link className={styles.Link} to="/Questionnaire/Q2">
+            <BlueButton text={"Next"} className={styles.BlueButton} />
+          </Link>
+        </div> */}
       </section>
     </div>
   );

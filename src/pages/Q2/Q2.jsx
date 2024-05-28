@@ -21,19 +21,19 @@ export function Q2() {
         <section className={styles.TextFields}>
           <div className={styles.TextFieldContainer}>
             <ShortTextField
-              placeholder="To have a flat Stomach"
+              placeholder="To walk 3 blocks"
               text={"What are your primary fitness goals?"}
             />
           </div>
           <div className={styles.TextFieldContainer}>
             <ShortTextField
-              placeholder="Yoga"
+              placeholder="Walking my dog"
               text={"What types of physical activities do you enjoy?"}
             />
           </div>
           <div className={styles.TextFieldContainer}>
             <ShortTextField
-              placeholder="I can't move my right arm"
+              placeholder="none"
               text={"Do you have any fitness limitations or concerns?"}
             />
           </div>
@@ -54,8 +54,8 @@ export function Q2() {
             </div>
           </div>
           <div className={styles.BlueButton}>
-            <Link className={styles.Link} to="/Questionnaire/Q2/Q3">
-              <BlueButton text={"Next"} />
+            <Link className={styles.Link} to="/Settings">
+              <BlueButton text={"Submit"} />
             </Link>
           </div>
         </section>

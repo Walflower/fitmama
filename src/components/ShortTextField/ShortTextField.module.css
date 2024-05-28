@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 19.5rem;
   display: flex;
 }
 .text {
@@ -25,7 +24,7 @@
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 28px;
-  width: 19.5rem;
+  width: 100%;
 
   background-repeat: no-repeat;
   background-position: center;
