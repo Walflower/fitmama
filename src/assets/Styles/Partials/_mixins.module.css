@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media screen and (min-width: 767px) {
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+  }
+}
