@@ -1,69 +1,67 @@
-/* ..............Body .................. */
-.main {
+.Content {
   display: flex;
+  justify-content: center;
 }
 .Body {
   display: flex;
-
-  flex-wrap: wrap;
-  padding-left: 2rem;
+  flex-direction: column;
+  margin-left: 20rem;
+  margin-top: 3rem;
+  justify-content: center;
 }
-.Link {
-  text-decoration-line: none;
-  color: black;
-  :hover {
-    background-color: rgb(206, 205, 205);
-  }
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
 }
-
-.cards {
-  width: 16.23rem;
-  height: 23.32rem;
-  margin: 3rem 1rem 0rem 1rem;
-  border-bottom: 1rem;
-  background-color: rgb(238, 238, 238);
+.QuestionnaireTitle {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.StatusBar {
+  padding-top: 28px;
+  width: 10px;
+}
+.TextFields {
+  padding-top: 28px;
+  width: 621px;
+}
+.CheckBoxContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 0.1px solid rgb(206, 205, 205);
-  border-radius: 0.5rem;
-  padding: 0.2rem;
 }
-.ImageContainer {
-  width: 16.26rem;
-  height: 15.92rem;
-}
-.Image {
-  width: 100%;
-  border-radius: 0.5rem;
-  :hover {
-    background-color: rgb(206, 205, 205);
-  }
-}
-.TextContainer {
-  width: 16.23rem;
-  height: 9.46rem;
+.CheckBox {
+  display: flex;
 }
 
-.Kilometers {
-  margin-bottom: 8px;
-  margin-top: 0;
-  margin: 0.2rem;
+.CheckBoxTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 2px;
+  padding-bottom: 6px;
+  align-items: center;
+  color: #695c5c;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
-.Names {
-  margin: 0;
-  padding: 0.2rem;
-}
-.TexParagraph {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.2rem;
+.BlueButton {
+  display: flex;
+  /* align-content: center; */
+  justify-content: center;
+  width: 621px;
 }
 
-.Connect {
-  padding: 0;
-  :hover {
-    background-color: #4f85bb;
-  }
+.Link {
+  display: flex;
+  width: 256px;
 }
