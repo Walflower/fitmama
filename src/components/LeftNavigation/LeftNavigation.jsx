@@ -24,7 +24,16 @@ export function LeftNavigation() {
             <img src={Lara} alt="Lara" className={styles.UserImage} />
             <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
-
+          <Link to="/Settings" className={styles.navLink}>
+            <section className={styles.ServicesContainer}>
+              <img
+                src={Settings}
+                alt="Settings"
+                className={styles.ServicesImage}
+              />
+              <p className={styles.ServicesTitles}>Profile</p>
+            </section>
+          </Link>
           <Link to="/Community" className={styles.navLink}>
             <section className={styles.ServicesContainer}>
               <img
@@ -74,16 +83,7 @@ export function LeftNavigation() {
               <p className={styles.ServicesTitles}>About Us</p>
             </section>
           </Link>
-          <Link to="/Settings" className={styles.navLink}>
-            <section className={styles.ServicesContainer}>
-              <img
-                src={Settings}
-                alt="Settings"
-                className={styles.ServicesImage}
-              />
-              <p className={styles.ServicesTitles}>Settings</p>
-            </section>
-          </Link>
+
           <Link to="/FAQ" className={styles.navLink}>
             <section className={styles.ServicesContainer}>
               <img src={FAQ} alt="FAQ" className={styles.ServicesImage} />

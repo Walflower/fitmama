@@ -1,0 +1,132 @@
+/* ..............Body .................. */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.Body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  margin-top: 3rem;
+}
+.UserProfile {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+.ImageBorder {
+  width: 10rem;
+  border-radius: 100%;
+}
+.UserImage {
+  height: 10rem;
+  width: 10.8rem;
+  border-radius: 100%;
+}
+.ContentContainer {
+  display: flex;
+}
+.content {
+  padding-right: 5rem;
+}
+.BlueButton {
+  display: flex;
+  width: 16rem;
+  justify-content: space-between;
+}
+.BlueButtonLink {
+  display: flex;
+  width: 46rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration-line: none;
+}
+
+.nextButton {
+  display: flex;
+  width: 5rem;
+  height: 4rem;
+  justify-content: space-between;
+}
+
+/* @media screen and(min-width:450px) {
+  .nextButton {
+    width: 10rem;
+  }
+} */
+
+/* .CheckBoxTitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 2px;
+  padding-bottom: 6px;
+  align-items: center;
+  color: #695c5c;
+}
+
+
+.Content {
+  display: flex;
+  justify-content: center;
+}
+.Body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+.BackButton {
+  padding-left: 27px;
+  width: 32px;
+  height: 32px;
+}
+.QuestionnaireTitle {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 67.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.StatusBar {
+  padding-top: 28px;
+  width: 10px;
+}
+.TextFields {
+  padding-top: 28px;
+  width: 621px;
+}
+.CheckBoxContainer {
+  display: flex;
+  flex-direction: column;
+}
+.CheckBox {
+  display: flex;
+}
+
+.CheckBoxTitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 2px;
+  padding-bottom: 6px;
+  align-items: center;
+  color: #695c5c;
+}
+
+.BlueButton {
+  display: flex;
+  /* align-content: center; */
+/* justify-content: center;
+  width: 621px;
+}
+
+.Link {
+  display: flex;
+  width: 256px;
+} */

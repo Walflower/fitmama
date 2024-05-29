@@ -15,9 +15,7 @@ import Home from "./pages/Home/Home";
 import reportWebVitals from "./reportWebVitals";
 import SignUp from "./pages/Signup/SignUp";
 import { WelcomeBack } from "./pages/WelcomeBack/WelcomeBack";
-import { Questionnaire } from "./pages/Questionnaire/Questionnaire";
-import { Q2 } from "./pages/Q2/Q2";
-import { Q3 } from "./pages/Q3/Q3";
+
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Membership from "./pages/Membership/Membership";
 import { CommunityForum } from "./pages/CommunityForum/CommuntiyForum";
@@ -26,7 +24,7 @@ import UserProfile from "./pages/UserProfile/UserProfile";
 import Chat from "./pages/Chat/Chat";
 import Challenges from "./pages/Challenges/Challenges";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import Settings from "./pages/Settings/Settings";
+import Profile from "./pages/Profile/Profile";
 import FAQ from "./pages/FAQ/FAQ";
 import ContactUs from "./pages/ContactUs/ContactUs";
 
@@ -36,9 +34,6 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/Signup" element={<SignUp />} />
       <Route path="/WelcomeBack" element={<WelcomeBack />} />
-      <Route path="/Questionnaire" element={<Questionnaire />} />
-      <Route path="/Questionnaire/Q2" element={<Q2 />} />
-      <Route path="/Questionnaire/Q2/Q3" element={<Q3 />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/WelcomeBack" element={<Membership />} />
       <Route path="/Community" element={<CommunityForum />} />
@@ -47,7 +42,7 @@ const router = createBrowserRouter(
       <Route path="/Chat" element={<Chat />} />
       <Route path="/Challenges" element={<Challenges />} />
       <Route path="/AboutUs" element={<AboutUs />} />
-      <Route path="/Settings" element={<Settings />} />
+      <Route path="/Settings" element={<Profile />} />
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/ContactUs" element={<ContactUs />} />
     </>

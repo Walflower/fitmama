@@ -14,23 +14,6 @@ import InputBox from "../../components/InputBox/InputBox";
 import EmojiPicker from "emoji-picker-react";
 
 export default function Chat() {
-  // interface Comment(){
-  //   <id:string></id:string>
-  //   body:string;
-  // }
-  const dummyComments = [
-    {
-      Id: "1",
-      body: "Hello! I saw your post about wanting to stay consistent with workouts. Im in the same boat! Maybe we could be accountability buddies?",
-    },
-    {
-      Id: "2",
-      body: "That sounds awesome! Having someone to check in with would definitely keep me on track. What kind of workouts do you usually do?",
-    },
-  ];
-
-  const [comments, setComments] = useState([dummyComments]);
-
   return (
     <main className={styles.main}>
       <LeftNavigation />
@@ -43,11 +26,11 @@ export default function Chat() {
           </span>
           <div className={styles.EmojiPicker}></div>
           <InputBox />
-          <div>
+          {/* <div>
             {comments.map((comments) => {
               return <section></section>;
             })}
-          </div>
+          </div> */}
         </section>
 
         <section className={styles.Connections}>
