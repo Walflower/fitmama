@@ -47,66 +47,64 @@ export default function Profile() {
         }
       };
       postContent();
+
+      // ................................
+      // const addCollectedDAta = async (e) => {
+      //   // e.preventDefault();
+
+      //   //stating form input values
+      //   const name = formRef.current.name.value;
+      //   const post = formRef.current.post.value;
+
+      //   //checking if the form is valid
+      //   const isFormValid = () => {
+      //     if (!name || !post) {
+      //       return false;
+      //     } else {
+      //       return true;
+      //     }
+      //   };
+
+      // if (isFormValid()) {
+      //   alert("You've added new post successfully!");
+      //   // await postNewPost(name, post);
+
+      //   //this clears the form
+      //   e.target.reset();
+      // } else {
+      //   alert("Failed to add Information, you have errors in you form");
+      // }
+
+      // postNewGathered(FirstName, LastName, Password);
     }, []);
-
-    // ................................
-    const addCollectedDAta = async (e) => {
-      // e.preventDefault();
-
-      //stating form input values
-      const name = formRef.current.name.value;
-      const post = formRef.current.post.value;
-
-      //checking if the form is valid
-      const isFormValid = () => {
-        if (!name || !post) {
-          return false;
-        } else {
-          return true;
-        }
-      };
-
-      if (isFormValid()) {
-        alert("You've added new post successfully!");
-        // await postNewPost(name, post);
-
-        //this clears the form
-        e.target.reset();
-      } else {
-        alert("Failed to add Information, you have errors in you form");
-      }
-
-      postNewGathered(FirstName, LastName, Password);
-    };
     // ..............................................
-    const postNewGathered = async (name, post) => {
-      try {
-        const NewDataCollected = {
-          FirstName: FirstName,
-          LastName: LastName,
-          Email: Email,
-          Password: Password,
-        };
+    //   const postNewGathered = async (name, post) => {
+    //     try {
+    //       const NewDataCollected = {
+    //         FirstName: FirstName,
+    //         LastName: LastName,
+    //         Email: Email,
+    //         Password: Password,
+    //       };
 
-        const postresponse = await axios.post(
-          "http://localhost:9000",
-          NewDataCollected
-        );
-        setPostList([NewDataCollected, ...postList]);
-      } catch (error) {
-        console.error("This is the error ", error);
-      }
-    };
+    //       const postresponse = await axios.post(
+    //         "http://localhost:9000",
+    //         NewDataCollected
+    //       );
+    //       setPostList([NewDataCollected, ...postList]);
+    //     } catch (error) {
+    //       console.error("This is the error ", error);
+    //     }
+    //   };
 
     console.log(FirstName, LastName, Email, Password);
   }
-  // ................................................
 
   return (
     <main className={styles.main}>
       <LeftNavigation />
 
-      <form onSubmit={addPost} ref={formRef} className={styles.Body}>
+      <form className={styles.Body}>
         <section className={styles.UserProfile}>
           <div className={styles.ImageBorder}>
             <img src={Lara} alt="Lara" className={styles.UserImage} />
