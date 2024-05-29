@@ -29,82 +29,113 @@ export default function Profile() {
   const [Children, setChildren] = useState("");
   const [Yes, setYes] = useState("");
   const [No, setNo] = useState("");
-
+  // ...........................................
+  const [Info, setInfo] = useState([]);
+  const formRef = useRef(null);
   // ................................................
   //creating post request
   function SaveProfile() {
-    const [Info, setInfo] = useState([]);
-    const formRef = useRef(null);
-    // .................................
     useEffect(() => {
       //Collecting all the data from UserProfile
       const postContent = async () => {
         try {
-          const response = await axios.post("http://localhost:9000/");
+          const response = await axios.post(
+            "http://localhost:9000/userprofiles"
+          );
           setInfo(response.data);
         } catch (error) {
           console.error("This is the error ", error);
         }
       };
       postContent();
-
-      // ................................
-      // const addCollectedDAta = async (e) => {
-      //   // e.preventDefault();
-
-      //   //stating form input values
-      //   const name = formRef.current.name.value;
-      //   const post = formRef.current.post.value;
-
-      //   //checking if the form is valid
-      //   const isFormValid = () => {
-      //     if (!name || !post) {
-      //       return false;
-      //     } else {
-      //       return true;
-      //     }
-      //   };
-
-      // if (isFormValid()) {
-      //   alert("You've added new post successfully!");
-      //   // await postNewPost(name, post);
-
-      //   //this clears the form
-      //   e.target.reset();
-      // } else {
-      //   alert("Failed to add Information, you have errors in you form");
-      // }
-
-      // postNewGathered(FirstName, LastName, Password);
     }, []);
-    // ..............................................
-    //   const postNewGathered = async (name, post) => {
-    //     try {
-    //       const NewDataCollected = {
-    //         FirstName: FirstName,
-    //         LastName: LastName,
-    //         Email: Email,
-    //         Password: Password,
-    //       };
-
-    //       const postresponse = await axios.post(
-    //         "http://localhost:9000",
-    //         NewDataCollected
-    //       );
-    //       setPostList([NewDataCollected, ...postList]);
-    //     } catch (error) {
-    //       console.error("This is the error ", error);
-    //     }
-    //   };
-
-    console.log(FirstName, LastName, Email, Password);
+    // console.log(FirstName, LastName, Email, Password);
   }
+  const addUser = async (e) => {
+    //stating form input values
+    const FirstName = formRef.current.FirstName.value;
+    const LastName = formRef.current.LastName.value;
+    const Email = formRef.current.Email.value;
+    const Password = formRef.current.Password.value;
+    const Age = formRef.current.Age.value;
+    const Location = formRef.current.Location.value;
+    const PostalCode = formRef.current.PostalCode.value;
+    const Activity = formRef.current.Activity.value;
+    const FitnessGoals = formRef.current.FitnessGoals.value;
+    const Activities = formRef.current.Activities.value;
+    const Concerns = formRef.current.Concerns.value;
+    const Children = formRef.current.Children.value;
+    const Yes = formRef.current.Yes.value;
+    const No = formRef.current.No.value;
+
+    postUserInformation(
+      FirstName,
+      LastName,
+      Email,
+      Password,
+      Age,
+      Location,
+      PostalCode,
+      Activity,
+      FitnessGoals,
+      Activities,
+      Concerns,
+      Children,
+      Yes,
+      No
+    );
+    //addform validation if we have time
+  };
+
+  const postUserInformation = async (
+    FirstName,
+    LastName,
+    Email,
+    Password,
+    Age,
+    Location,
+    PostalCode,
+    Activity,
+    FitnessGoals,
+    Activities,
+    Concerns,
+    Children,
+    Yes,
+    No
+  ) => {
+    try {
+      const newUser = {
+        FirstName: FirstName,
+        LastName: LastName,
+        Email: Email,
+        Password: Password,
+        Age: Age,
+        Location: Location,
+        PostalCode: PostalCode,
+        Activity: Activity,
+        FitnessGoals: FitnessGoals,
+        Activities: Activities,
+        Concerns: Concerns,
+        Children: Children,
+        Yes: Yes,
+        No: No,
+      };
+
+      const postResponse = await axios.post(
+        "http://localhost:9000/userprofiles",
+        newUser
+      );
+      setInfo([newUser, ...Info]);
+    } catch (error) {
+      console.error("This is the error ", error);
+    }
+  };
 
   return (
     <main className={styles.main}>
       <LeftNavigation />
 
-      <form className={styles.Body}>
+      <form onSubmit={addUser} className={styles.Body}>
         <section className={styles.UserProfile}>
           <div className={styles.ImageBorder}>
             <img src={Lara} alt="Lara" className={styles.UserImage} />

@@ -80,7 +80,7 @@ export function CommunityForum() {
         post: post,
       };
 
-      const postresponse = await axios.post("http://localhost:9000", newPost);
+      const postResponse = await axios.post("http://localhost:9000", newPost);
       setPostList([newPost, ...postList]);
     } catch (error) {
       console.error("This is the error ", error);
