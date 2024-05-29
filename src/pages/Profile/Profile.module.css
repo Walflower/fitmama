@@ -26,9 +26,9 @@
   width: 10.8rem;
   border-radius: 100%;
 }
-.ContentContainer {
+/* .ContentContainer {
   display: flex;
-}
+} */
 .content {
   padding-right: 5rem;
 }
@@ -58,7 +58,7 @@
   }
 } */
 
-/* .CheckBoxTitle {
+.CheckBoxTitle {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
@@ -68,7 +68,7 @@
   color: #695c5c;
 }
 
-
+/* 
 .Content {
   display: flex;
   justify-content: center;
@@ -121,12 +121,15 @@
 
 .BlueButton {
   display: flex;
-  /* align-content: center; */
-/* justify-content: center;
+align-content: center; 
+ justify-content: center;
   width: 621px;
 }
 
 .Link {
   display: flex;
   width: 256px;
-} */
+}
+
+
+*/
