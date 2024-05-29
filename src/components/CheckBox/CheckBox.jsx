@@ -1,6 +1,6 @@
 import styles from "./CheckBox.module.css";
 
-function CheckBox({ label, text, setText }) {
+function CheckBox({ label, text, setText, name }) {
   function handleChange(e) {
     setText(e.target.value);
     console.log(e.target.value);
@@ -16,7 +16,7 @@ function CheckBox({ label, text, setText }) {
         className={styles.input}
         type="checkbox"
         id="checkbox"
-        name="checkbox"
+        name={name}
       />
     </div>
   );

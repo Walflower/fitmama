@@ -34,25 +34,11 @@ export default function Profile() {
   const formRef = useRef(null);
   // ................................................
   //creating post request
-  function SaveProfile() {
-    useEffect(() => {
-      //Collecting all the data from UserProfile
-      const postContent = async () => {
-        try {
-          const response = await axios.post(
-            "http://localhost:9000/userprofiles"
-          );
-          setInfo(response.data);
-        } catch (error) {
-          console.error("This is the error ", error);
-        }
-      };
-      postContent();
-    }, []);
-    // console.log(FirstName, LastName, Email, Password);
-  }
+
   const addUser = async (e) => {
+    e.preventDefault();
     //stating form input values
+
     const FirstName = formRef.current.FirstName.value;
     const LastName = formRef.current.LastName.value;
     const Email = formRef.current.Email.value;
@@ -135,7 +121,7 @@ export default function Profile() {
     <main className={styles.main}>
       <LeftNavigation />
 
-      <form onSubmit={addUser} className={styles.Body}>
+      <form ref={formRef} onSubmit={addUser} className={styles.Body}>
         <section className={styles.UserProfile}>
           <div className={styles.ImageBorder}>
             <img src={Lara} alt="Lara" className={styles.UserImage} />
@@ -147,6 +133,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>First Name</p>
             <ShortTextField
+              name="FirstName"
               placeholder="First Name"
               text={FirstName}
               setText={setFirstName}
@@ -155,6 +142,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Last Name</p>
             <ShortTextField
+              name="LastName"
               placeholder="Last Name"
               text={LastName}
               setText={setLastName}
@@ -166,6 +154,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Email</p>
             <ShortTextField
+              name="Email"
               placeholder="Email"
               text={Email}
               setText={setEmail}
@@ -174,6 +163,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Email</p>
             <ShortTextField
+              name="Password"
               placeholder="Password"
               text={Password}
               setText={setPassword}
@@ -184,7 +174,12 @@ export default function Profile() {
         <div className={styles.ContentContainer}>
           <section className={styles.content}>
             <p>Please Provide Your Age</p>
-            <ShortTextField placeholder="36" text={Age} setText={setAge} />
+            <ShortTextField
+              name="Age"
+              placeholder="36"
+              text={Age}
+              setText={setAge}
+            />
           </section>
         </div>
 
@@ -192,6 +187,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Please Provide Your Postal Code</p>
             <ShortTextField
+              name="PostalCode"
               placeholder="K1N-4P9"
               text={PostalCode}
               setText={setPostalCode}
@@ -202,6 +198,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Location (City, State/Province, Country)</p>
             <ShortTextField
+              name="Location"
               placeholder="Ottawa"
               text={Location}
               setText={setLocation}
@@ -212,6 +209,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>What activities are you interest in?</p>
             <ShortTextField
+              name="Activity"
               placeholder="Cycling"
               text={Activity}
               setText={setActivity}
@@ -224,8 +222,8 @@ export default function Profile() {
               Would you like to join challenges with other members?
             </div>
             <div className={styles.CheckBox}>
-              <CheckBox text={Yes} setText={setYes} />
-              <CheckBox text={No} setText={setNo} />
+              <CheckBox name="Yes" text={Yes} setText={setYes} />
+              <CheckBox name="No" text={No} setText={setNo} />
             </div>
           </section>
         </div>
@@ -235,6 +233,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>What are your primary fitness goals?</p>
             <ShortTextField
+              name="FitnessGoals"
               placeholder="To walk 3 blocks"
               text={FitnessGoals}
               setText={setFitnessGoals}
@@ -245,6 +244,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>What types of physical activities do you enjoy?</p>
             <ShortTextField
+              name="Activities"
               placeholder="Walking my dog"
               text={Activities}
               setText={setActivities}
@@ -255,6 +255,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>Do you have any fitness limitations or concerns?</p>
             <ShortTextField
+              name="Concerns"
               placeholder="none"
               text={Concerns}
               setText={setConcerns}
@@ -265,6 +266,7 @@ export default function Profile() {
           <section className={styles.content}>
             <p>What Number of Children (0-5 years old)</p>
             <ShortTextField
+              name="Children"
               placeholder="2"
               text={Children}
               setText={setChildren}
@@ -278,15 +280,15 @@ export default function Profile() {
               with other moms?
             </div>
             <div className={styles.CheckBox}>
-              <CheckBox text={Yes} setText={setYes} />
-              <CheckBox text={No} setText={setNo} />
+              <CheckBox name="Yes" text={Yes} setText={setYes} />
+              <CheckBox name="No" text={No} setText={setNo} />
             </div>
           </section>
         </div>
 
         {/* .................................................................. */}
         <div className={styles.BlueButton}>
-          <BlueButton text={"SUBMIT"} onClick={SaveProfile} />
+          <BlueButton text={"SUBMIT"} onClick={notify} />
           <ToastContainer />
         </div>
       </form>

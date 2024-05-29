@@ -93,8 +93,6 @@ export function CommunityForum() {
 
       <main className={styles.main}>
         <section className={styles.container}>
-          {/* ....................NyakumaAdded..............currently hardcoded need to render the images from the backend....... */}
-
           <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Feed</p>
 

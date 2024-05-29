@@ -1,11 +1,16 @@
 import styles from "./ShortTextField.module.css";
 
-export default function ShortTextField({ text, placeholder, image, setText }) {
+export default function ShortTextField({
+  text,
+  placeholder,
+  image,
+  setText,
+  name,
+}) {
   // const [text, setText] = useState("");
 
   function handleChange(e) {
     setText(e.target.value);
-    console.log(e.target.value);
   }
   return (
     <label className={styles.label}>
@@ -15,7 +20,7 @@ export default function ShortTextField({ text, placeholder, image, setText }) {
           onChange={handleChange}
           style={image ? { backgroundImage: `url(${image})` } : null}
           placeholder={placeholder}
-          name="title__name"
+          name={name}
           className={styles.input}
         ></input>
       </div>
