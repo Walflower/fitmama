@@ -18,8 +18,8 @@
 }
 
 .cards {
-  width: 16.23rem;
-  height: 23.32rem;
+  width: 20rem;
+  height: 30rem;
   margin: 3rem 1rem 0rem 1rem;
   border-bottom: 1rem;
   background-color: rgb(238, 238, 238);
@@ -31,8 +31,11 @@
   padding: 0.2rem;
 }
 .ImageContainer {
-  width: 16.26rem;
-  height: 15.92rem;
+  /* width: 16.26rem;
+  height: 15.92rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 .Image {
   width: 100%;
@@ -45,8 +48,12 @@
   width: 16.23rem;
   height: 9.46rem;
 }
-
-.Kilometers {
+/* .......... */
+.userInformation {
+  display: flex;
+}
+/* ............. */
+/* .Kilometers {
   margin-bottom: 8px;
   margin-top: 0;
   margin: 0.2rem;
@@ -61,7 +68,7 @@
   margin-bottom: 1rem;
   padding: 0.2rem;
 }
-
+*/
 .Connect {
   padding: 0;
   :hover {

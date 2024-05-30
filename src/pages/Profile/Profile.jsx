@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Profile() {
   const notify = () => toast("INFORMATION SUBMITTED!");
   // ................................................
+  const [UploadImage, setUploadImage] = useState("");
   const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [Email, setEmail] = useState("");
@@ -38,7 +39,7 @@ export default function Profile() {
   const addUser = async (e) => {
     e.preventDefault();
     //stating form input values
-
+    const UploadImage = formRef.current.UploadImage.value;
     const FirstName = formRef.current.FirstName.value;
     const LastName = formRef.current.LastName.value;
     const Email = formRef.current.Email.value;
@@ -55,6 +56,7 @@ export default function Profile() {
     const No = formRef.current.No.value;
 
     postUserInformation(
+      UploadImage,
       FirstName,
       LastName,
       Email,
@@ -70,10 +72,10 @@ export default function Profile() {
       Yes,
       No
     );
-    //addform validation if we have time
   };
 
   const postUserInformation = async (
+    UploadImage,
     FirstName,
     LastName,
     Email,
@@ -91,6 +93,7 @@ export default function Profile() {
   ) => {
     try {
       const newUser = {
+        UploadImage: UploadImage,
         FirstName: FirstName,
         LastName: LastName,
         Email: Email,
@@ -112,23 +115,81 @@ export default function Profile() {
         newUser
       );
       setInfo([newUser, ...Info]);
+      //add validation here
     } catch (error) {
-      console.error("This is the error ", error);
+      toast.error("This is an error");
+      // console.error("This is the error ", error);
     }
   };
+  // .......................................................
+  // uploading an image
+  const [selectedImages, setSelectedImages] = useState(null);
+  const [Progress, setProgress] = useState({
+    started: false,
+    pc: 0,
+  });
+  const [msg, setMsg] = useState(null);
+
+  function handleUpload() {
+    if (!selectedImages) {
+      setMsg("No file Selected");
+      console.log("No File Selected");
+      return;
+    }
+    const fd = new FormData();
+    for (let i = 0; i < selectedImages.length; i++) {
+      fd.append(`selectedImages${i + 1}`, selectedImages[i]);
+    }
+    setMsg("Uploading....");
+
+    fetch("http://localhost:9000/upload", {
+      method: "POST",
+      body: fd,
+      headers: {
+        "Custom-Header": "value",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("bad response");
+        }
+
+        toast.success("UPLOAD COMPLETED");
+        return res.json();
+      })
+      .then((data) => console.log(data))
+      .catch((err) => {
+        toast.error("Upload unsuccessful");
+        console.log(err);
+      });
+  }
 
   return (
     <main className={styles.main}>
       <LeftNavigation />
 
       <form ref={formRef} onSubmit={addUser} className={styles.Body}>
+        {/* ......................uploading image. */}
         <section className={styles.UserProfile}>
-          <div className={styles.ImageBorder}>
-            <img src={Lara} alt="Lara" className={styles.UserImage} />
-          </div>
-          <NoFillButton text={"Upload Photo"} />
-        </section>
+          <div className={styles.ImageBorder}></div>
+          <button>
+            <input
+              src="download.png"
+              name="UploadImage"
+              onChange={(e) => {
+                setSelectedImages(e.target.files);
+              }}
+              type="file"
+              multiple
+            ></input>
+          </button>
 
+          <NoFillButton onClick={handleUpload} text={"Upload Photo"}>
+            Upload
+          </NoFillButton>
+          {msg && <span>{msg}</span>}
+        </section>
+        {/* ......................uploading image. */}
         <div className={styles.ContentContainer}>
           <section className={styles.content}>
             <p>First Name</p>
@@ -287,9 +348,13 @@ export default function Profile() {
         </div>
 
         {/* .................................................................. */}
+
         <div className={styles.BlueButton}>
           <BlueButton text={"SUBMIT"} onClick={notify} />
           <ToastContainer />
+          <Link to="/Network">
+            <BlueButton text={"BROWSE NETWORK"} />
+          </Link>
         </div>
       </form>
     </main>

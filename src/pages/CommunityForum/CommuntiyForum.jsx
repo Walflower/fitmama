@@ -129,7 +129,6 @@ export function CommunityForum() {
             </span>
           </section>
 
-          {/* ....................Nyakuma Add...................... */}
           <ul className={styles.list}>
             {postList?.map((post) => {
               return (
