@@ -12,6 +12,9 @@
   overflow-y: auto; /* Scroll within the navigation bar if content overflows */
   z-index: 1000;
 }
+.LeftNavigation::-webkit-scrollbar {
+  display: none;
+}
 .Container {
   width: 15rem;
   color: #ffffff;
