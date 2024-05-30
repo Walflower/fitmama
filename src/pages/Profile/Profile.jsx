@@ -145,7 +145,6 @@ export default function Profile() {
     pc: 0,
   });
   const [msg, setMsg] = useState(null);
-
   function handleUpload() {
     if (!selectedImages) {
       setMsg("No file Selected");
@@ -200,7 +199,6 @@ export default function Profile() {
               multiple
             ></input>
           </button>
-
           <NoFillButton onClick={handleUpload} text={"Upload Photo"}>
             Upload
           </NoFillButton>
@@ -317,7 +315,7 @@ export default function Profile() {
                 name="Activity2"
                 placeholder="Walking"
                 text={Activity}
-                setText={setActivity1}
+                setText={setActivity2}
               />
             </div>
           </section>

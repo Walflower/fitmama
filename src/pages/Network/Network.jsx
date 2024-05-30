@@ -33,7 +33,6 @@ export default function Network() {
       <LeftNavigation />
 
       <body className={styles.Body}>
-        {/* ............................................... */}
         <div className={styles.ImageContainer}>
           {userProfileList?.map((allProfiles) => {
             return (
@@ -54,27 +53,13 @@ export default function Network() {
                       </div>
                       <span className={styles.TextContainer}>
                         <div className={styles.TexParagraph}>
-                          <h2 className={styles.Names}>
+                          {/* <h2 className={styles.Names}>
                             {allProfiles.FirstName}
-                          </h2>
+                          </h2> */}
                           <h2 className={styles.Names}>
                             {allProfiles.LastName}
                           </h2>
                         </div>
-                        <div className={styles.TexParagraph}>
-                          <div className={styles.Content}>Activities:</div>
-                          <div className={styles.ContentInfo}>
-                            {allProfiles.Activity}
-                          </div>
-                        </div>
-
-                        <div className={styles.TexParagraph}>
-                          <div className={styles.Content}>Fitness Goals:</div>
-                          <div className={styles.ContentInfo}>
-                            {allProfiles.FitnessGoals}
-                          </div>
-                        </div>
-
                         <div className={styles.TexParagraph}>
                           <div className={styles.Content}>
                             Amount of Children:
@@ -83,6 +68,25 @@ export default function Network() {
                             {allProfiles.Children}
                           </div>
                         </div>
+                        <div className={styles.TexParagraph}>
+                          <div className={styles.Content}>Activities:</div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.Activity}
+                          </div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.Activity1}
+                          </div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.Activity2}
+                          </div>
+                        </div>
+
+                        {/* <div className={styles.TexParagraph}>
+                          <div className={styles.Content}>Fitness Goals:</div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.FitnessGoals}
+                          </div>
+                        </div> */}
                       </span>
                     </div>
                     <Link className={styles.Connect} to={allProfiles.FirstName}>

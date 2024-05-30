@@ -106,14 +106,7 @@
   width: 32px;
   height: 32px;
 }
-.QuestionnaireTitle {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 67.2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .StatusBar {
   padding-top: 28px;
   width: 10px;
@@ -122,6 +115,7 @@
   padding-top: 28px;
   width: 621px;
 }
+*/
 .CheckBoxContainer {
   display: flex;
   flex-direction: column;
@@ -139,16 +133,11 @@
   align-items: center;
   color: #695c5c;
 }
-*/
 .SubmitBrows {
   display: flex;
   align-content: center;
   justify-content: center;
   gap: 1rem;
-  /* width: 30%;
-  gap: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 5rem; */
 }
 .submitButtonContainer {
   width: 16rem;

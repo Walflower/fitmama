@@ -54,14 +54,13 @@ export default function UserProfile() {
                 <div className={styles.NoFillButton}>
                   {allProfiles.FirstName} {allProfiles.Age}
                 </div>
-                {/* ..........completed above */}
 
                 <div className={styles.ConnectButton}>
                   <Link className={styles.Link} to="/Chat">
                     <ConnectButton text={"Connect"} />
                   </Link>
                 </div>
-                {/* .......All fake connections below */}
+                {/* */}
                 <section className={styles.Connections}>
                   <p className={styles.ConnectionsTitle}>Connections</p>
                   <span className={styles.ConnectionImageContainer}>
@@ -112,7 +111,8 @@ export default function UserProfile() {
               {/* /....... */}
               <section className={styles.ProfileContainer}>
                 <p className={styles.HeaderText}>
-                  Hi there, My name is Helen I am mom of one beautiful kid
+                  Hi there, My name is {allProfiles.FirstName} I am mom of{" "}
+                  {allProfiles.Children} beautiful Children
                 </p>
                 <div className={styles.locationContainer}>
                   <img
@@ -126,44 +126,65 @@ export default function UserProfile() {
                 </div>
                 <section>
                   <p className={styles.ConnectionsTitle}>Bio</p>
-                  <p className={styles.BioContent}>{allProfiles.Bio}</p>
+                  <p className={styles.BioContent}>
+                    {allProfiles.Bio}. My fitness goals Include:{" "}
+                    {allProfiles.FitnessGoals}.
+                  </p>
                 </section>
                 <p className={styles.ConnectionsTitle}>Activities</p>
+                {/* ..........completed activities */}
                 <div className={styles.ImagesContainer}>
                   <span className={styles.ActivitiesImageContainer}>
-                    <img
+                    {/* <img
                       src={Yoga}
                       alt="Yoga"
                       className={styles.ACtivitiesImage}
-                    />
-                    <p className={styles.ActivitiesHashtag}>#Yoga</p>
+                    /> */}
+                    <p className={styles.ActivitiesHashtag}>
+                      {allProfiles.Activity}
+                    </p>
+                    <p className={styles.ActivitiesHashtag}>
+                      {allProfiles.Activity1}
+                    </p>
                   </span>
                   <span className={styles.ActivitiesImageContainer}>
-                    <img
+                    {/* <img
                       src={Reading}
                       alt="Reading"
                       className={styles.ACtivitiesImage}
-                    />
-                    <p className={styles.ActivitiesHashtag}>#Reading</p>
+                    /> */}
+                    <p className={styles.ActivitiesHashtag}>
+                      {allProfiles.Activity1}
+                    </p>
                   </span>
                   <span className={styles.ActivitiesImageContainer}>
-                    <img
+                    {/* <img
                       src={Cycling}
                       alt="Cycling"
                       className={styles.ACtivitiesImage}
-                    />
-                    <p className={styles.ActivitiesHashtag}>#Cycling</p>
+                    /> */}
+                    <p className={styles.ActivitiesHashtag}>
+                      {allProfiles.Activity2}
+                    </p>
                   </span>
                 </div>
+                {/* ..........completed activities above */}
+                {/* ................................................... */}
                 <section className={styles.MemberContainer}>
                   <span className={styles.MembershipDate}>
                     <div className={styles.MembershipText}>
-                      <b>Member Since</b> Nov 22
+                      <b>Member Since</b>-
+                      {/* {new Date(allProfiles.Date).toLocaleString()} */}
                     </div>
                   </span>
                   <span className={styles.MembershipDate}>
                     <div className={styles.MembershipText}>
-                      <b>Connections</b> 15 moms
+                      <b>Connections</b>-
+                    </div>
+                  </span>
+                  <span className={styles.MembershipDate}>
+                    <div className={styles.MembershipText}>
+                      <b>Mom of</b> {allProfiles.Children}
                     </div>
                   </span>
                 </section>
