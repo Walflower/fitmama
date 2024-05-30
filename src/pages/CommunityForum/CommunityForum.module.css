@@ -21,8 +21,11 @@
   margin-left: 3.375rem;
   margin-bottom: 0.625rem;
   border-radius: 24px;
-
-  overflow-y: auto; /* Scroll within the navigation bar if content overflows */
+  transform: translateY(0.1rem);
+  overflow-y: scroll; /* Scroll within the navigation bar if content overflows */
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 /* ................Connections............... */
 .Image {
