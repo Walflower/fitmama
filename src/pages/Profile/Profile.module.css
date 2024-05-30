@@ -5,9 +5,11 @@
 }
 .Body {
   display: flex;
+  /* align-items: center; */
   flex-direction: column;
   margin-left: 20rem;
   margin-top: 3rem;
+  width: 50%;
 }
 .UserProfile {
   width: 15rem;
@@ -32,17 +34,22 @@
   width: 10.8rem;
   border-radius: 100%;
 }
+
 /* .ContentContainer {
   display: flex;
 } */
 .content {
   padding-right: 5rem;
 }
-.BlueButton {
+.contentInterest {
+  padding-right: 5rem;
+  height: 5rem;
+}
+/* .BlueButton {
   display: flex;
   width: 16rem;
   justify-content: space-between;
-}
+} */
 .BlueButtonLink {
   display: flex;
   width: 46rem;
@@ -57,12 +64,20 @@
   height: 4rem;
   justify-content: space-between;
 }
-
+.numberOfActivities {
+  width: 50%;
+  display: flex;
+  gap: 2.2rem;
+}
 /* @media screen and(min-width:450px) {
   .nextButton {
     width: 10rem;
   }
 } */
+.CheckBox {
+  display: flex;
+  gap: 1rem;
+}
 
 .CheckBoxTitle {
   font-size: 18px;
@@ -124,18 +139,32 @@
   align-items: center;
   color: #695c5c;
 }
-
-.BlueButton {
+*/
+.SubmitBrows {
   display: flex;
-align-content: center; 
- justify-content: center;
-  width: 621px;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  /* width: 30%;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem; */
+}
+.submitButtonContainer {
+  width: 16rem;
 }
 
 .Link {
   display: flex;
-  width: 256px;
+  width: 16rem;
 }
-
-
-*/
+.connectNetwork {
+  width: 100%;
+  color: #202e3d;
+  height: 3.188rem;
+  line-height: 1.875rem;
+  font-size: 1.375rem;
+  font-weight: 400;
+  border-radius: 1rem;
+  border: 0.0625rem solid #b9c7d6;
+}

@@ -20,7 +20,7 @@ export default function Network() {
       try {
         const response = await axios.get("http://localhost:9000/userprofiles");
         setUserProfileList(response.data);
-        console.log(response.data, "good");
+        console.log(response.data, "User Profile Colleted");
       } catch (error) {
         console.error("This is the error ", error);
       }
@@ -40,32 +40,52 @@ export default function Network() {
               <div className={styles.ImageContainer} key={allProfiles.id}>
                 <Link className={styles.Link} to="/UserProfile">
                   <section className={styles.cards}>
-                    {/* <div className={styles.ImageContainer}>
-                    <img src={Frances} alt="Frances" className={styles.Image} />
-                     </div> */}
-
                     <div className={styles.TextContainer}>
-                      <h5 className={styles.Kilometers}>
-                        {allProfiles.PostalCode}
-                      </h5>
-                      <span className={styles.TextContainer}>
-                        <h3>{allProfiles.FirstName}</h3>
-                        <h3>{allProfiles.LastName}</h3>
-                      </span>
-                      <span>
-                        <div className={styles.SmallTextTitle}>
-                          <h5>Activities:</h5>
+                      {/* ......... */}
+                      <div className={styles.ImageContainer}>
+                        <div className={styles.Image}>
+                          {allProfiles.UploadImage}
+                        </div>
+                      </div>
 
-                          <div>{allProfiles.Activity}</div>
+                      {/* ......... */}
+                      <div className={styles.Distance}>
+                        {allProfiles.PostalCode}
+                      </div>
+                      <span className={styles.TextContainer}>
+                        <div className={styles.TexParagraph}>
+                          <h2 className={styles.Names}>
+                            {allProfiles.FirstName}
+                          </h2>
+                          <h2 className={styles.Names}>
+                            {allProfiles.LastName}
+                          </h2>
+                        </div>
+                        <div className={styles.TexParagraph}>
+                          <div className={styles.Content}>Activities:</div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.Activity}
+                          </div>
                         </div>
 
-                        <h5>Fitness Goals:</h5>
-                        <div>{allProfiles.FitnessGoals}</div>
-                        <h5> Amount of Children:</h5>
-                        <div>{allProfiles.Children}</div>
+                        <div className={styles.TexParagraph}>
+                          <div className={styles.Content}>Fitness Goals:</div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.FitnessGoals}
+                          </div>
+                        </div>
+
+                        <div className={styles.TexParagraph}>
+                          <div className={styles.Content}>
+                            Amount of Children:
+                          </div>
+                          <div className={styles.ContentInfo}>
+                            {allProfiles.Children}
+                          </div>
+                        </div>
                       </span>
                     </div>
-                    <Link className={styles.Connect} to="/Chat">
+                    <Link className={styles.Connect} to={allProfiles.FirstName}>
                       <BlueButton text="Connect" className={styles.Connect} />
                     </Link>
                   </section>

@@ -5,7 +5,6 @@
 .Body {
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
   padding-left: 18rem;
 }
@@ -31,44 +30,58 @@
   padding: 0.2rem;
 }
 .ImageContainer {
-  /* width: 16.26rem;
-  height: 15.92rem; */
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
 }
 .Image {
   width: 100%;
+  height: 16rem;
   border-radius: 0.5rem;
+  background-color: #bb4fa4;
   :hover {
     background-color: rgb(206, 205, 205);
   }
 }
 .TextContainer {
-  width: 16.23rem;
-  height: 9.46rem;
-}
-/* .......... */
-.userInformation {
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin: 0;
+  padding: 0.3rem;
+  height: 100%;
 }
-/* ............. */
-/* .Kilometers {
+.TexParagraph {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+.Content {
+  padding-top: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.ContentInfo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.Distance {
   margin-bottom: 8px;
   margin-top: 0;
   margin: 0.2rem;
 }
 
 .Names {
+  display: flex;
+  align-items: center;
   margin: 0;
-  padding: 0.2rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
 }
-.TexParagraph {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.2rem;
-}
-*/
+
 .Connect {
   padding: 0;
   :hover {

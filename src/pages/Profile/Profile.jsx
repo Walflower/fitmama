@@ -20,10 +20,13 @@ export default function Profile() {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   // ................................................
+  const [Bio, setBio] = useState("");
   const [Age, setAge] = useState("");
   const [Location, setLocation] = useState("");
   const [PostalCode, setPostalCode] = useState("");
   const [Activity, setActivity] = useState("");
+  const [Activity1, setActivity1] = useState("");
+  const [Activity2, setActivity2] = useState("");
   const [FitnessGoals, setFitnessGoals] = useState("");
   const [Activities, setActivities] = useState("");
   const [Concerns, setConcerns] = useState("");
@@ -44,10 +47,13 @@ export default function Profile() {
     const LastName = formRef.current.LastName.value;
     const Email = formRef.current.Email.value;
     const Password = formRef.current.Password.value;
+    const Bio = formRef.current.Bio.value;
     const Age = formRef.current.Age.value;
     const Location = formRef.current.Location.value;
     const PostalCode = formRef.current.PostalCode.value;
     const Activity = formRef.current.Activity.value;
+    const Activity1 = formRef.current.Activity1.value;
+    const Activity2 = formRef.current.Activity2.value;
     const FitnessGoals = formRef.current.FitnessGoals.value;
     const Activities = formRef.current.Activities.value;
     const Concerns = formRef.current.Concerns.value;
@@ -61,10 +67,13 @@ export default function Profile() {
       LastName,
       Email,
       Password,
+      Bio,
       Age,
       Location,
       PostalCode,
       Activity,
+      Activity1,
+      Activity2,
       FitnessGoals,
       Activities,
       Concerns,
@@ -80,10 +89,13 @@ export default function Profile() {
     LastName,
     Email,
     Password,
+    Bio,
     Age,
     Location,
     PostalCode,
     Activity,
+    Activity1,
+    Activity2,
     FitnessGoals,
     Activities,
     Concerns,
@@ -98,10 +110,14 @@ export default function Profile() {
         LastName: LastName,
         Email: Email,
         Password: Password,
+        Bio: Bio,
         Age: Age,
         Location: Location,
         PostalCode: PostalCode,
         Activity: Activity,
+        Activity1: Activity1,
+        Activity2: Activity2,
+
         FitnessGoals: FitnessGoals,
         Activities: Activities,
         Concerns: Concerns,
@@ -174,6 +190,7 @@ export default function Profile() {
           <div className={styles.ImageBorder}></div>
           <button>
             <input
+              setText={setUploadImage}
               src="download.png"
               name="UploadImage"
               onChange={(e) => {
@@ -221,8 +238,10 @@ export default function Profile() {
               setText={setEmail}
             />
           </section>
+        </div>
+        <div className={styles.ContentContainer}>
           <section className={styles.content}>
-            <p>Email</p>
+            <p>Password</p>
             <ShortTextField
               name="Password"
               placeholder="Password"
@@ -232,6 +251,18 @@ export default function Profile() {
           </section>
         </div>
         {/* ............................................................. */}
+        <h1>UPDATE YOUR INFORMATION</h1>
+        <div className={styles.ContentContainer}>
+          <section className={styles.contentInterest}>
+            <p>Tell us about yourself? Small Bio Likes, Interest!</p>
+            <ShortTextField
+              name="Bio"
+              placeholder="I'm 35, exploring the world of fitness with my little one in GTA! Join me as I try new workouts and activities while navigating the joys and struggles of toddlerhood.  #FitExplorer #ToddlerMomAdventures"
+              text={Bio}
+              setText={setBio}
+            />
+          </section>
+        </div>
         <div className={styles.ContentContainer}>
           <section className={styles.content}>
             <p>Please Provide Your Age</p>
@@ -268,13 +299,27 @@ export default function Profile() {
         </div>
         <div className={styles.ContentContainer}>
           <section className={styles.content}>
-            <p>What activities are you interest in?</p>
-            <ShortTextField
-              name="Activity"
-              placeholder="Cycling"
-              text={Activity}
-              setText={setActivity}
-            />
+            <p>What activities are you interest in?Please provide 3</p>
+            <div className={styles.numberOfActivities}>
+              <ShortTextField
+                name="Activity"
+                placeholder="Cycling"
+                text={Activity}
+                setText={setActivity}
+              />
+              <ShortTextField
+                name="Activity1"
+                placeholder="Rollerblading"
+                text={Activity}
+                setText={setActivity1}
+              />
+              <ShortTextField
+                name="Activity2"
+                placeholder="Walking"
+                text={Activity}
+                setText={setActivity1}
+              />
+            </div>
           </section>
         </div>
         <div className={styles.CheckBoxContainer}>
@@ -283,8 +328,8 @@ export default function Profile() {
               Would you like to join challenges with other members?
             </div>
             <div className={styles.CheckBox}>
-              <CheckBox name="Yes" text={Yes} setText={setYes} />
-              <CheckBox name="No" text={No} setText={setNo} />
+              Yes <CheckBox name="Yes" text={Yes} setText={setYes} />
+              No <CheckBox name="No" text={No} setText={setNo} />
             </div>
           </section>
         </div>
@@ -341,19 +386,22 @@ export default function Profile() {
               with other moms?
             </div>
             <div className={styles.CheckBox}>
-              <CheckBox name="Yes" text={Yes} setText={setYes} />
-              <CheckBox name="No" text={No} setText={setNo} />
+              Yes <CheckBox name="Yes" text={Yes} setText={setYes} />
+              No <CheckBox name="No" text={No} setText={setNo} />
             </div>
           </section>
         </div>
 
         {/* .................................................................. */}
 
-        <div className={styles.BlueButton}>
-          <BlueButton text={"SUBMIT"} onClick={notify} />
-          <ToastContainer />
+        <div className={styles.SubmitBrows}>
+          <div className={styles.submitButtonContainer}>
+            <BlueButton text={"SUBMIT"} onClick={notify} />
+            <ToastContainer />
+          </div>
+
           <Link to="/Network">
-            <BlueButton text={"BROWSE NETWORK"} />
+            <button className={styles.connectNetwork}>BROWSE NETWORK</button>
           </Link>
         </div>
       </form>
