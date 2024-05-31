@@ -22,15 +22,16 @@ export default function SignUp() {
           <ShortTextField placeholder="Enter Your Username" />
         </div>
         <div className={styles.TextFieldContainer}>
-          <ShortTextField placeholder="Enter Your Email" />
+          <ShortTextField placeholder="Enter Your Email" type="email" />
         </div>
         <div className={styles.TextFieldContainer}>
-          <ShortTextField placeholder="Enter Your Phone Number" />
+          <ShortTextField placeholder="Enter Your Phone Number" type="tel" />
         </div>
         <div className={styles.TextFieldContainer}>
           <ShortTextField
             placeholder="Enter Your Password"
             image={EyePassewordImage}
+            type="password"
           />
         </div>
         <Link to="/Community">

@@ -18,7 +18,7 @@ import EmojiPicker from "emoji-picker-react";
 
 export default function Chat() {
   const [messages, setMessages] = useState([]);
-  const [messageSender, setMessageSender] = useState("Lina");
+  const [messageSender, setMessageSender] = useState("Helen");
   const [chatInput, setChatInput] = useState("");
 
   // Load messages from localStorage when the component mounts
@@ -95,7 +95,7 @@ export default function Chat() {
             <div className={styles.chatMessages}>
               {messages.map((message, index) => {
                 const messageClass =
-                  message.sender === "Lina" ? "messageBlue" : "messageGrey";
+                  message.sender === "Helen" ? "messageBlue" : "messageGrey";
                 return (
                   <div key={index} className={`message ${messageClass}`}>
                     <div className={styles.messageSender}>{message.sender}</div>
@@ -136,18 +136,18 @@ export default function Chat() {
           <section className={styles.Connections}>
             <div className={styles.ConnectionsIcons}>
               <div
-                text="Lina"
-                onClick={() => switchSender("Lina")}
-                className={styles.LinaSelectorActive}
+                text="Helen"
+                onClick={() => switchSender("Helen")}
+                className={styles.HelenSelectorActive}
               >
-                Lina
+                Helen
               </div>
             </div>
             <div className={styles.ConnectionsIcons}>
               <div
                 text="Samantha"
                 onClick={() => switchSender("Samantha")}
-                className={styles.LinaSelectorActive}
+                className={styles.HelenSelectorActive}
               >
                 Samantha
               </div>
@@ -156,7 +156,7 @@ export default function Chat() {
               <div
                 text="Christal"
                 onClick={() => switchSender("Christal")}
-                className={styles.LinaSelectorActive}
+                className={styles.HelenSelectorActive}
               >
                 Christal
               </div>
@@ -165,7 +165,7 @@ export default function Chat() {
               <div
                 text="Sara"
                 onClick={() => switchSender("Sara")}
-                className={styles.LinaSelectorActive}
+                className={styles.HelenSelectorActive}
               >
                 Sara
               </div>
@@ -174,7 +174,7 @@ export default function Chat() {
               <div
                 text="Julia"
                 onClick={() => switchSender("Julia")}
-                className={styles.LinaSelectorActive}
+                className={styles.HelenSelectorActive}
               >
                 Julia
               </div>

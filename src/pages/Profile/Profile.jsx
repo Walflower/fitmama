@@ -234,6 +234,7 @@ export default function Profile() {
               placeholder="Email"
               text={Email}
               setText={setEmail}
+              type="email"
             />
           </span>
 
@@ -244,6 +245,7 @@ export default function Profile() {
               placeholder="Password"
               text={Password}
               setText={setPassword}
+              type="password"
             />
           </span>
         </section>

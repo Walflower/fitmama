@@ -24,7 +24,7 @@ export function LeftNavigation() {
             <img src={Lara} alt="Lara" className={styles.UserImage} />
             <h2 className={styles.UserName}>Hi Helen</h2>
           </div>
-          <Link to="/Settings" className={styles.navLink}>
+          <Link to="/Profile" className={styles.navLink}>
             <section className={styles.ServicesContainer}>
               <img
                 src={Settings}

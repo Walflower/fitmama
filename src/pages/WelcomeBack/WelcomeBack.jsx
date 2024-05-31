@@ -28,35 +28,32 @@ export function WelcomeBack() {
             <img className={styles.WavingHandImage} src={WavingHandImage} />
           </p>
           <div className={styles.spacing}>
-            <ShortTextField placeholder="Enter Your Email" text={"Email"} />
+            <ShortTextField
+              placeholder="Enter Your Email"
+              text={"Email"}
+              type="email"
+            />
           </div>
           <div className={styles.spacing}>
             <ShortTextField
               className={styles.spacing}
-              text={"Passeword"}
+              text={"Password"}
               placeholder="Enter Your Password"
               image={EyePassewordImageOpen}
+              type="password"
             />
           </div>
         </div>
-        {/* <div>
-          <CheckBox />
-        </div> */}
+
         <div className={styles.LogIn}>
           <Link className={styles.Link} to="/Profile">
             <SignUpBlueButton text="Login" />
           </Link>
         </div>
-        {/* <div>
-          <SignUpWithGoogle
-            text="Login With Google"
-            image={SignUpWithGoogleImage}
-            linkTo="/Google"
-          />
-        </div> */}
+
         <div className={styles.LoginContainer}>
           <p className={styles.NoAccount}>Don’t have an account ? </p>
-          <Link className={styles.LogInLink} to="/#Home">
+          <Link className={styles.LogInLink} to="/Signup">
             Sign Up
           </Link>
         </div>
