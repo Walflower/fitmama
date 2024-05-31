@@ -100,17 +100,17 @@ export function CommunityForum() {
             <p className={styles.ConnectionsTitle}>Feed</p>
 
             <span className={styles.ConnectionImageContainer}>
-              <Link to="/" className={styles.ConnectionsLink}>
+              <Link to="/Network" className={styles.ConnectionsLink}>
                 <div className={styles.ConnectionsIcons}>
                   <img src={Frances} alt="Frances" className={styles.Image} />
                 </div>
               </Link>
-              <Link to="/">
+              <Link to="/Network">
                 <div className={styles.ConnectionsIcons1}>
                   <img src={Martha} alt="Martha" className={styles.Image} />
                 </div>
               </Link>
-              <Link to="/">
+              <Link to="/Network">
                 <div className={styles.ConnectionsIcons2}>
                   <img src={Matilda} alt="Matilda" className={styles.Image} />
                 </div>

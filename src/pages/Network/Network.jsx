@@ -43,9 +43,11 @@ export default function Network() {
                     <div className={styles.TextContainer}>
                       {/* ......... */}
                       <div className={styles.ImageContainer}>
-                        <div className={styles.Image}>
-                          {allProfiles.UploadImage}
-                        </div>
+                        <img
+                          className={styles.Image}
+                          src={allProfiles.UploadImage}
+                          alt="profile"
+                        />
                       </div>
 
                       {/* ......... */}
