@@ -92,10 +92,11 @@ export function CommunityForum() {
       <LeftNavigation />
 
       <main className={styles.main}>
+        <h1>COMMUNITY FORUM</h1>
         <section className={styles.container}>
           {/* HIDING FEED FOR NOW SINCE IT NOT CONNECT TO THE PEOPLE WE HAVE */}
 
-          {/* <section className={styles.Connections}>
+          <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Feed</p>
 
             <span className={styles.ConnectionImageContainer}>
@@ -114,22 +115,12 @@ export function CommunityForum() {
                   <img src={Matilda} alt="Matilda" className={styles.Image} />
                 </div>
               </Link>
-              <Link to="/">
-                <div className={styles.ConnectionsIcons3}>
-                  <img src={Luna} alt="Luna" className={styles.Image} />
-                </div>
-              </Link>
-              <Link to="/" ConnectionsLink>
-                <div className={styles.ConnectionsIcons4}>
-                  <img src={Samantha} alt="Samantha" className={styles.Image} />
-                </div>
-              </Link>
 
               <div className={styles.ConnectionsIconsMore}>
                 <div className={styles.ImageMore}>20+</div>
               </div>
             </span>
-          </section> */}
+          </section>
 
           <ul className={styles.list}>
             {postList?.map((post) => {

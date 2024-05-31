@@ -61,3 +61,10 @@
     background-color: #4f85bb;
   }
 }
+
+.Connect {
+  padding: 0;
+  :hover {
+    background-color: #0d6314;
+  }
+}

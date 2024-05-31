@@ -33,6 +33,7 @@ export default function Network() {
       <LeftNavigation />
 
       <body className={styles.Body}>
+        <h1>YOUR NETWORK</h1>
         <div className={styles.ImageContainer}>
           {userProfileList?.map((allProfiles) => {
             return (
@@ -57,7 +58,7 @@ export default function Network() {
                             {allProfiles.FirstName}
                           </h2> */}
                           <h2 className={styles.Names}>
-                            {allProfiles.LastName}
+                            {allProfiles.FirstName}
                           </h2>
                         </div>
                         <div className={styles.TexParagraph}>
