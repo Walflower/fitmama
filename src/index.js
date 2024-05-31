@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Profiler } from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
@@ -25,6 +25,7 @@ import Chat from "./pages/Chat/Chat";
 import Challenges from "./pages/Challenges/Challenges";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Profile from "./pages/Profile/Profile";
+
 import FAQ from "./pages/FAQ/FAQ";
 import ContactUs from "./pages/ContactUs/ContactUs";
 
@@ -42,7 +43,7 @@ const router = createBrowserRouter(
       <Route path="/Chat" element={<Chat />} />
       <Route path="/Challenges" element={<Challenges />} />
       <Route path="/AboutUs" element={<AboutUs />} />
-      <Route path="/Settings" element={<Profile />} />
+      <Route path="/Profile" element={<Profile />} />
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/ContactUs" element={<ContactUs />} />
     </>
