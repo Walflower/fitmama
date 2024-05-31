@@ -14,6 +14,7 @@ import WalkingChallenge from "../../assets/Images/Challenges/Walking.jpg";
 
 export default function Challenges() {
   const notify = () => toast("CHALLENGE JOINED!");
+
   return (
     <main className={styles.main}>
       <LeftNavigation />
@@ -31,7 +32,7 @@ export default function Challenges() {
             <h4 className={styles.Names}>Hydration Challenge</h4>
           </div>
 
-          <div>
+          <div className={styles.Connect}>
             <BlueButton text="Join Challenge" onClick={notify}></BlueButton>
             <ToastContainer />
           </div>
@@ -49,7 +50,7 @@ export default function Challenges() {
             <h4 className={styles.Names}>MindFull Eating Challenge</h4>
           </div>
 
-          <div>
+          <div className={styles.Connect}>
             <BlueButton text="Join Challenge" onClick={notify}></BlueButton>
             <ToastContainer />
           </div>
@@ -63,7 +64,7 @@ export default function Challenges() {
             <h4 className={styles.Names}>BabyLifting</h4>
           </div>
 
-          <div>
+          <div className={styles.Connect}>
             <BlueButton text="Join Challenge" onClick={notify}></BlueButton>
             <ToastContainer />
           </div>
@@ -81,8 +82,12 @@ export default function Challenges() {
             <h4 className={styles.Names}>YogaChallenge</h4>
           </div>
 
-          <div>
-            <BlueButton text="Join Challenge" onClick={notify}></BlueButton>
+          <div className={styles.Connect}>
+            <BlueButton
+              className={styles.Connect}
+              text="Join Challenge"
+              onClick={notify}
+            ></BlueButton>
             <ToastContainer />
           </div>
         </section>
