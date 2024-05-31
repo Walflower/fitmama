@@ -187,7 +187,7 @@ export default function Profile() {
         {/* ......................uploading image. */}
         <section className={styles.UserProfile}>
           <div className={styles.ImageBorder}></div>
-          <button>
+          <button className={styles.UploadButton}>
             <input
               setText={setUploadImage}
               src="download.png"
@@ -198,15 +198,16 @@ export default function Profile() {
               type="file"
               multiple
             ></input>
+            {/* ......................uploading image. */}
           </button>
-          <NoFillButton onClick={handleUpload} text={"Upload Photo"}>
-            Upload
-          </NoFillButton>
-          {msg && <span>{msg}</span>}
-        </section>
-        {/* ......................uploading image. */}
-        <div className={styles.ContentContainer}>
-          <section className={styles.content}>
+          <span className={styles.UploadContent}>
+            <NoFillButton onClick={handleUpload} text={"Upload Photo"}>
+              Upload
+            </NoFillButton>
+            {msg && <span>{msg}</span>}
+          </span>
+
+          <span className={styles.content}>
             <p>First Name</p>
             <ShortTextField
               name="FirstName"
@@ -214,8 +215,9 @@ export default function Profile() {
               text={FirstName}
               setText={setFirstName}
             />
-          </section>
-          <section className={styles.content}>
+          </span>
+
+          <span className={styles.content}>
             <p>Last Name</p>
             <ShortTextField
               name="LastName"
@@ -223,11 +225,9 @@ export default function Profile() {
               text={LastName}
               setText={setLastName}
             />
-          </section>
-        </div>
+          </span>
 
-        <div className={styles.ContentContainer}>
-          <section className={styles.content}>
+          <span className={styles.content}>
             <p>Email</p>
             <ShortTextField
               name="Email"
@@ -235,10 +235,9 @@ export default function Profile() {
               text={Email}
               setText={setEmail}
             />
-          </section>
-        </div>
-        <div className={styles.ContentContainer}>
-          <section className={styles.content}>
+          </span>
+
+          <span className={styles.content}>
             <p>Password</p>
             <ShortTextField
               name="Password"
@@ -246,12 +245,13 @@ export default function Profile() {
               text={Password}
               setText={setPassword}
             />
-          </section>
-        </div>
+          </span>
+        </section>
+
         {/* ............................................................. */}
         <h1>UPDATE YOUR INFORMATION</h1>
         <div className={styles.ContentContainer}>
-          <section className={styles.contentInterest}>
+          <section className={styles.content}>
             <p>Tell us about yourself? Small Bio Likes, Interest!</p>
             <ShortTextField
               name="Bio"
@@ -260,8 +260,7 @@ export default function Profile() {
               setText={setBio}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>Please Provide Your Age</p>
             <ShortTextField
@@ -271,9 +270,7 @@ export default function Profile() {
               setText={setAge}
             />
           </section>
-        </div>
 
-        <div className={styles.ContentContainer}>
           <section className={styles.content}>
             <p>Please Provide Your Postal Code</p>
             <ShortTextField
@@ -283,8 +280,7 @@ export default function Profile() {
               setText={setPostalCode}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>Location (City, State/Province, Country)</p>
             <ShortTextField
@@ -294,18 +290,17 @@ export default function Profile() {
               setText={setLocation}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>What activities are you interest in?Please provide 3</p>
-            <div className={styles.numberOfActivities}>
-              <ShortTextField
-                name="Activity"
-                placeholder="Cycling"
-                text={Activity}
-                setText={setActivity}
-              />
-              <ShortTextField
+
+            <ShortTextField
+              name="Activity"
+              placeholder="Cycling"
+              text={Activity}
+              setText={setActivity}
+            />
+            {/* <ShortTextField
                 name="Activity1"
                 placeholder="Rollerblading"
                 text={Activity}
@@ -316,11 +311,9 @@ export default function Profile() {
                 placeholder="Walking"
                 text={Activity}
                 setText={setActivity2}
-              />
-            </div>
+              /> */}
           </section>
-        </div>
-        <div className={styles.CheckBoxContainer}>
+
           <section className={styles.content}>
             <div className={styles.CheckBoxTitle}>
               Would you like to join challenges with other members?
@@ -330,10 +323,7 @@ export default function Profile() {
               No <CheckBox name="No" text={No} setText={setNo} />
             </div>
           </section>
-        </div>
 
-        {/* ......................................... */}
-        <div className={styles.ContentContainer}>
           <section className={styles.content}>
             <p>What are your primary fitness goals?</p>
             <ShortTextField
@@ -343,8 +333,7 @@ export default function Profile() {
               setText={setFitnessGoals}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>What types of physical activities do you enjoy?</p>
             <ShortTextField
@@ -354,8 +343,7 @@ export default function Profile() {
               setText={setActivities}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>Do you have any fitness limitations or concerns?</p>
             <ShortTextField
@@ -365,8 +353,7 @@ export default function Profile() {
               setText={setConcerns}
             />
           </section>
-        </div>
-        <div className={styles.ContentContainer}>
+
           <section className={styles.content}>
             <p>What Number of Children (0-5 years old)</p>
             <ShortTextField
@@ -376,8 +363,7 @@ export default function Profile() {
               setText={setChildren}
             />
           </section>
-        </div>
-        <div className={styles.CheckBoxContainer}>
+
           <section className={styles.content}>
             <div className={styles.CheckBoxTitle}>
               Are you interested in participating in local meetups and walks

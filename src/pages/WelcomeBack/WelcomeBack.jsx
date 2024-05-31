@@ -27,16 +27,17 @@ export function WelcomeBack() {
             Hi, Welcome Back!
             <img className={styles.WavingHandImage} src={WavingHandImage} />
           </p>
-        </div>
-        <div className={styles.TextFieldContainer}>
-          <ShortTextField placeholder="Enter Your Email" text={"Email"} />
-        </div>
-        <div className={styles.TextFieldContainer}>
-          <ShortTextField
-            text={"Passeword"}
-            placeholder="Enter Your Password"
-            image={EyePassewordImageOpen}
-          />
+          <div className={styles.spacing}>
+            <ShortTextField placeholder="Enter Your Email" text={"Email"} />
+          </div>
+          <div className={styles.spacing}>
+            <ShortTextField
+              className={styles.spacing}
+              text={"Passeword"}
+              placeholder="Enter Your Password"
+              image={EyePassewordImageOpen}
+            />
+          </div>
         </div>
         {/* <div>
           <CheckBox />
