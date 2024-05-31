@@ -2,7 +2,7 @@ import styles from "./Profile.module.css";
 import { LeftNavigation } from "../../components/LeftNavigation/LeftNavigation";
 import { Link } from "react-router-dom";
 import BlueButton from "../../components/BlueButton/BlueButton";
-import Lara from "../../assets/Images/ProfileImages/Lara.png";
+import Helen from "../../assets/Images/ProfileImages/Lara.png";
 import NoFillButton from "../../components/NoFillButton/NoFillButton";
 import ShortTextField from "../../components/ShortTextField/ShortTextField";
 import CheckBox from "../../components/CheckBox/CheckBox";
@@ -186,7 +186,9 @@ export default function Profile() {
       <form ref={formRef} onSubmit={addUser} className={styles.Body}>
         {/* ......................uploading image. */}
         <section className={styles.UserProfile}>
-          <div className={styles.ImageBorder}></div>
+          <div className={styles.ImageBorder}>
+            <img className={styles.ImageBorder} src={Helen} alt="profile" />
+          </div>
           <button className={styles.UploadButton}>
             <input
               setText={setUploadImage}
@@ -254,7 +256,7 @@ export default function Profile() {
         <h1>UPDATE YOUR INFORMATION</h1>
         <div className={styles.ContentContainer}>
           <section className={styles.content}>
-            <p>Tell us about yourself? Small Bio Likes, Interest!</p>
+            <p>Tell us about yourself? Likes & Interest!</p>
             <ShortTextField
               name="Bio"
               placeholder="I'm 35, exploring the world of fitness with my little one in GTA! Join me as I try new workouts and activities while navigating the joys and struggles of toddlerhood.  #FitExplorer #ToddlerMomAdventures"
@@ -294,7 +296,7 @@ export default function Profile() {
           </section>
 
           <section className={styles.content}>
-            <p>What activities are you interest in?Please provide 3</p>
+            <p>What activities are you interested in? Please provide 3</p>
 
             <ShortTextField
               name="Activity"
@@ -382,7 +384,10 @@ export default function Profile() {
 
         <div className={styles.SubmitBrows}>
           <div className={styles.submitButtonContainer}>
-            <BlueButton text={"SUBMIT"} onClick={notify} />
+            <Link to="/Community">
+              {" "}
+              <BlueButton text={"SUBMIT"} onClick={notify} />
+            </Link>
             <ToastContainer />
           </div>
 

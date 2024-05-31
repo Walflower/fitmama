@@ -123,8 +123,8 @@ export default function Chat() {
               </button>
             </form>
             {/* clear chat */}
-            {/* 
-            <button onClick={clearChat} className={styles.clearChatBtn}>
+
+            {/* <button onClick={clearChat} className={styles.clearChatBtn}>
               Clear Chat
             </button> */}
             {/* clear chat */}
