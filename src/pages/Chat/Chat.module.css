@@ -230,7 +230,7 @@
  */
 
 /* ///////////////////////////////////////////////// */
-body {
+/* body {
   background-image: linear-gradient(
     100deg,
     hsl(16deg 80% 61%) 2%,
@@ -243,7 +243,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-}
+} */
 .message {
   padding: 10px;
   margin: 5px 0;
