@@ -28,12 +28,16 @@
   color: #000000;
   padding: 2rem;
 }
+.buttons{
+  display: flex;
+}
 .clearButton {
   background: transparent;
   border: none;
   color: #4f7398;
   width: 7.313rem;
   height: 3.188rem;
+  font-size: 24px;
 }
 
 .divider {
