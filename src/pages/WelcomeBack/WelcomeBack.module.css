@@ -1,21 +1,32 @@
 .WelcomeBackContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding-top: 4rem;
 }
 /************************ WelcomeAccountImage ******************/
-.WelcomeAccountImageContainer {
-  /* width: 451px; */
-  height: 542px;
-  margin-right: 46px;
+
+.WelcomeBackImage {
+  width: 451px;
+  height: 33.875rem;
+
+  margin-right: 2.875rem;
   align-items: center;
   justify-content: center;
   display: flex;
 }
+.WelcomeBackImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.LOGO {
+}
 .CreateAccountImage {
-  width: 451px;
-  padding-top: 134px;
+  width: 28.1875rem;
+  padding-top: 8.375rem;
 }
 /************************ SigupContainer ******************/
 .SignUpContainer {
@@ -25,9 +36,7 @@
   justify-content: center;
   width: 20.5rem;
 }
-.LOGO {
-  background-color: #3f5c7a;
-}
+
 /************************ Title ******************/
 
 .SignUpTitle {
@@ -37,7 +46,9 @@
   font-size: 37px;
   font-weight: 400;
   line-height: 52px;
-  margin-bottom: 47px;
+  /* margin: 0; */
+  margin-top: 0.2rem;
+  margin-bottom: 2.9375rem;
 }
 /************************ WavingHandImage ******************/
 .WavingHandImage {
@@ -64,11 +75,18 @@
 .LogIn {
   margin-bottom: 28px;
 }
+.link {
+  text-decoration-line: none;
+}
 
 /************************ LoginContainer ******************/
 .LoginContainer {
   display: flex;
   align-items: center;
+  margin: 0;
+}
+.NoAccount {
+  margin: 0;
 }
 /************************ LogInLink ******************/
 .LogInLink {
