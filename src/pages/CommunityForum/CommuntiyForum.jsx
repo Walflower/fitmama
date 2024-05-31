@@ -93,7 +93,9 @@ export function CommunityForum() {
 
       <main className={styles.main}>
         <section className={styles.container}>
-          <section className={styles.Connections}>
+          {/* HIDING FEED FOR NOW SINCE IT NOT CONNECT TO THE PEOPLE WE HAVE */}
+
+          {/* <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Feed</p>
 
             <span className={styles.ConnectionImageContainer}>
@@ -127,7 +129,7 @@ export function CommunityForum() {
                 <div className={styles.ImageMore}>20+</div>
               </div>
             </span>
-          </section>
+          </section> */}
 
           <ul className={styles.list}>
             {postList?.map((post) => {
