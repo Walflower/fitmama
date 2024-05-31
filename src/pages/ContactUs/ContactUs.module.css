@@ -1,69 +1,101 @@
-/* ..............Body .................. */
 .main {
   display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 20px;
+  height: 100vh; 
+
 }
-.Body {
+
+.contactFormContainer {
   display: flex;
-
-  flex-wrap: wrap;
-  padding-left: 2rem;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 100px;
+  
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  max-width: 800px;
 }
-.Link {
-  text-decoration-line: none;
+
+.contactInfo {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.contactInfo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1a202c;
+}
+
+.contactInfo p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #718096;
+}
+
+.contactDetails {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
   color: black;
-  :hover {
-    background-color: rgb(206, 205, 205);
-  }
 }
 
-.cards {
-  width: 16.23rem;
-  height: 23.32rem;
-  margin: 3rem 1rem 0rem 1rem;
-  border-bottom: 1rem;
-  background-color: rgb(238, 238, 238);
+.contactDetails li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contactDetails i {
+  margin-right: 10px;
+  color: #ff69b4; /* Pink color for icons */
+}
+
+.contactForm {
+  flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.formGroup {
+  display: flex;
   justify-content: space-between;
-  border: 0.1px solid rgb(206, 205, 205);
-  border-radius: 0.5rem;
-  padding: 0.2rem;
+  margin-bottom: 15px;
 }
-.ImageContainer {
-  width: 16.26rem;
-  height: 15.92rem;
-}
-.Image {
+
+.inputField, .textarea {
   width: 100%;
-  border-radius: 0.5rem;
-  :hover {
-    background-color: rgb(206, 205, 205);
-  }
-}
-.TextContainer {
-  width: 16.23rem;
-  height: 9.46rem;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
-.Kilometers {
-  margin-bottom: 8px;
-  margin-top: 0;
-  margin: 0.2rem;
+.inputField {
+  flex: 1;
+  margin-right: 10px;
 }
 
-.Names {
-  margin: 0;
-  padding: 0.2rem;
-}
-.TexParagraph {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.2rem;
+.textarea {
+  height: 100px;
+  resize: none;
 }
 
-.Connect {
-  padding: 0;
-  :hover {
-    background-color: #4f85bb;
-  }
+.submitButton {
+  padding: 10px;
+  background-color: #3a4a58;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submitButton:hover {
+  background-color: #2d3a46;
 }
