@@ -14,69 +14,7 @@ import Crystal from "../../assets/Images/Network/Crystal.jpg";
 import InputBox from "../../components/InputBox/InputBox";
 import EmojiPicker from "emoji-picker-react";
 
-// export default function Chat() {
-//   return (
-//     <main className={styles.main}>
-//       <LeftNavigation />
-
-//       <body className={styles.body}>
-//         <section className={styles.ChatMessageContainer}>
-//           <span className={styles.ChatBox}>
-//             <div className={styles.LeftChat}></div>
-//             <div className={styles.RightChat}></div>
-//           </span>
-//           <div className={styles.EmojiPicker}></div>
-//           <InputBox />
-//           {/* <div>
-//             {comments.map((comments) => {
-//               return <section></section>;
-//             })}
-//           </div> */}
-//         </section>
-
-//         <section className={styles.Connections}>
-//           <p className={styles.ConnectionsTitle}>Connections</p>
-
-//           <span className={styles.ConnectionImageContainer}>
-//             <Link to="/" className={styles.Link}>
-//               <div className={styles.ConnectionsIcons}>
-//                 <img src={Frances} alt="Frances" className={styles.Image} />
-//                 <h4 className={styles.Names}>Frances</h4>
-//               </div>
-//             </Link>
-//             <Link to="/" className={styles.Link}>
-//               <div className={styles.ConnectionsIcons}>
-//                 <img src={Martha} alt="Martha" className={styles.Image} />
-//                 <h4 className={styles.Names}>Martha</h4>
-//               </div>
-//             </Link>
-//             <Link to="/" className={styles.Link}>
-//               <div className={styles.ConnectionsIcons}>
-//                 <img src={Matilda} alt="Matilda" className={styles.Image} />
-//                 <h4 className={styles.Names}>Matilda</h4>
-//               </div>
-//             </Link>
-//             <Link to="/" className={styles.Link}>
-//               <div className={styles.ConnectionsIcons}>
-//                 <img src={Luna} alt="Luna" className={styles.Image} />
-//                 <h4 className={styles.Names}>Luna</h4>
-//               </div>
-//             </Link>
-//             <Link to="/" className={styles.Link}>
-//               <div className={styles.ConnectionsIcons}>
-//                 <img src={Samantha} alt="Samantha" className={styles.Image} />
-//                 <h4 className={styles.Names}>Samantha</h4>
-//               </div>
-//             </Link>
-//           </span>
-//         </section>
-//         {/* ...............................Comments .......... */}
-//       </body>
-//     </main>
-//   );
-// }
-
-const ChatApp = () => {
+export default function Chat() {
   const [messages, setMessages] = useState([]);
   const [messageSender, setMessageSender] = useState("John");
   const [chatInput, setChatInput] = useState("");
@@ -135,103 +73,103 @@ const ChatApp = () => {
     <main className={styles.main}>
       <LeftNavigation />
 
-      <div className={styles.body}>
-        {/* <section className={styles.ChatMessageContainer}>
-        <span className={styles.ChatBox}>
-          <div className={styles.LeftChat}></div>
-          <div className={styles.RightChat}></div>
-        </span>
-        </section> */}
+      <body className={styles.body}>
+        <section className={styles.ChatMessageContainer}>
+          <div className={styles.body}>
+            <div className="chatHeader">
+              <BlueButton
+                text="John"
+                onClick={() => switchSender("John")}
+                className={styles.JohnSelectorActive}
+              >
+                John
+              </BlueButton>
+              <BlueButton
+                text="Samantha"
+                onClick={() => switchSender("Samantha")}
+                className={styles.SamanthaSelectorActive}
+              >
+                Samantha
+              </BlueButton>
+            </div>
+            <div className={styles.chatContainer}>
+              <div className={styles.chatMessages}>
+                {messages.map((message, index) => {
+                  const messageClass =
+                    message.sender === "John" ? "messageBlue" : "messageGrey";
+                  return (
+                    <div key={index} className={`message ${messageClass}`}>
+                      <div className={styles.messageSender}>
+                        {message.sender}
+                      </div>
+                      <div className={styles.messageText}>{message.text}</div>
+                      <div className={styles.messageTimestamp}>
+                        {message.timestamp}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
 
-        <div className="chatHeader">
-          <BlueButton
-            text="John"
-            onClick={() => switchSender("John")}
-            className={styles.JohnSelectorActive}
-          >
-            John
-          </BlueButton>
-          <BlueButton
-            text="Samantha"
-            onClick={() => switchSender("Samantha")}
-            className={styles.SamanthaSelectorActive}
-          >
-            Samantha
-          </BlueButton>
-        </div>
-        <div className={styles.chatContainer}>
-          <div className={styles.chatMessages}>
-            {messages.map((message, index) => {
-              const messageClass =
-                message.sender === "John" ? "messageBlue" : "messageGrey";
-              return (
-                <div key={index} className={`message ${messageClass}`}>
-                  <div className={styles.messageSender}>{message.sender}</div>
-                  <div className={styles.messageText}>{message.text}</div>
-                  <div className={styles.messageTimestamp}>
-                    {message.timestamp}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+              <form className={styles.chatInputForm} onSubmit={sendMessage}>
+                <input
+                  placeholder="Text here Please..."
+                  type="text"
+                  className={styles.chatInput}
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  required
+                />
+                <button type="submit">Send</button>
+              </form>
 
-          <form className={styles.chatInputForm} onSubmit={sendMessage}>
-            <input
-              placeholder="Text here Please..."
-              type="text"
-              className={styles.chatInput}
-              value={chatInput}
-              onChange={(e) => setChatInput(e.target.value)}
-              required
-            />
-            <button type="submit">Send</button>
-          </form>
-
-          {/* <button onClick={clearChat} className={styles.clearChatBtn}>
+              {/* <button onClick={clearChat} className={styles.clearChatBtn}>
             Clear Chat
           </button> */}
-        </div>
-      </div>
-      {/* ...connections
-      <section className={styles.Connections}>
-        <p className={styles.ConnectionsTitle}>Connections</p>
+            </div>
+          </div>
 
-        <span className={styles.ConnectionImageContainer}>
-          <Link to="/" className={styles.Link}>
-            <div className={styles.ConnectionsIcons}>
-              <img src={Frances} alt="Frances" className={styles.Image} />
-              <h4 className={styles.Names}>Frances</h4>
-            </div>
-          </Link>
-          <Link to="/" className={styles.Link}>
-            <div className={styles.ConnectionsIcons}>
-              <img src={Martha} alt="Martha" className={styles.Image} />
-              <h4 className={styles.Names}>Martha</h4>
-            </div>
-          </Link>
-          <Link to="/" className={styles.Link}>
-            <div className={styles.ConnectionsIcons}>
-              <img src={Matilda} alt="Matilda" className={styles.Image} />
-              <h4 className={styles.Names}>Matilda</h4>
-            </div>
-          </Link>
-          <Link to="/" className={styles.Link}>
-            <div className={styles.ConnectionsIcons}>
-              <img src={Luna} alt="Luna" className={styles.Image} />
-              <h4 className={styles.Names}>Luna</h4>
-            </div>
-          </Link>
-          <Link to="/" className={styles.Link}>
-            <div className={styles.ConnectionsIcons}>
-              <img src={Samantha} alt="Samantha" className={styles.Image} />
-              <h4 className={styles.Names}>Samantha</h4>
-            </div>
-          </Link>
-        </span>
-      </section> */}
+          <InputBox />
+        </section>
+
+        <section className={styles.Connections}>
+          <p className={styles.ConnectionsTitle}>Connections</p>
+          {
+            <span className={styles.ConnectionImageContainer}>
+              <Link to="/" className={styles.Link}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Frances} alt="Frances" className={styles.Image} />
+                  <h4 className={styles.Names}>Frances</h4>
+                </div>
+              </Link>
+              <Link to="/" className={styles.Link}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Martha} alt="Martha" className={styles.Image} />
+                  <h4 className={styles.Names}>Martha</h4>
+                </div>
+              </Link>
+              <Link to="/" className={styles.Link}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Matilda} alt="Matilda" className={styles.Image} />
+                  <h4 className={styles.Names}>Matilda</h4>
+                </div>
+              </Link>
+              <Link to="/" className={styles.Link}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Luna} alt="Luna" className={styles.Image} />
+                  <h4 className={styles.Names}>Luna</h4>
+                </div>
+              </Link>
+              <Link to="/" className={styles.Link}>
+                <div className={styles.ConnectionsIcons}>
+                  <img src={Samantha} alt="Samantha" className={styles.Image} />
+                  <h4 className={styles.Names}>Samantha</h4>
+                </div>
+              </Link>
+            </span>
+          }
+        </section>
+      </body>
     </main>
   );
-};
-
-export default ChatApp;
+}
