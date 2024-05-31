@@ -8,6 +8,7 @@ import Matilda from "../../assets/Images/Network/Matilda.png";
 import Luna from "../../assets/Images/Network/Luna.jpg";
 import Samantha from "../../assets/Images/Network/Samantha.jpg";
 import Crystal from "../../assets/Images/Network/Crystal.jpg";
+import About from "../../assets/Images/About/About.png";
 
 export default function AboutUs() {
   return (
@@ -27,7 +28,14 @@ export default function AboutUs() {
               mission is to create a supportive and engaging community where
               mothers of young children (ages 0-5) can connect, share
               experiences, and achieve their health and fitness goals together.
+              
             </div>
+            <img  src={About} alt="about fit mama hub" />
+            <div>
+         
+            </div>
+          
+            
           </div>
         </section>
 
