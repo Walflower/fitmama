@@ -1,4 +1,4 @@
-.WelcomeBackContainer {
+.LoginContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 /************************ WelcomeAccountImage ******************/
 
-.WelcomeBackImage {
+.LoginImage {
   width: 451px;
   height: 33.875rem;
 
@@ -16,7 +16,7 @@
   justify-content: center;
   display: flex;
 }
-.WelcomeBackImageContainer {
+.LoginImageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,6 +83,9 @@
 }
 .link {
   text-decoration-line: none;
+}
+.danger {
+  color: red;
 }
 
 /************************ LoginContainer ******************/

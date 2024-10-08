@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 import { HashLink } from "react-router-hash-link";
 import { NavHashLink } from "react-router-hash-link";
-import Footer, {footer} from "../../components/Footer/Footer"
+import Footer, { footer } from "../../components/Footer/Footer";
 
 import Fuel from "../../assets/Images/fuel-image.svg";
 import GetStarted from "../../assets/Images/get-started.svg";
@@ -52,7 +52,7 @@ export default function Home() {
           </nav>
 
           <div className={styles.buttons}>
-            <NavLink to="/WelcomeBack">
+            <NavLink to="/Login">
               <button className={styles.clearButton}>Sign in</button>
             </NavLink>
             <NavLink to="/Signup">
@@ -288,8 +288,8 @@ export default function Home() {
           <img src={CardTwo} alt="comment two" />
         </div>
       </section>
-     { /**Footer */}
-<Footer/>
+      {/**Footer */}
+      <Footer />
 
       {/**each question needs to be to span down and up */}
       {/* <section>
@@ -330,6 +330,5 @@ export default function Home() {
         <button type="submit">Be a Member</button>
       </section> */}
     </div>
-    
   );
 }

@@ -14,7 +14,7 @@ import {
 import Home from "./pages/Home/Home";
 import reportWebVitals from "./reportWebVitals";
 import SignUp from "./pages/Signup/SignUp";
-import { WelcomeBack } from "./pages/WelcomeBack/WelcomeBack";
+import { Login } from "./pages/Login/Login";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Membership from "./pages/Membership/Membership";
@@ -34,9 +34,9 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<Home />} />
       <Route path="/Signup" element={<SignUp />} />
-      <Route path="/WelcomeBack" element={<WelcomeBack />} />
+      <Route path="/Login" element={<Login />} />
       <Route path="/Dashboard" element={<Dashboard />} />
-      <Route path="/WelcomeBack" element={<Membership />} />
+      <Route path="/Login" element={<Membership />} />
       <Route path="/Community" element={<CommunityForum />} />
       <Route path="/Network" element={<Network />} />
       <Route path="/UserProfile" element={<UserProfile />} />
