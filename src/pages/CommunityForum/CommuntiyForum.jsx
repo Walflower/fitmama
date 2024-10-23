@@ -35,7 +35,9 @@ export function CommunityForum() {
     //getting book list from api
     const getPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/");
+        const response = await axios.get(
+          "http://localhost:8080/community-posts"
+        );
         setPostList(response.data);
       } catch (error) {
         console.error("This is the error ", error);
@@ -80,7 +82,10 @@ export function CommunityForum() {
         post: post,
       };
 
-      const postResponse = await axios.post("http://localhost:9000", newPost);
+      const postResponse = await axios.post(
+        "http://localhost:8080/community-posts",
+        newPost
+      );
       setPostList([newPost, ...postList]);
     } catch (error) {
       console.error("This is the error ", error);
@@ -94,8 +99,6 @@ export function CommunityForum() {
       <main className={styles.main}>
         <h1>COMMUNITY FORUM</h1>
         <section className={styles.container}>
-          {/* HIDING FEED FOR NOW SINCE IT NOT CONNECT TO THE PEOPLE WE HAVE */}
-
           <section className={styles.Connections}>
             <p className={styles.ConnectionsTitle}>Feed</p>
 
@@ -132,70 +135,16 @@ export function CommunityForum() {
                     className="list__image"
                   /> */}
                   <p>{post.name}</p>
-                  <p>{post.post}</p>
+                  <p>{post.text}</p>
+
+                  {/* TODO: need to add the number of likes*/}
                   <ClearButton
                     text="Like"
                     icon={greenHeart}
                     className={styles.like}
                   />
-
+                  {/* TODO: need to add comments on post to backend*/}
                   <ClearButton text="Comment" icon={greenChat} />
-
-                  {/* <div className="chat_footer">
-                    {!emojiPicker ? (
-                      <InsertEmoticonIcon
-                        onClick={() => setEmojiPicker((prev) => !prev)}
-                      />
-                    ) : (
-                      <>
-                        <InsertEmoticonIcon
-                          onClick={() => setEmojiPicker((prev) => !prev)}
-                        />
-                        <EmojiPicker
-                          searchDisabled="true"
-                          previewConfig={{ showPreview: false }}
-                          emojiStyle="google"
-                          onEmojiClick={(e) =>
-                            setInput((input) => input + e.emoji)
-                          }
-                          height={400}
-                          width="40%"
-                        />
-                      </>
-                    )}
-                  </div> */}
-                  {/* <InputEmoji /> */}
-                  {/* <EmojiPicker /> */}
-
-                  {/* <ClearButton text="Delete" icon={greenGarbageCan} /> */}
-
-                  {/* <button type="button" class="react-input-emoji--button">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="24"
-                      height="24"
-                      class="react-input-emoji--button--icon"
-                    >
-                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10"></path>
-                      <path d="M8 7a2 2 0 1 0-.001 3.999A2 2 0 0 0 8 7M16 7a2 2 0 1 0-.001 3.999A2 2 0 0 0 16 7M15.232 15c-.693 1.195-1.87 2-3.349 2-1.477 0-2.655-.805-3.347-2H15m3-2H6a6 6 0 1 0 12 0"></path>
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    class="react-input-emoji--button react-input-emoji--button__show"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="24"
-                      height="24"
-                      class="react-input-emoji--button--icon"
-                    >
-                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10"></path>
-                      <path d="M8 7a2 2 0 1 0-.001 3.999A2 2 0 0 0 8 7M16 7a2 2 0 1 0-.001 3.999A2 2 0 0 0 16 7M15.232 15c-.693 1.195-1.87 2-3.349 2-1.477 0-2.655-.805-3.347-2H15m3-2H6a6 6 0 1 0 12 0"></path>
-                    </svg>
-                  </button> */}
                 </li>
               );
             })}
@@ -226,17 +175,7 @@ export function CommunityForum() {
                 height="200px"
                 className={styles.textarea}
               />
-              {/* <InputEmoji
-                name="post"
-                type="text"
-                value={text}
-                onChange={setText}
-                placeholder="Write your post here"
-                height="200px"
-                className={styles.textarea}
-                cleanOnEnter
-                onEnter={addPost}
-              /> */}
+
               <button text="Submit" className={styles.formButton}>
                 POST
               </button>
