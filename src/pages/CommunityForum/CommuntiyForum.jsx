@@ -2,8 +2,7 @@ import styles from "./CommunityForum.module.css";
 import Lara from "../../assets/Images/ProfileImages/Lara.png";
 import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
-// import InputEmoji from "react-input-emoji";
-// import EmojiPicker from "emoji-picker-react";
+import { v4 as uuidv4 } from "uuid";
 
 import { LeftNavigation } from "../../components/LeftNavigation/LeftNavigation";
 import greenHeart from "../../assets/Icons/green-heart.svg";
@@ -24,8 +23,10 @@ import InputBox from "../../components/InputBox/InputBox";
 export function CommunityForum() {
   const [postList, setPostList] = useState([]);
   const formRef = useRef(null);
-  // // const [text, setText] = useState("");
-  // const [emojiPicker, setEmojiPicker] = useState("");
+
+  const generatePostId = () => {
+    return uuidv4();
+  };
 
   // function handleOnEnter(text) {
   //   console.log("enter", text);
@@ -47,15 +48,13 @@ export function CommunityForum() {
   }, []);
 
   const addPost = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
-    //stating form input values
-    const name = formRef.current.name.value;
-    const post = formRef.current.post.value;
+    const text = formRef.current.text.value;
 
     //checking if the form is valid
     const isFormValid = () => {
-      if (!name || !post) {
+      if (!text) {
         return false;
       } else {
         return true;
@@ -64,28 +63,29 @@ export function CommunityForum() {
 
     if (isFormValid()) {
       alert("You've added new post successfully!");
-      // await postNewPost(name, post);
-
-      //this clears the form
-      e.target.reset();
+      postNewPost(text);
+      e.target.reset(); //clears form after posting
     } else {
       alert("Failed to add post, you have errors in you form");
     }
-
-    postNewPost(name, post);
   };
 
-  const postNewPost = async (name, post) => {
+  const postNewPost = async (text) => {
     try {
       const newPost = {
-        name: name,
-        post: post,
+        post_id: generatePostId(), // Assuming you'd generate this ID in the frontend if needed
+        user_id: 1, // Assuming you have the current user's ID available
+        post_image: null, // If no image for now, send null
+        text: text,
+        likes: 0,
       };
 
+      console.log(newPost);
       const postResponse = await axios.post(
         "http://localhost:8080/community-posts",
         newPost
       );
+      console.log(postResponse.data);
       setPostList([newPost, ...postList]);
     } catch (error) {
       console.error("This is the error ", error);
@@ -128,13 +128,13 @@ export function CommunityForum() {
           <ul className={styles.list}>
             {postList?.map((post) => {
               return (
-                <li key={post.id} className={styles.post}>
+                <li key={post.post_id} className={styles.post}>
                   {/* <img
                     src={post?.image}
                     alt="user profile"
                     className="list__image"
                   /> */}
-                  <p>{post.name}</p>
+                  {/* <p>{post.name}</p> */}
                   <p>{post.text}</p>
 
                   {/* TODO: need to add the number of likes*/}
@@ -156,20 +156,20 @@ export function CommunityForum() {
 
           <form onSubmit={addPost} ref={formRef} className={styles.form}>
             <div className={styles.formContainer}>
-              <label className={styles.LabelTitle}>Name</label>
+              {/* <label className={styles.LabelTitle}>Name</label>
               <input
                 name="name"
                 type="text"
                 placeholder="Name"
                 className={styles.Input}
                 // ref={formRef}
-              />
+              /> */}
             </div>
 
             <div className={styles.formContainer}>
               <label className={styles.LabelTitle}>New Post:</label>
               <textarea
-                name="post"
+                name="text"
                 type="text"
                 placeholder="write your post here"
                 height="200px"
