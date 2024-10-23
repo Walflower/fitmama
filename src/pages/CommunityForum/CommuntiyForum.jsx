@@ -24,16 +24,13 @@ export function CommunityForum() {
   const [postList, setPostList] = useState([]);
   const formRef = useRef(null);
 
+  //Generating an unique post_id
   const generatePostId = () => {
     return uuidv4();
   };
 
-  // function handleOnEnter(text) {
-  //   console.log("enter", text);
-  // }
-  // ................................................................................
+  //GET list of community post
   useEffect(() => {
-    //getting book list from api
     const getPosts = async () => {
       try {
         const response = await axios.get(
@@ -47,6 +44,7 @@ export function CommunityForum() {
     getPosts();
   }, []);
 
+  //POST new post to db
   const addPost = async (e) => {
     e.preventDefault();
 
@@ -73,9 +71,9 @@ export function CommunityForum() {
   const postNewPost = async (text) => {
     try {
       const newPost = {
-        post_id: generatePostId(), // Assuming you'd generate this ID in the frontend if needed
-        user_id: 1, // Assuming you have the current user's ID available
-        post_image: null, // If no image for now, send null
+        post_id: generatePostId(),
+        user_id: 1, // TODO currently setting this to 1 for now
+        post_image: null, //TODO figure out how to upload images
         text: text,
         likes: 0,
       };
@@ -155,6 +153,7 @@ export function CommunityForum() {
           <p className={styles.ConnectionsTitle2}>Add a New Post</p>
 
           <form onSubmit={addPost} ref={formRef} className={styles.form}>
+            {/*TODO update this to auto the name of the user once sign in complete*/}
             <div className={styles.formContainer}>
               {/* <label className={styles.LabelTitle}>Name</label>
               <input
