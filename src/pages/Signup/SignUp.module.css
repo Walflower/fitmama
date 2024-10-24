@@ -81,3 +81,10 @@
 .danger {
   color: red;
 }
+.Button {
+  background-color: blue;
+  width: 10rem;
+  height: 4rem;
+  font-size: 26px;
+  color: #000;
+}
